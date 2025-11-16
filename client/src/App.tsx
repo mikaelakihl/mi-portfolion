@@ -3,7 +3,7 @@ import './App.css'
 
 const Layout = () => {
   return (
-    <div className="App">
+    <div>
       <nav>
         <Link to="/cv">CV</Link>
         <Link to="/projects">Projects</Link>
