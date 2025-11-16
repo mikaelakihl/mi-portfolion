@@ -42,6 +42,9 @@ const CV = () => {
   return (
     <>
     <SideBarCV/>
+    <div className='bg-brand-100'>
+     <img src="/assets/cloud.png" alt="cloud" className="w-full h-full" /> 
+    </div>
     <MainCV/>
     </>
   )
