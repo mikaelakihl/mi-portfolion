@@ -1,6 +1,8 @@
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import './App.css'
+import { FaGithub, FaLinkedin, FaPhone, FaPhoneAlt } from 'react-icons/fa';
+import { CiMail } from 'react-icons/ci';
 
 type CVData = {
   education: Array<{
@@ -58,10 +60,22 @@ const SideBarCV = () => {
       <div>
         <h2>Contact</h2>
         <div>
-        <a href="mailto:mikaela.kihl@medieinstitutet.se">mikaela.kihl@medieinstitutet.se</a>
-        <a href="https://github.com/mikaelakihl">GitHub</a>
-        <a href="https://www.linkedin.com/in/mikaela-kihl-4b1751200/">LinkedIn</a>
-        <a href="tel:070-857-0746">070-857-0746</a>
+          <div className='flex items-center gap-2'>
+            <CiMail />
+           <a href="mailto:mikaela.kihl@medieinstitutet.se">mikaela.kihl@medieinstitutet.se</a> 
+          </div>
+          <div className='flex items-center gap-2'>
+            <FaGithub />
+            <a href="https://github.com/mikaelakihl">GitHub</a> 
+          </div>
+          <div className='flex items-center gap-2'>
+            <FaLinkedin/>
+            <a href="https://www.linkedin.com/in/mikaela-kihl-4b1751200/">LinkedIn</a>
+          </div>
+        <div className='flex items-center gap-2'>
+          <FaPhoneAlt/>
+          <a href="tel:070-857-0746">070-857-0746</a>
+        </div>
         </div>
         <div>
           <h2>Languages</h2>
