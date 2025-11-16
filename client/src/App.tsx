@@ -52,7 +52,7 @@ const SideBarCV = () => {
         <img src="/assets/mikaelakihl-cv.png" alt="CV" className="w-full h-full object-cover" />
       </div>
       <div>
-        <h1>Mikaela Kihl</h1>
+        <h1 className='text-xl font-bold'>Mikaela Kihl</h1>
         <p>Frontend Developer</p>
       </div>
       <div>
@@ -109,10 +109,11 @@ const MainCV = () => {
 
   return (
     <section>
-      <div>
-        <p>Summary about me</p>
+      <div className='bg-green-300'>
+        <p>My career started when I was 16 and during these years I've gained a lot of skills, socially and practically. Five words to describe myself, <strong>open, loyal, responsible, inventive & adaptable.</strong></p>
+        <p>I enjoy working in a team but I'm also very independent. After five years in customer support I'm ready for new challenges in Front End Development.</p>
       </div>
-      <div>
+      <div className='bg-blue-300'>
         <h2>Education & Internship</h2>
         <ul>
           {cvData.education.map((educationEntry) => (
@@ -125,7 +126,7 @@ const MainCV = () => {
           ))}
         </ul>
       </div>
-      <div>
+      <div className='bg-red-300'>
         <h2>Work Experience</h2>
         <ul>
           {cvData.workExperience.map((workEntry) => (

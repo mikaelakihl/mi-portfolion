@@ -17,3 +17,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+@layer base {
+  h2 {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold;
+  }
+  
+  p {
+    @apply text-base md:text-lg;
+  }
+}
