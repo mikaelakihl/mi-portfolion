@@ -50,7 +50,7 @@ const CV = () => {
 const SideBarCV = () => {
   return (
     <section className=' bg-brand-100 flex flex-col items-center justify-center'>
-      <div className='rounded-full w-48 h-48 overflow-hidden'>
+      <div className='rounded-full w-48 h-48 overflow-hidden border-4 border-brand-200'>
         <img src="/assets/mikaelakihl-cv.png" alt="CV" className="w-full h-full object-cover" />
       </div>
       <div>
