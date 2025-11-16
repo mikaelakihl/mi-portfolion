@@ -49,7 +49,7 @@ const CV = () => {
 
 const SideBarCV = () => {
   return (
-    <section className=' bg-gray-300 flex flex-col items-center justify-center'>
+    <section className=' bg-brand-100 flex flex-col items-center justify-center'>
       <div className='rounded-full w-48 h-48 overflow-hidden'>
         <img src="/assets/mikaelakihl-cv.png" alt="CV" className="w-full h-full object-cover" />
       </div>
@@ -59,10 +59,14 @@ const SideBarCV = () => {
       </div>
       <div>
         <h2>Contact</h2>
-        <div>
+        <div className='bg-brand-50'>
           <div className='flex items-center gap-2'>
             <CiMail />
            <a href="mailto:mikaela.kihl@medieinstitutet.se">mikaela.kihl@medieinstitutet.se</a> 
+          </div>
+          <div className='flex items-center gap-2'>
+            <CiMail />
+           <a href="mailto:mikaela.kihl@outlook.com">mikaela.kihl@outlook.com</a> 
           </div>
           <div className='flex items-center gap-2'>
             <FaGithub />
@@ -77,10 +81,12 @@ const SideBarCV = () => {
           <a href="tel:070-857-0746">070-857-0746</a>
         </div>
         </div>
-        <div>
+        <div className='flex flex-col items-center gap-2'>
           <h2>Languages</h2>
+          <div className='flex items-center gap-2'>
           <p>swedish</p>
           <p>english</p>
+          </div>
         </div>
         <div>
           <h2>Tech</h2>
