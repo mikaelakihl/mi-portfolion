@@ -1,7 +1,7 @@
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import './App.css'
-import { FaGithub, FaLinkedin, FaPhone, FaPhoneAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
 
 type CVData = {
@@ -42,12 +42,28 @@ const CV = () => {
   return (
     <>
     <SideBarCV/>
-    <div className='bg-brand-100'>
-     <img src="/assets/cloud.png" alt="cloud" className="w-full h-full" /> 
-    </div>
+    <Cloud/>
     <MainCV/>
     </>
   )
+}
+
+const Cloud = () => {
+  return (
+    <>
+    
+    <div className='bg-brand-100 relative h-full'>
+      <div className='absolute inset-3 flex items-center gap-2'>
+        <img src="/assets/art/flysland.png" alt="floating island" className="w-full h-full object-contain" />
+        <img src="/assets/art/no_one_is_captain_but_you.png" alt="floating island" className="w-full h-full object-contain" />
+        <img src="/assets/art/djungle_2.png" alt="floating island" className="w-full h-full object-contain" />
+        <img src="/assets/art/caravan_dolphin.png" alt="floating island" className="w-full h-full object-contain" />
+      </div>
+      <img src="/assets/cloud.png" alt="cloud" className="w-full h-full relative z-10" /> 
+    </div>
+    </>
+  )
+  
 }
 
 const SideBarCV = () => {
