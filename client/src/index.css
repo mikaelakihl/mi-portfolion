@@ -22,8 +22,14 @@ body {
   h2 {
     @apply text-xl md:text-2xl lg:text-3xl font-bold;
   }
+
+  h1 {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold;
   
   p {
     @apply text-base md:text-lg;
   }
 }
+
+}
+  
