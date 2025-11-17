@@ -4,11 +4,10 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  background-color: var(--color-brand-100);
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -25,12 +24,11 @@ body {
 
   h1 {
     @apply text-xl md:text-2xl lg:text-3xl font-bold;
+  }
   
   p {
     @apply text-base md:text-lg;
   }
-}
-
 }
 
 @theme {

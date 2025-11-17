@@ -27,11 +27,11 @@ type CVData = {
 const Layout = () => {
   return (
     <div className='App'>
-      <nav>
+      <nav className='max-w-7xl mx-auto px-4 md:px-8'>
         <Link to="/cv">CV</Link>
         <Link to="/projects">Projects</Link>
       </nav>
-      <main>
+      <main className='max-w-7xl mx-auto px-4 md:px-8'>
         <Outlet />
       </main>
     </div>
@@ -39,14 +39,23 @@ const Layout = () => {
 }
 
 const CV = () => {
+
+
   return (
-    <>
-    <SideBarCV/>
-    <Cloud/>
-    <MainCV/>
-    </>
+    <div className='flex md:flex-row flex-col'>
+      <SideBarCV/>
+      <div className='flex flex-col w-full' >
+        <div className='flex-1'>
+          <Cloud />
+        </div>
+        <div className='flex-1'>
+          <MainCV />
+        </div>
+      </div>
+    </div>
   )
 }
+
 
 const Cloud = () => {
   return (
@@ -68,7 +77,7 @@ const Cloud = () => {
 
 const SideBarCV = () => {
   return (
-    <section className=' bg-brand-100 flex flex-col items-center justify-center'>
+    <section className=' bg-brand-100 flex flex-col items-center justify-center w-full md:w-1/3'>
       <div className='rounded-full w-48 h-48 overflow-hidden border-4 border-brand-200'>
         <img src="/assets/mikaelakihl-cv.png" alt="CV" className="w-full h-full object-cover" />
       </div>
@@ -147,17 +156,17 @@ const MainCV = () => {
   if (!cvData) return <div>No data available</div>;
 
   return (
-    <section>
-      <div className='bg-green-300'>
+    <section className='flex flex-col bg-white gap-4 w-full px-4 text-left md:p-20'>
+      <div className='flex flex-col gap-4 w-full mt-4' >
         <p>My career started when I was 16 and during these years I've gained a lot of skills, socially and practically. Five words to describe myself, <strong>open, loyal, responsible, inventive & adaptable.</strong></p>
         <p>I enjoy working in a team but I'm also very independent. After five years in customer support I'm ready for new challenges in Front End Development.</p>
       </div>
-      <div className='bg-blue-300'>
-        <h2>Education & Internship</h2>
-        <ul>
+      <div className='flex flex-col gap-4'>
+        <h2 className='text-left'>Education & Internship</h2>
+        <ul className='flex flex-col gap-4'>
           {cvData.education.map((educationEntry) => (
             <li key={educationEntry.id}>
-              <h3>
+              <h3 className='font-bold'>
                 {educationEntry.startDate} - {educationEntry.endDate}: {educationEntry.organization}, {educationEntry.location}
               </h3>
               <p>{educationEntry.description}</p>
@@ -165,12 +174,12 @@ const MainCV = () => {
           ))}
         </ul>
       </div>
-      <div className='bg-red-300'>
-        <h2>Work Experience</h2>
-        <ul>
+      <div className='flex flex-col gap-4'>
+        <h2 className='text-left'>Work Experience</h2>
+        <ul className='flex flex-col gap-4'>
           {cvData.workExperience.map((workEntry) => (
             <li key={workEntry.id}>
-              <h3>
+              <h3 className='font-bold'>
                 {workEntry.startDate} - {workEntry.endDate}: {workEntry.company}, {workEntry.location}
               </h3>
               <p>{workEntry.description}</p>
