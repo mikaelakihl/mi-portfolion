@@ -62,13 +62,13 @@ const Cloud = () => {
     <>
     
     <div className='bg-brand-100 relative h-full'>
-      <div className='absolute inset-3 flex items-center gap-2 md:-translate-y-12'>
-        <img src="/assets/art/flysland.png" alt="floating island" className="w-full h-full object-contain" />
-        <img src="/assets/art/no_one_is_captain_but_you.png" alt="floating island" className="w-full h-full object-contain" />
-        <img src="/assets/art/djungle_2.png" alt="floating island" className="w-full h-full object-contain" />
-        <img src="/assets/art/caravan_dolphin.png" alt="floating island" className="w-full h-full object-contain" />
+      <div className='absolute inset-3 flex items-center gap-2 -translate-y-[10%]'>
+        <img src="/assets/art/flysland.png" alt="floating island" className="w-full h-full object-contain -rotate-20 mt-[5%] mx-[2%] translate-x-[20%] md:translate-x-[9%]" />
+        <img src="/assets/art/no_one_is_captain_but_you.png" alt="floating island" className="w-full h-full mb-10 object-contain -rotate-6 -translate-x-[8%]" />
+        <img src="/assets/art/djungle_2.png" alt="floating island" className="w-full h-full object-contain rotate-6 mb-[12%] -translate-x-[20%]" />
+        <img src="/assets/art/caravan_dolphin.png" alt="floating island" className="w-full h-full object-contain rotate-15 mt-[5%] mx-[-4%] -translate-x-[25%] md:-translate-x-[20%]" />
       </div>
-      <img src="/assets/cloud.png" alt="cloud" className="w-full h-full relative z-10" /> 
+      <img src="/assets/cloud.png" alt="cloud" className="w-full h-full relative z-20" /> 
     </div>
     </>
   )
@@ -157,7 +157,7 @@ const MainCV = () => {
   if (!cvData) return <div>No data available</div>;
 
   return (
-    <section className='flex flex-col bg-white gap-4 w-full px-4 text-left md:p-20'>
+    <section className='flex flex-col bg-white gap-4 w-full px-4 text-left md:p-20 relative z-10'>
       <div className='flex flex-col gap-4 w-full mt-4' >
         <p>My career started when I was 16 and during these years I've gained a lot of skills, socially and practically. Five words to describe myself, <strong>open, loyal, responsible, inventive & adaptable.</strong></p>
         <p>I enjoy working in a team but I'm also very independent. After five years in customer support I'm ready for new challenges in Front End Development.</p>
