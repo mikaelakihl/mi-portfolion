@@ -1,0 +1,14 @@
+{
+  "name": "portfolion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ]
+}
+
