@@ -31,7 +31,7 @@ const Layout = () => {
         <Link to="/cv">CV</Link>
         <Link to="/projects">Projects</Link>
       </nav>
-      <main className='max-w-7xl mx-auto px-4 md:px-8'>
+      <main className='max-w-7xl mx-auto px-4 md:px-8 bg-brand-100'>
         <Outlet />
       </main>
     </div>
@@ -87,25 +87,25 @@ const SideBarCV = () => {
       </div>
       <div className='flex flex-col gap-4'>
         
-        <div className='bg-brand-50 m-0'>
+        <div className=' m-0 p-4 rounded-md text-black'>
           <h2 className='uppercase text-black'>Contact</h2>
-          <div className='flex items-center gap-2 text-black'>
+          <div className='flex items-center gap-2'>
             <CiMail />
            <a href="mailto:mikaela.kihl@medieinstitutet.se">mikaela.kihl@medieinstitutet.se</a> 
           </div>
-          <div className='flex items-center gap-2 text-black'>
+          <div className='flex items-center gap-2'>
             <CiMail />
            <a href="mailto:mikaela.kihl@outlook.com">mikaela.kihl@outlook.com</a> 
           </div>
-          <div className='flex items-center gap-2 text-black'>
+          <div className='flex items-center gap-2 '>
             <FaGithub />
             <a href="https://github.com/mikaelakihl">GitHub</a> 
           </div>
-          <div className='flex items-center gap-2 text-black'>
+          <div className='flex items-center gap-2 '>
             <FaLinkedin/>
             <a href="https://www.linkedin.com/in/mikaela-kihl-4b1751200/">LinkedIn</a>
           </div>
-          <div className='flex items-center gap-2 text-black'>
+          <div className='flex items-center gap-2 '>
           <FaPhoneAlt/>
           <a href="tel:070-857-0746">070-857-0746</a>
         </div>
