@@ -61,7 +61,7 @@ const Cloud = () => {
   return (
     <>
     
-    <div className='bg-brand-100 relative h-full'>
+    <div className=' relative h-full'>
       <div className='absolute inset-3 flex items-center gap-2 -translate-y-[10%]'>
         <img src="/assets/art/flysland.png" alt="floating island" className="w-full h-full object-contain -rotate-20 mt-[5%] mx-[2%] translate-x-[20%] md:translate-x-[9%] filter-[drop-shadow(0_0_1px_rgba(0,0,0,0.3))_drop-shadow(0_4px_6px_rgba(0,0,0,0.3))]" />
         <img src="/assets/art/no_one_is_captain_but_you.png" alt="floating island" className="w-full h-full mb-10 object-contain -rotate-6 -translate-x-[8%] filter-[drop-shadow(0_0_1px_rgba(0,0,0,0.3))_drop-shadow(0_4px_6px_rgba(0,0,0,0.3))]" />
@@ -77,18 +77,18 @@ const Cloud = () => {
 
 const SideBarCV = () => {
   return (
-    <section className=' bg-brand-100 flex flex-col items-center justify-center w-full md:w-1/3 text-white'>
+    <section className='sidebar-cv  flex flex-col items-center justify-center w-full md:w-1/3 text-white'>
       <div className='rounded-full w-48 h-48 overflow-hidden border-4 border-brand-200'>
         <img src="/assets/mikaelakihl-cv.png" alt="CV" className="w-full h-full object-cover" />
       </div>
       <div>
-        <h1 className='font-bold'>Mikaela Kihl</h1>
+        <h1 className='uppercase'>Mikaela Kihl</h1>
         <p>Frontend Developer</p>
       </div>
       <div>
         
-        <div className='bg-brand-50 '>
-        <h2 className='uppercase text-black'>Contact</h2>
+        <div className='bg-brand-100 m-0'>
+          <h2 className='uppercase text-black'>Contact</h2>
           <div className='flex items-center gap-2 text-black'>
             <CiMail />
            <a href="mailto:mikaela.kihl@medieinstitutet.se">mikaela.kihl@medieinstitutet.se</a> 
@@ -105,7 +105,7 @@ const SideBarCV = () => {
             <FaLinkedin/>
             <a href="https://www.linkedin.com/in/mikaela-kihl-4b1751200/">LinkedIn</a>
           </div>
-        <div className='flex items-center gap-2 text-black'>
+          <div className='flex items-center gap-2 text-black'>
           <FaPhoneAlt/>
           <a href="tel:070-857-0746">070-857-0746</a>
         </div>
