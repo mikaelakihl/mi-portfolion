@@ -85,30 +85,32 @@ const SideBarCV = () => {
         <h1 className='uppercase'>Mikaela Kihl</h1>
         <p>Frontend Developer</p>
       </div>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-4 w-full max-w-xs px-4'>
         
-        <div className=' m-0 p-4 rounded-md text-black'>
-          <h2 className='uppercase text-black'>Contact</h2>
-          <div className='flex items-center gap-2'>
-            <CiMail />
-           <a href="mailto:mikaela.kihl@medieinstitutet.se">mikaela.kihl@medieinstitutet.se</a> 
+        <div className='bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white'>
+          <h2 className='uppercase text-white font-bold mb-4 tracking-wider text-center'>Contact</h2>
+          <div className='flex flex-col gap-3 text-sm'>
+            <div className='flex items-center gap-3 hover:text-brand-300 transition-colors'>
+              <CiMail className="text-lg shrink-0"/>
+              <a href="mailto:mikaela.kihl@medieinstitutet.se" className="truncate">mikaela.kihl@medieinstitutet.se</a> 
+            </div>
+            <div className='flex items-center gap-3 hover:text-brand-300 transition-colors'>
+              <CiMail className="text-lg shrink-0"/>
+              <a href="mailto:mikaela.kihl@outlook.com" className="truncate">mikaela.kihl@outlook.com</a> 
+            </div>
+            <div className='flex items-center gap-3 hover:text-brand-300 transition-colors'>
+              <FaGithub className="text-lg shrink-0"/>
+              <a href="https://github.com/mikaelakihl">GitHub</a> 
+            </div>
+            <div className='flex items-center gap-3 hover:text-brand-300 transition-colors'>
+              <FaLinkedin className="text-lg shrink-0"/>
+              <a href="https://www.linkedin.com/in/mikaela-kihl-4b1751200/">LinkedIn</a>
+            </div>
+            <div className='flex items-center gap-3 hover:text-brand-300 transition-colors'>
+              <FaPhoneAlt className="text-sm shrink-0"/>
+              <a href="tel:070-857-0746">070-857-0746</a>
+            </div>
           </div>
-          <div className='flex items-center gap-2'>
-            <CiMail />
-           <a href="mailto:mikaela.kihl@outlook.com">mikaela.kihl@outlook.com</a> 
-          </div>
-          <div className='flex items-center gap-2 '>
-            <FaGithub />
-            <a href="https://github.com/mikaelakihl">GitHub</a> 
-          </div>
-          <div className='flex items-center gap-2 '>
-            <FaLinkedin/>
-            <a href="https://www.linkedin.com/in/mikaela-kihl-4b1751200/">LinkedIn</a>
-          </div>
-          <div className='flex items-center gap-2 '>
-          <FaPhoneAlt/>
-          <a href="tel:070-857-0746">070-857-0746</a>
-        </div>
         </div>
         <div className='flex flex-col items-center gap-2 '>
           <h2 className='uppercase'>Languages</h2>
