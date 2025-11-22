@@ -77,63 +77,64 @@ const Cloud = () => {
 
 const SideBarCV = () => {
   return (
-    <section className=' bg-brand-100 flex flex-col items-center justify-center w-full md:w-1/3'>
+    <section className=' bg-brand-100 flex flex-col items-center justify-center w-full md:w-1/3 text-white'>
       <div className='rounded-full w-48 h-48 overflow-hidden border-4 border-brand-200'>
         <img src="/assets/mikaelakihl-cv.png" alt="CV" className="w-full h-full object-cover" />
       </div>
       <div>
-        <h1 className='text-xl font-bold'>Mikaela Kihl</h1>
+        <h1 className='font-bold'>Mikaela Kihl</h1>
         <p>Frontend Developer</p>
       </div>
       <div>
-        <h2>Contact</h2>
-        <div className='bg-brand-50'>
-          <div className='flex items-center gap-2'>
+        
+        <div className='bg-brand-50 '>
+        <h2 className='uppercase text-black'>Contact</h2>
+          <div className='flex items-center gap-2 text-black'>
             <CiMail />
            <a href="mailto:mikaela.kihl@medieinstitutet.se">mikaela.kihl@medieinstitutet.se</a> 
           </div>
-          <div className='flex items-center gap-2'>
+          <div className='flex items-center gap-2 text-black'>
             <CiMail />
            <a href="mailto:mikaela.kihl@outlook.com">mikaela.kihl@outlook.com</a> 
           </div>
-          <div className='flex items-center gap-2'>
+          <div className='flex items-center gap-2 text-black'>
             <FaGithub />
             <a href="https://github.com/mikaelakihl">GitHub</a> 
           </div>
-          <div className='flex items-center gap-2'>
+          <div className='flex items-center gap-2 text-black'>
             <FaLinkedin/>
             <a href="https://www.linkedin.com/in/mikaela-kihl-4b1751200/">LinkedIn</a>
           </div>
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-2 text-black'>
           <FaPhoneAlt/>
           <a href="tel:070-857-0746">070-857-0746</a>
         </div>
         </div>
-        <div className='flex flex-col items-center gap-2'>
-          <h2>Languages</h2>
+        <div className='flex flex-col items-center gap-2 '>
+          <h2 className='uppercase'>Languages</h2>
           <div className='flex items-center gap-2'>
           <p>swedish</p>
           <p>english</p>
           </div>
         </div>
         <div>
-          <h2>Tech</h2>
+          <h2 className='uppercase'>Tech</h2>
           <p>Javascript</p>
 
         </div>
         <div>
-          <h2>Strengths</h2>
+          <h2 className='uppercase'>Strengths</h2>
           <p>Creative</p>
           <p>Adaptable</p>
           <p>Easygoing</p>
           <p>Supportive</p>
         </div>
         <div>
-          <h2>Areas to growth</h2>
+          <h2 className='uppercase'>Areas to growth</h2>
           <p>Reading lengthy texts</p>
           <p>Presentation skills</p>
         </div>
-        <p>References available upon request</p>
+        <p className='text-black'>References available upon request</p>
       </div>
     </section>
   )
