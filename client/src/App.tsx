@@ -77,7 +77,7 @@ const Cloud = () => {
 
 const SideBarCV = () => {
   return (
-    <section className='sidebar-cv  flex flex-col items-center justify-center w-full md:w-1/3 text-white'>
+    <section className='sidebar-cv  flex flex-col items-center justify-center w-full md:w-1/3 text-white gap-8 md:mx-5'>
       <div className='rounded-full w-48 h-48 overflow-hidden border-4 border-brand-200'>
         <img src="/assets/mikaelakihl-cv.png" alt="CV" className="w-full h-full object-cover" />
       </div>
@@ -85,9 +85,9 @@ const SideBarCV = () => {
         <h1 className='uppercase'>Mikaela Kihl</h1>
         <p>Frontend Developer</p>
       </div>
-      <div>
+      <div className='flex flex-col gap-4'>
         
-        <div className='bg-brand-100 m-0'>
+        <div className='bg-brand-50 m-0'>
           <h2 className='uppercase text-black'>Contact</h2>
           <div className='flex items-center gap-2 text-black'>
             <CiMail />
