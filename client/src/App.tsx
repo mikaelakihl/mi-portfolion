@@ -45,7 +45,7 @@ const CV = () => {
     <div className='flex md:flex-row flex-col'>
       <SideBarCV/>
       <div className='flex flex-col w-full' >
-        <div className='flex-1'>
+        <div className='flex-1 md:mt-20'>
           <Cloud />
         </div>
         <div className='flex-1'>
@@ -62,7 +62,7 @@ const Cloud = () => {
     <>
     
     <div className='bg-brand-100 relative h-full'>
-      <div className='absolute inset-3 flex items-center gap-2'>
+      <div className='absolute inset-3 flex items-center gap-2 md:-translate-y-12'>
         <img src="/assets/art/flysland.png" alt="floating island" className="w-full h-full object-contain" />
         <img src="/assets/art/no_one_is_captain_but_you.png" alt="floating island" className="w-full h-full object-contain" />
         <img src="/assets/art/djungle_2.png" alt="floating island" className="w-full h-full object-contain" />
