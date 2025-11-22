@@ -144,7 +144,7 @@ const MainCV = () => {
   const { data: cvData, isLoading, error } = useQuery<CVData>({
     queryKey: ['cv'],
     queryFn: async () => {
-      const response = await fetch('https://mi-portfolion-server.vercel.app/api/cv');
+      const response = await fetch('http://localhost:3001/api/cv');
       if (!response.ok) {
         throw new Error('Failed to fetch CV data');
       }
