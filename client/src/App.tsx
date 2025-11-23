@@ -169,9 +169,9 @@ const SideBarCV = () => {
           <p>english</p>
           </div>
         </div>
-        <div>
+        <div className='bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white'>
           <h2 className='uppercase'>Tech</h2>
-          <p>Javascript</p>
+          <p >View here</p>
 
         </div>
         <div>
