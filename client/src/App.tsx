@@ -1,7 +1,8 @@
-import { Routes, Route, Outlet, Link } from 'react-router-dom'
-import { useQuery } from '@tanstack/react-query'
-import './App.css'
-import { FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
+import { useState } from 'react';
+import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import './App.css';
+import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
 
 type CVData = {
@@ -24,13 +25,46 @@ type CVData = {
   }>;
 };
 
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <header className='bg-brand-200 h-[100px] relative z-50'>
+      <nav className='max-w-7xl mx-auto px-4 md:px-8 h-full flex items-center justify-between'>
+        
+        <div className='text-white font-bold text-xl md:hidden'>Menu</div>
+
+        {/* Desktop Menu */}
+        <div className='hidden md:flex w-full justify-center gap-8'>
+          <Link to="/cv" className='text-white hover:text-brand-400 transition-colors'>CV</Link>
+          <Link to="/projects" className='text-white hover:text-brand-400 transition-colors'>Projects</Link>
+        </div>
+
+        {/* Hamburger Icon */}
+        <div className='md:hidden text-white cursor-pointer' onClick={toggleMenu}>
+          {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
+        </div>
+      </nav>
+
+      {/* Mobile Menu Dropdown */}
+      {isOpen && (
+        <div className='absolute top-[100px] left-0 w-full bg-brand-200 flex flex-col items-center gap-6 py-8 shadow-lg md:hidden'>
+          <Link to="/cv" className='text-white text-xl hover:text-brand-400 transition-colors' onClick={toggleMenu}>CV</Link>
+          <Link to="/projects" className='text-white text-xl hover:text-brand-400 transition-colors' onClick={toggleMenu}>Projects</Link>
+        </div>
+      )}
+    </header>
+  );
+}
+
 const Layout = () => {
   return (
     <div className='App'>
-      <nav className='max-w-7xl mx-auto px-4 md:px-8'>
-        <Link to="/cv">CV</Link>
-        <Link to="/projects">Projects</Link>
-      </nav>
+      <Header />
       <main className='max-w-7xl mx-auto px-4 md:px-8 bg-brand-100'>
         <Outlet />
       </main>
