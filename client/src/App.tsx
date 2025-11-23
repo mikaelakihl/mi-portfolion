@@ -5,6 +5,22 @@ import './App.css';
 import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
 
+interface IProject {
+  id: number;
+  title: string;
+  img?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+  description: string;
+  tech: string[];
+  demo: string;
+  github: string;
+  created_at: string;
+}
+
 type CVData = {
   education: Array<{
     id: string;
@@ -234,7 +250,39 @@ const MainCV = () => {
 }
 
 const Projects = () => {
-  return <div>Projects</div>
+  const { data: projectData, isLoading, error } = useQuery<IProject[]>({
+    queryKey: ['projects'],
+    queryFn: async () => {
+      const response = await fetch('http://localhost:3001/api/projects');
+      if (!response.ok) {
+        throw new Error('Failed to fetch CV data');
+      }
+      return response.json();
+    },
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  if (!projectData) return <div>No data available</div>;
+
+  return (
+    <section className='max-w-7xl mx-auto p-4'>
+      <ul className='grid md:grid-cols-2 gap-8'>
+         {projectData.map((project) => (
+        <li key={project.id}>
+          <div className='flex flex-col gap-4 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white h-full'>
+            <img className='border border-2 border-white/20 rounded-xl' src={project.img?.src} alt={project.img?.alt} width={project.img?.width} height={project.img?.height} />
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <p>{project.tech.join(', ')}</p>
+            <a href={project.demo} target="_blank" rel="noopener noreferrer">Demo</a>
+            <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </li>
+         ))}
+      </ul>
+    </section>
+  )
 }
 
 const App = () => {

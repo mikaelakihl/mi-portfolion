@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { cvData } from '../data/cvData.js';
+import { projectData } from '../data/projectData.js';
 
 const router = Router();
 
@@ -11,6 +12,11 @@ router.get('/', (req, res) => {
 // CV data route
 router.get('/cv', (req, res) => {
   res.json(cvData);
+});
+
+// Project data route
+router.get('/projects', (req, res) => {
+  res.json(projectData);
 });
 
 export default router;
