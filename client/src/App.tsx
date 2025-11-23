@@ -170,7 +170,7 @@ const SideBarCV = () => {
           <p>Reading lengthy texts</p>
           <p>Presentation skills</p>
         </div>
-        <p className='text-black'>References available upon request</p>
+        <p className='text-black font-script text-2xl'>References available upon request</p>
       </div>
     </section>
   )
