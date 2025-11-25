@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import './App.css';
-import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaFigma, FaSass, FaDatabase, FaTrello, FaSlack, FaVuejs, FaICursor } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaFigma, FaSass, FaDatabase, FaVuejs } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
-import { SiTypescript, SiVite, SiTailwindcss, SiExpress, SiMongodb, SiPostman, SiPrettier, SiEslint, SiPnpm, SiAdobephotoshop, SiVitest, SiCypress } from 'react-icons/si';
+import { SiTypescript, SiVite, SiTailwindcss, SiExpress, SiMongodb, SiPrettier, SiEslint, SiPnpm, SiAdobephotoshop, SiVitest, SiCypress } from 'react-icons/si';
 import { BsCursorFill } from 'react-icons/bs';
 
 interface IProject {
@@ -339,22 +339,27 @@ const Projects = () => {
          {projectData.map((project) => (
         <li key={project.id}>
           <div className='flex flex-col gap-4 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white h-full'>
+          <h3 className='  font-normal'>{project.title}</h3>
             <img className='border border-2 border-white/20 rounded-xl' src={project.img?.src} alt={project.img?.alt} width={project.img?.width} height={project.img?.height} />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            
+            <p className='text-left'>{project.description}</p>
+            <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6'></div>
             <div className='flex flex-wrap gap-2'>
               {project.tech.map((techName) => {
                 const tech = techStackList.find((t) => t.name.toLowerCase() === techName.toLowerCase());
                 return (
-                  <div key={techName} className='bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white flex items-center gap-2'>
+                  <div key={techName} className={(tech ? tech.bgColor : 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white') + ' flex items-center gap-2'}>
                     {tech && <Icon icon={tech.icon} />}
                     <p>{tech ? tech.name : techName}</p>
                   </div>
                 );
               })}
             </div>
-            <a href={project.demo} target="_blank" rel="noopener noreferrer">Demo</a>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+            <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6'></div>
+            <div className='flex items-center w-full gap-2'>
+              <a className=' bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' href={project.demo}>View Demo</a>
+              <a className='bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' href={project.github}>View on GitHub</a>
+              </div>
           </div>
         </li>
          ))}
