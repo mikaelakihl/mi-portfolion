@@ -62,7 +62,7 @@ const Header = () => {
   };
 
   return (
-    <header className='bg-brand-200 h-[100px] relative z-50'>
+    <header className='bg-brand-200 h-[100px] relative z-50 mb-5'>
       <nav className='max-w-7xl mx-auto px-4 md:px-8 h-full flex items-center justify-between'>
         
         <div className='text-white font-bold text-xl md:hidden'>Menu</div>
@@ -334,8 +334,8 @@ const Projects = () => {
   return (
     <>
       <div className='max-w-7xl mx-auto p-4'>
-      <h2 className='text-center font-normal mb-8 text-white uppercase tracking-wider'>Tech Stack</h2>
-      <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6'></div>
+      <h2 className='text-center font-normal text-white uppercase tracking-wider'>Tech Stack</h2>
+      <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6 '></div>
       <ul className='flex flex-wrap gap-4 justify-center'>
       {techStackList.map((tech) => (
         <li key={tech.id}>
@@ -405,8 +405,9 @@ const Art = () => {
   if (!artData) return <div>No data available</div>;
 
   return (
-    <>
-    <h2 className='text-center font-normal my-8 text-white uppercase tracking-wider'>Art</h2>
+    <>  <div className='max-w-7xl mx-auto p-4'>
+    <h2 className='text-center font-normal text-white uppercase tracking-wider'>Art</h2>
+   
     <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6'></div>
     <section className='max-w-7xl mx-auto p-4'>
       <ul className='grid md:grid-cols-4 gap-8'>
@@ -425,8 +426,8 @@ const Art = () => {
           </li>
         ))}
       </ul>
-    </section>
-    </>
+    </section></div>
+    </> 
   )
 }
 
@@ -474,7 +475,7 @@ const ArtDetail = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen p-4 relative'>
+    <div className='flex flex-col items-center justify-center min-h-screen p-4 relative '>
       <h2 className='font-normal text-center my-8 text-white uppercase tracking-wider'>{art.name}</h2>
       
       <div className="flex items-center justify-center w-full gap-4">
@@ -510,7 +511,9 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!pathname.startsWith('/art/')) {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   return null;
