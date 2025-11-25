@@ -334,6 +334,7 @@ const Projects = () => {
       </ul>
     </div>
     <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6'></div>
+    <h2 className='text-center font-normal mb-8 text-white uppercase tracking-wider'>My projects</h2>
     <section className='max-w-7xl mx-auto p-4'>
       <ul className='grid md:grid-cols-2 gap-8'>
          {projectData.map((project) => (
