@@ -335,6 +335,7 @@ const Projects = () => {
     <>
       <div className='max-w-7xl mx-auto p-4'>
       <h2 className='text-center font-normal mb-8 text-white uppercase tracking-wider'>Tech Stack</h2>
+      <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6'></div>
       <ul className='flex flex-wrap gap-4 justify-center'>
       {techStackList.map((tech) => (
         <li key={tech.id}>
@@ -404,20 +405,28 @@ const Art = () => {
   if (!artData) return <div>No data available</div>;
 
   return (
+    <>
+    <h2 className='text-center font-normal my-8 text-white uppercase tracking-wider'>Art</h2>
+    <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6'></div>
     <section className='max-w-7xl mx-auto p-4'>
       <ul className='grid md:grid-cols-4 gap-8'>
         {artData.map((art) => (
           <li key={art.id}>
-            <div>
-              <NavLink to={`/art/${art.id}`}>
-              <img src={art.img?.url} alt={art.img?.alt} width={art.img?.width} height={art.img?.height} />
+            <div className="flex flex-col gap-2">
+              <NavLink to={`/art/${art.id}`} className="block aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity">
+                <img 
+                  src={art.img?.url} 
+                  alt={art.img?.alt} 
+                  className="w-full h-full object-cover border border-2 border-white/20 rounded-xl"
+                />
               </NavLink>
-              <p>{art.name}</p>
+              <h3 className="text-white text-center ">{art.name}</h3>
             </div>
           </li>
         ))}
       </ul>
     </section>
+    </>
   )
 }
 
@@ -440,11 +449,11 @@ const ArtDetail = () => {
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen p-4'>
-      <h2 className='text-2xl font-bold mb-4 text-white'>{art.name}</h2>
+      <h2 className='font-normal text-center my-8 text-white uppercase tracking-wider'>{art.name}</h2>
       <img 
         src={'/' + art.img?.url} 
         alt={art.img?.alt} 
-        className='max-w-full max-h-[80vh] object-contain rounded-lg shadow-xl'
+        className='max-w-full max-h-[80vh] object-contain rounded-lg shadow-xl border border-2 border-white/20 rounded-xl'
       />
     </div>
   )
