@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Routes, Route, Outlet, Link, NavLink, useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, Outlet, Link, NavLink, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import './App.css';
 import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaFigma, FaSass, FaDatabase, FaVuejs, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -187,7 +187,7 @@ const SideBarCV = () => {
         </div>
         <div className='bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white'>
           <h2 className='uppercase'>Tech</h2>
-          <p >View here</p>
+          <NavLink to="/projects">View here</NavLink>
 
         </div>
         <div>
@@ -506,8 +506,20 @@ const ArtDetail = () => {
   )
 }
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const App = () => {
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="cv" element={<CV />} />
@@ -516,6 +528,7 @@ const App = () => {
         <Route path='art/:id' element={<ArtDetail />} />
       </Route>
     </Routes>
+    </>
   )
 }
 
