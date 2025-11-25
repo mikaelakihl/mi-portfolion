@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import './App.css';
-import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaFigma, FaSass, FaDatabase, FaTrello, FaSlack } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaFigma, FaSass, FaDatabase, FaTrello, FaSlack, FaVuejs, FaICursor } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
-import { SiTypescript, SiVite, SiTailwindcss, SiExpress, SiMongodb, SiPostman } from 'react-icons/si';
+import { SiTypescript, SiVite, SiTailwindcss, SiExpress, SiMongodb, SiPostman, SiPrettier, SiEslint, SiPnpm, SiAdobephotoshop, SiVitest, SiCypress } from 'react-icons/si';
+import { BsCursorFill } from 'react-icons/bs';
 
 interface IProject {
   id: number;
@@ -282,7 +283,7 @@ const Projects = () => {
   const iconMap: { [key: string]: React.ComponentType<{ size?: number | string }> } = {
     FaHtml5, FaCss3Alt, FaJs, SiTypescript, FaReact, SiVite, SiTailwindcss,
     FaNodeJs, SiExpress, FaGitAlt, FaGithub, FaNpm, FaFigma, FaSass,
-    FaDatabase, SiMongodb, SiPostman, FaTrello, FaSlack
+    FaDatabase, SiMongodb, SiAdobephotoshop, BsCursorFill, SiVitest, FaVuejs, SiPrettier, SiEslint, SiCypress, SiPnpm,
   };
 
   const Icon = ({ icon }: { icon: string }) => {
@@ -291,25 +292,30 @@ const Projects = () => {
   };
   
   const techStackList: ITechStack[] = [
-    { id: 1, name: 'HTML', icon: 'FaHtml5', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 2, name: 'CSS', icon: 'FaCss3Alt', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 3, name: 'JavaScript', icon: 'FaJs', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 4, name: 'TypeScript', icon: 'SiTypescript', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 5, name: 'React', icon: 'FaReact', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 6, name: 'Vite', icon: 'SiVite', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 7, name: 'Tailwind', icon: 'SiTailwindcss', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 8, name: 'Node.js', icon: 'FaNodeJs', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 9, name: 'Express', icon: 'SiExpress', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 10, name: 'Git', icon: 'FaGitAlt', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 11, name: 'GitHub', icon: 'FaGithub', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white'   },
-    { id: 12, name: 'NPM', icon: 'FaNpm', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 13, name: 'Figma', icon: 'FaFigma', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 14, name: 'Sass', icon: 'FaSass', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 15, name: 'SQL', icon: 'FaDatabase', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 16, name: 'MongoDB', icon: 'SiMongodb', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 17, name: 'Postman', icon: 'SiPostman', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 18, name: 'Trello', icon: 'FaTrello', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
-    { id: 19, name: 'Slack', icon: 'FaSlack', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' }
+    { id: 1, name: 'HTML', icon: 'FaHtml5', bgColor: 'bg-orange-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 2, name: 'CSS', icon: 'FaCss3Alt', bgColor: 'bg-indigo-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 3, name: 'JavaScript', icon: 'FaJs', bgColor: 'bg-yellow-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 4, name: 'TypeScript', icon: 'SiTypescript', bgColor: 'bg-indigo-600/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 5, name: 'React', icon: 'FaReact', bgColor: 'bg-black/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 6, name: 'Vite', icon: 'SiVite', bgColor: 'bg-purple-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 7, name: 'Tailwind', icon: 'SiTailwindcss', bgColor: 'bg-cyan-400/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 8, name: 'Node.js', icon: 'FaNodeJs', bgColor: 'bg-lime-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 9, name: 'Express', icon: 'SiExpress', bgColor: 'bg-slate-700/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 10, name: 'Vitest', icon: 'SiVitest', bgColor: 'bg-yellow-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 11, name: 'GitHub', icon: 'FaGithub', bgColor: 'bg-black/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white'   },
+    { id: 12, name: 'NPM', icon: 'FaNpm', bgColor: 'bg-red-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 13, name: 'Figma', icon: 'FaFigma', bgColor: 'bg-orange-600/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 14, name: 'Sass', icon: 'FaSass', bgColor: 'bg-pink-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 15, name: 'SQL', icon: 'FaDatabase', bgColor: 'bg-sky-600/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 16, name: 'MongoDB', icon: 'SiMongodb', bgColor: 'bg-emerald-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 17, name: 'Adobe Photoshop', icon: 'SiAdobephotoshop', bgColor: 'bg-sky-400/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 18, name: 'Cursor', icon: 'BsCursorFill', bgColor: 'bg-black/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 19, name: 'Cypress', icon: 'SiCypress', bgColor: 'bg-gray-300/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 20, name: 'Vue', icon: 'FaVuejs', bgColor: 'bg-cyan-900/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 21, name: 'Prettier', icon: 'SiPrettier', bgColor: 'bg-black/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 22, name: 'EsLint', icon: 'SiEslint', bgColor: 'bg-purple-950/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 23, name: 'Pnpm', icon: 'SiPnpm', bgColor: 'bg-stone-700/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' }
+    
   ];
 
   return (
@@ -336,7 +342,17 @@ const Projects = () => {
             <img className='border border-2 border-white/20 rounded-xl' src={project.img?.src} alt={project.img?.alt} width={project.img?.width} height={project.img?.height} />
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <p>{project.tech.join(', ')}</p>
+            <div className='flex flex-wrap gap-2'>
+              {project.tech.map((techName) => {
+                const tech = techStackList.find((t) => t.name.toLowerCase() === techName.toLowerCase());
+                return (
+                  <div key={techName} className='bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white flex items-center gap-2'>
+                    {tech && <Icon icon={tech.icon} />}
+                    <p>{tech ? tech.name : techName}</p>
+                  </div>
+                );
+              })}
+            </div>
             <a href={project.demo} target="_blank" rel="noopener noreferrer">Demo</a>
             <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
