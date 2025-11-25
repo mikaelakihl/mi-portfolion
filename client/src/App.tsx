@@ -181,7 +181,7 @@ const SideBarCV = () => {
           </div>
         </div>
         <div className='flex flex-col items-center gap-2 '>
-          <h2 className='uppercase mb-2'>Languages</h2>
+          <h2 className='uppercase tracking-wider mb-2'>Languages</h2>
           <div className='flex items-center gap-2'>
           <p>swedish</p>
           <p>english</p>
