@@ -65,7 +65,7 @@ const Header = () => {
     <header className='bg-brand-200 h-[100px] relative z-50 mb-5'>
       <nav className='max-w-7xl mx-auto px-4 md:px-8 h-full flex items-center justify-between'>
         
-        <div className='text-white font-bold text-xl md:hidden'>Menu</div>
+        <div className='text-white font-bold text-xl md:hidden'></div>
 
         {/* Desktop Menu */}
         <div className='hidden md:flex w-full justify-center gap-8'>
