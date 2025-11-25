@@ -7,10 +7,9 @@ export interface IProject {
     width: number;
     height: number;
   };
-  description: string;
+  description: string[];
   tech: string[];
   demo: string;
   github: string;
   created_at: string;
 }
-

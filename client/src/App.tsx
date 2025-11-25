@@ -16,7 +16,7 @@ interface IProject {
     width: number;
     height: number;
   };
-  description: string;
+  description: string[];
   tech: string[];
   demo: string;
   github: string;
@@ -340,10 +340,14 @@ const Projects = () => {
          {projectData.map((project) => (
         <li key={project.id}>
           <div className='flex flex-col gap-4 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white h-full'>
-          <h3 className='  font-normal'>{project.title}</h3>
+          <h3 className=' text-xl md:text-2xl lg:text-3xl font-bold font-normal'>{project.title}</h3>
             <img className='border border-2 border-white/20 rounded-xl' src={project.img?.src} alt={project.img?.alt} width={project.img?.width} height={project.img?.height} />
             
-            <p className='text-left'>{project.description}</p>
+            <div className='flex flex-col gap-2 text-left'>
+              {project.description.map((desc, index) => (
+                <p key={index}>{desc}</p>
+              ))}
+            </div>
             <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6'></div>
             <div className='flex flex-wrap gap-2'>
               {project.tech.map((techName) => {
