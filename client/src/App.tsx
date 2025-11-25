@@ -314,8 +314,8 @@ const Projects = () => {
 
   return (
     <>
-    <div className='max-w-7xl mx-auto p-4'>
-      <h2 className='text-center font-bold mb-4 text-white'>Tech Stack</h2>
+      <div className='max-w-7xl mx-auto p-4'>
+      <h2 className='text-center font-normal mb-8 text-white uppercase tracking-wider'>Tech Stack</h2>
       <ul className='flex flex-wrap gap-4 justify-center'>
       {techStackList.map((tech) => (
         <li key={tech.id}>

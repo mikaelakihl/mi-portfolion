@@ -47,6 +47,7 @@ body {
  
   /* Or define a full color palette with shades */
   --font-script: "Caveat", cursive;
+  --font-poppins: "Poppins", sans-serif;
 
   --color-brand-50: #96A294;
   --color-brand-100: #7D8C81;
