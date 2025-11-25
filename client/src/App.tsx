@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import { Routes, Route, Outlet, Link, NavLink, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import './App.css';
 import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaFigma, FaSass, FaDatabase, FaVuejs } from 'react-icons/fa';
@@ -21,6 +21,17 @@ interface IProject {
   demo: string;
   github: string;
   created_at: string;
+}
+
+interface IArt {
+  id: number;
+  name: string;
+  img: {
+    url: string;
+    width: number;
+    height: number;
+    alt: string;
+  };
 }
 
 type CVData = {
@@ -60,6 +71,7 @@ const Header = () => {
         <div className='hidden md:flex w-full justify-center gap-8'>
           <Link to="/cv" className='text-white hover:text-brand-400 transition-colors'>CV</Link>
           <Link to="/projects" className='text-white hover:text-brand-400 transition-colors'>Projects</Link>
+          <Link to="/art" className='text-white hover:text-brand-400 transition-colors'>Art</Link>
         </div>
 
         {/* Hamburger Icon */}
@@ -73,6 +85,7 @@ const Header = () => {
         <div className='absolute top-[100px] left-0 w-full bg-brand-200 flex flex-col items-center gap-6 py-8 shadow-lg md:hidden'>
           <Link to="/cv" className='text-white text-xl hover:text-brand-400 transition-colors' onClick={toggleMenu}>CV</Link>
           <Link to="/projects" className='text-white text-xl hover:text-brand-400 transition-colors' onClick={toggleMenu}>Projects</Link>
+          <Link to="/art" className='text-white text-xl hover:text-brand-400 transition-colors' onClick={toggleMenu}>Art</Link>
         </div>
       )}
     </header>
@@ -374,12 +387,77 @@ const Projects = () => {
   )
 }
 
+const Art = () => {
+  const { data: artData, isLoading, error } = useQuery<IArt[]>({
+    queryKey: ['art'],
+    queryFn: async () => {
+      const response = await fetch('http://localhost:3001/api/art');
+      if (!response.ok) {
+        throw new Error('Failed to fetch Art data');
+      }
+      return response.json();
+    },
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  if (!artData) return <div>No data available</div>;
+
+  return (
+    <section className='max-w-7xl mx-auto p-4'>
+      <ul className='grid md:grid-cols-4 gap-8'>
+        {artData.map((art) => (
+          <li key={art.id}>
+            <div>
+              <NavLink to={`/art/${art.id}`}>
+              <img src={art.img?.url} alt={art.img?.alt} width={art.img?.width} height={art.img?.height} />
+              </NavLink>
+              <p>{art.name}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+const ArtDetail = () => {
+  const { id } = useParams();
+  const { data: art, isLoading, error } = useQuery<IArt>({
+    queryKey: ['art', id],
+    queryFn: async () => {
+      const response = await fetch(`http://localhost:3001/api/art/${id}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch Art data');
+      }
+      return response.json();
+    },
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  if (!art) return <div>No art found</div>;
+
+  return (
+    <div className='flex flex-col items-center justify-center min-h-screen p-4'>
+      <h2 className='text-2xl font-bold mb-4 text-white'>{art.name}</h2>
+      <img 
+        src={'/' + art.img?.url} 
+        alt={art.img?.alt} 
+        className='max-w-full max-h-[80vh] object-contain rounded-lg shadow-xl'
+      />
+    </div>
+  )
+}
+
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="cv" element={<CV />} />
         <Route path="projects" element={<Projects />} />
+        <Route path='art' element={<Art />} />
+        <Route path='art/:id' element={<ArtDetail />} />
       </Route>
     </Routes>
   )
