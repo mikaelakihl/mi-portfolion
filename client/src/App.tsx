@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import './App.css';
-import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaFigma, FaSass, FaDatabase, FaTrello, FaSlack } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
+import { SiTypescript, SiVite, SiTailwindcss, SiExpress, SiMongodb, SiPostman } from 'react-icons/si';
 
 interface IProject {
   id: number;
@@ -168,6 +169,7 @@ const SideBarCV = () => {
           <p>swedish</p>
           <p>english</p>
           </div>
+
         </div>
         <div className='bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white'>
           <h2 className='uppercase'>Tech</h2>
@@ -191,6 +193,7 @@ const SideBarCV = () => {
     </section>
   )
 }
+
 
 const MainCV = () => {
   const { data: cvData, isLoading, error } = useQuery<CVData>({
@@ -249,6 +252,10 @@ const MainCV = () => {
   )
 }
 
+
+
+
+
 const Projects = () => {
   const { data: projectData, isLoading, error } = useQuery<IProject[]>({
     queryKey: ['projects'],
@@ -265,7 +272,62 @@ const Projects = () => {
   if (error) return <div>Error: {error.message}</div>;
   if (!projectData) return <div>No data available</div>;
 
+  interface ITechStack {
+    id: number;
+    name: string;
+    icon: string;
+    bgColor?: string;
+  }
+
+  const iconMap: { [key: string]: React.ComponentType<{ size?: number | string }> } = {
+    FaHtml5, FaCss3Alt, FaJs, SiTypescript, FaReact, SiVite, SiTailwindcss,
+    FaNodeJs, SiExpress, FaGitAlt, FaGithub, FaNpm, FaFigma, FaSass,
+    FaDatabase, SiMongodb, SiPostman, FaTrello, FaSlack
+  };
+
+  const Icon = ({ icon }: { icon: string }) => {
+    const IconComponent = iconMap[icon];
+    return IconComponent ? <IconComponent size={30} /> : null;
+  };
+  
+  const techStackList: ITechStack[] = [
+    { id: 1, name: 'HTML', icon: 'FaHtml5', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 2, name: 'CSS', icon: 'FaCss3Alt', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 3, name: 'JavaScript', icon: 'FaJs', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 4, name: 'TypeScript', icon: 'SiTypescript', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 5, name: 'React', icon: 'FaReact', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 6, name: 'Vite', icon: 'SiVite', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 7, name: 'Tailwind', icon: 'SiTailwindcss', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 8, name: 'Node.js', icon: 'FaNodeJs', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 9, name: 'Express', icon: 'SiExpress', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 10, name: 'Git', icon: 'FaGitAlt', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 11, name: 'GitHub', icon: 'FaGithub', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white'   },
+    { id: 12, name: 'NPM', icon: 'FaNpm', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 13, name: 'Figma', icon: 'FaFigma', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 14, name: 'Sass', icon: 'FaSass', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 15, name: 'SQL', icon: 'FaDatabase', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 16, name: 'MongoDB', icon: 'SiMongodb', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 17, name: 'Postman', icon: 'SiPostman', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 18, name: 'Trello', icon: 'FaTrello', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' },
+    { id: 19, name: 'Slack', icon: 'FaSlack', bgColor: 'bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white' }
+  ];
+
   return (
+    <>
+    <div className='max-w-7xl mx-auto p-4'>
+      <h2 className='text-center font-bold mb-4 text-white'>Tech Stack</h2>
+      <ul className='flex flex-wrap gap-4 justify-center'>
+      {techStackList.map((tech) => (
+        <li key={tech.id}>
+          <div className={tech.bgColor + ' flex items-center gap-2'}>
+            <Icon icon={tech.icon} />
+            <p>{tech.name}</p>
+            </div>
+          </li>
+      ))}
+      </ul>
+    </div>
+    <div className='bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6'></div>
     <section className='max-w-7xl mx-auto p-4'>
       <ul className='grid md:grid-cols-2 gap-8'>
          {projectData.map((project) => (
@@ -282,6 +344,7 @@ const Projects = () => {
          ))}
       </ul>
     </section>
+    </>
   )
 }
 
@@ -297,3 +360,4 @@ const App = () => {
 }
 
 export default App
+
