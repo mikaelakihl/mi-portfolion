@@ -69,7 +69,7 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <div className='hidden md:flex w-full justify-center gap-8'>
-          <Link to="/cv" className='text-white hover:text-brand-400 transition-colors'>CV</Link>
+          <Link to="/" className='text-white hover:text-brand-400 transition-colors'>CV</Link>
           <Link to="/projects" className='text-white hover:text-brand-400 transition-colors'>Projects</Link>
           <Link to="/art" className='text-white hover:text-brand-400 transition-colors'>Art</Link>
         </div>
@@ -83,7 +83,7 @@ const Header = () => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className='absolute top-[100px] left-0 w-full bg-brand-200 flex flex-col items-center gap-6 py-8 shadow-lg md:hidden'>
-          <Link to="/cv" className='text-white text-xl hover:text-brand-400 transition-colors' onClick={toggleMenu}>CV</Link>
+          <Link to="/" className='text-white text-xl hover:text-brand-400 transition-colors' onClick={toggleMenu}>CV</Link>
           <Link to="/projects" className='text-white text-xl hover:text-brand-400 transition-colors' onClick={toggleMenu}>Projects</Link>
           <Link to="/art" className='text-white text-xl hover:text-brand-400 transition-colors' onClick={toggleMenu}>Art</Link>
         </div>
@@ -531,7 +531,7 @@ const App = () => {
     <ScrollToTop />
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="cv" element={<CV />} />
+        <Route path="/" element={<CV />} />
         <Route path="projects" element={<Projects />} />
         <Route path='art' element={<Art />} />
         <Route path='art/:id' element={<ArtDetail />} />
