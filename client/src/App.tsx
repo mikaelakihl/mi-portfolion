@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Routes, Route, Outlet, Link, NavLink, useParams } from 'react-router-dom';
+import { Routes, Route, Outlet, Link, NavLink, useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import './App.css';
-import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaFigma, FaSass, FaDatabase, FaVuejs } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPhoneAlt, FaBars, FaTimes, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaFigma, FaSass, FaDatabase, FaVuejs, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
 import { SiTypescript, SiVite, SiTailwindcss, SiExpress, SiMongodb, SiPrettier, SiEslint, SiPnpm, SiAdobephotoshop, SiVitest, SiCypress } from 'react-icons/si';
 import { BsCursorFill } from 'react-icons/bs';
@@ -432,6 +432,20 @@ const Art = () => {
 
 const ArtDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const currentId = Number(id);
+
+  const { data: artData, isLoading: isListLoading } = useQuery<IArt[]>({
+    queryKey: ['art'],
+    queryFn: async () => {
+      const response = await fetch('http://localhost:3001/api/art');
+      if (!response.ok) {
+        throw new Error('Failed to fetch Art data');
+      }
+      return response.json();
+    },
+  });
+
   const { data: art, isLoading, error } = useQuery<IArt>({
     queryKey: ['art', id],
     queryFn: async () => {
@@ -443,18 +457,51 @@ const ArtDetail = () => {
     },
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading || isListLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
-  if (!art) return <div>No art found</div>;
+  if (!art || !artData) return <div>No art found</div>;
+
+  const currentIndex = artData.findIndex(item => item.id === currentId);
+  const prevArt = artData[currentIndex - 1];
+  const nextArt = artData[currentIndex + 1];
+
+  const handlePrev = () => {
+    if (prevArt) navigate(`/art/${prevArt.id}`);
+  };
+
+  const handleNext = () => {
+    if (nextArt) navigate(`/art/${nextArt.id}`);
+  };
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen p-4'>
+    <div className='flex flex-col items-center justify-center min-h-screen p-4 relative'>
       <h2 className='font-normal text-center my-8 text-white uppercase tracking-wider'>{art.name}</h2>
-      <img 
-        src={'/' + art.img?.url} 
-        alt={art.img?.alt} 
-        className='max-w-full max-h-[80vh] object-contain rounded-lg shadow-xl border border-2 border-white/20 rounded-xl'
-      />
+      
+      <div className="flex items-center justify-center w-full gap-4">
+        {/* Previous Button */}
+        <button 
+          onClick={handlePrev} 
+          disabled={!prevArt}
+          className={`p-2 rounded-full bg-white/10 backdrop-blur-md text-white transition-opacity ${!prevArt ? 'opacity-30 cursor-not-allowed' : 'hover:bg-white/20'}`}
+        >
+          <FaChevronLeft size={30} />
+        </button>
+
+        <img 
+          src={'/' + art.img?.url} 
+          alt={art.img?.alt} 
+          className='max-w-[80vw] max-h-[80vh] object-contain rounded-lg shadow-xl border border-2 border-white/20 rounded-xl'
+        />
+
+        {/* Next Button */}
+        <button 
+          onClick={handleNext} 
+          disabled={!nextArt}
+          className={`p-2 rounded-full bg-white/10 backdrop-blur-md text-white transition-opacity ${!nextArt ? 'opacity-30 cursor-not-allowed' : 'hover:bg-white/20'}`}
+        >
+          <FaChevronRight size={30} />
+        </button>
+      </div>
     </div>
   )
 }
