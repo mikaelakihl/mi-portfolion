@@ -228,7 +228,7 @@ const MainCV = () => {
   if (!cvData) return <div>No data available</div>;
 
   return (
-    <section className='flex flex-col bg-white gap-4 w-full px-4 pb-10 pt-10 text-left md:p-20 relative z-10'>
+    <section className='flex flex-col bg-white gap-4 w-full px-4 pb-10 pt-10 text-left md:p-20 relative z-30 -mt-2 md:-mt-10'>
       <div className='flex flex-col gap-4 w-full mt-4' >
         <p>My career started when I was 16, but my interest in design and development began much earlier. As a teenager, I spent countless hours customizing blogs and experimenting with HTML, CSS, and Photoshop — a curiosity that never really left.</p>
         <p>Five words to describe me: <strong>open, loyal, responsible, inventive & adaptable.</strong> I enjoy the energy of teamwork but work just as well on my own.</p>
