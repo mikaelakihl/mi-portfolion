@@ -150,7 +150,7 @@ const SideBarCV = () => {
         <img src="/assets/mikaelakihl-cv.png" alt="CV" className="w-full h-full object-cover" />
       </div>
       <div>
-        <h1 className='uppercase'>Mikaela Kihl</h1>
+        <h1 className='uppercase tracking-wider'>Mikaela Kihl</h1>
         <p>Frontend Developer</p>
       </div>
       <div className='flex flex-col gap-4 w-full max-w-xs px-4'>
@@ -181,31 +181,30 @@ const SideBarCV = () => {
           </div>
         </div>
         <div className='flex flex-col items-center gap-2 '>
-          <h2 className='uppercase'>Languages</h2>
+          <h2 className='uppercase mb-2'>Languages</h2>
           <div className='flex items-center gap-2'>
           <p>swedish</p>
           <p>english</p>
           </div>
 
         </div>
-        <div className='bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white'>
-          <h2 className='uppercase'>Tech</h2>
+        <div className='bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white'>
+          <h2 className='uppercase mb-4 tracking-wider'>Tech</h2>
           <NavLink to="/projects">View here</NavLink>
 
         </div>
         <div>
-          <h2 className='uppercase'>Strengths</h2>
+          <h2 className='uppercase tracking-wider mb-2'>Strengths</h2>
           <p>Creative</p>
           <p>Adaptable</p>
           <p>Easygoing</p>
           <p>Supportive</p>
         </div>
         <div>
-          <h2 className='uppercase'>Areas to growth</h2>
+          <h2 className='uppercase tracking-wider mb-2'>Growth areas</h2>
           <p>Reading lengthy texts</p>
           <p>Presentation skills</p>
         </div>
-        <p className='text-black font-script text-2xl'>References available upon request</p>
       </div>
     </section>
   )
@@ -231,9 +230,11 @@ const MainCV = () => {
   return (
     <section className='flex flex-col bg-white gap-4 w-full px-4 pb-10 pt-10 text-left md:p-20 relative z-10'>
       <div className='flex flex-col gap-4 w-full mt-4' >
-        <p>My career started when I was 16 and during these years I've gained a lot of skills, socially and practically. Five words to describe myself, <strong>open, loyal, responsible, inventive & adaptable.</strong></p>
-        <p>I enjoy working in a team but I'm also very independent. After five years in customer support I'm ready for new challenges in Front End Development.</p>
+        <p>My career started when I was 16, but my interest in design and development began much earlier. As a teenager, I spent countless hours customizing blogs and experimenting with HTML, CSS, and Photoshop — a curiosity that never really left.</p>
+        <p>Five words to describe me: <strong>open, loyal, responsible, inventive & adaptable.</strong> I enjoy the energy of teamwork but work just as well on my own.</p>
+        <p>After five years in customer support, I returned to what inspires me most — so now I’m studying Front End Development, building projects, learning new tools, and growing a little every day as I work toward creating simple, thoughtful user experiences.</p>
       </div>
+      <div className='bg-gradient-to-r from-transparent via-black to-transparent h-[1px] my-6 '></div>
       <div className='flex flex-col gap-4'>
         <h2 className='text-left'>Education & Internship</h2>
         <ul className='flex flex-col gap-4'>
@@ -264,6 +265,8 @@ const MainCV = () => {
             </li>
           ))}
         </ul>
+        <p className='text-black font-script text-2xl mt-4'>References available upon request</p>
+
       </div>
     </section>
   )
