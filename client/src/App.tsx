@@ -63,14 +63,16 @@ const Header = () => {
 
   return (
     <header className='bg-brand-200 h-[100px] relative z-50 mb-5'>
-      <nav className='max-w-7xl mx-auto px-4 md:px-8 h-full flex items-center justify-between'>
+      <nav className='max-w-7xl mx-auto px-4 md:px-8 h-full flex items-center justify-between md:justify-center'>
         
         <div className='text-white font-bold text-xl md:hidden'></div>
 
         {/* Desktop Menu */}
-        <div className='hidden md:flex w-full justify-center gap-8'>
+        <div className='hidden md:flex justify-center gap-8 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white '>
           <Link to="/" className='text-white hover:text-brand-400 transition-colors'>CV</Link>
+          <span className='text-black'>|</span>
           <Link to="/projects" className='text-white hover:text-brand-400 transition-colors'>Projects</Link>
+          <span className='text-black'>|</span>
           <Link to="/art" className='text-white hover:text-brand-400 transition-colors'>Art</Link>
         </div>
 
