@@ -33,6 +33,8 @@ import {
   FaVuejs,
   FaChevronLeft,
   FaChevronRight,
+  FaSortAmountDown,
+  FaSortAmountUp,
 } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import {
@@ -351,6 +353,16 @@ const MainCV = () => {
 const Projects = () => {
   if (!projectData) return <div>No data available</div>;
 
+  // Add state for sort order, default true for "Newest" (Descending Dates)
+  const [isDescending, setIsDescending] = useState(true);
+
+  // Sort the projects based on created_at
+  const sortedProjects = [...projectData].sort((a, b) => {
+    const dateA = new Date(a.created_at || 0).getTime(); // Fallback to 0 if empty
+    const dateB = new Date(b.created_at || 0).getTime();
+    return isDescending ? dateB - dateA : dateA - dateB;
+  });
+
   interface ITechStack {
     id: number;
     name: string;
@@ -579,8 +591,21 @@ const Projects = () => {
         My projects
       </h2>
       <section className="max-w-7xl mx-auto p-4">
+        {/* Add Sort Button */}
+        <div className="flex justify-end mb-6">
+          <button
+            onClick={() => setIsDescending(!isDescending)}
+            className="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg hover:bg-white/20 transition-all"
+          >
+            <span className="text-sm uppercase tracking-wider font-medium">
+              {isDescending ? "Newest" : "Oldest"}
+            </span>
+            {isDescending ? <FaSortAmountDown /> : <FaSortAmountUp />}
+          </button>
+        </div>
+
         <ul className="grid md:grid-cols-2 gap-8">
-          {projectData.map((project) => (
+          {sortedProjects.map((project) => (
             <li key={project.id}>
               <div className="flex flex-col gap-4 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white h-full">
                 <h3 className=" text-xl md:text-2xl lg:text-3xl font-bold font-normal">
