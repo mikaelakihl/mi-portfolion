@@ -29,7 +29,7 @@ export const cvData: CVData = {
       company: "Visma Draftit",
       location: "Malmö",
       description:
-        "Customer success associate, handling incoming calls and emails. Varying administrative office-tasks.",
+        "Handling incoming calls and emails, helping customers with issues, and completing varied administrative tasks. Developed strong communication, problem-solving, and customer-focused service skills.",
     },
     {
       id: "1",
@@ -37,7 +37,8 @@ export const cvData: CVData = {
       endDate: "February 2022",
       company: "Betssongroup",
       location: "St julians, Malta",
-      description: "Customer support with email and live-chat.",
+      description:
+        "Assisted customers through email and chat in a fast-paced iGaming environment. Improved written communication, efficiency, and gained insight into the iGaming industry.",
       experienceGained: ["Soft skills", "Igaming knowledge"],
     },
     {
@@ -46,7 +47,8 @@ export const cvData: CVData = {
       endDate: "March 2021",
       company: "Assistans i balans",
       location: "Stockholm",
-      description: "Assists 11-year old girl with disability",
+      description:
+        "Provided daily support to an 11-year-old girl with a disability. Built skills in non-verbal communication, patience, and creative problem-solving.",
       experienceGained: ["Creativity", "Communicating with body language"],
     },
     {
@@ -55,7 +57,8 @@ export const cvData: CVData = {
       endDate: "August 2020",
       company: "Mr Green/William hill",
       location: "Sliema, Malta",
-      description: "Customer support with calls, mails and live chat",
+      description:
+        "Handled customer inquiries across multiple channels. Strengthened multitasking abilities, language skills, and service handling under pressure.",
       experienceGained: ["Patience", "Multitask", "Language"],
     },
     {
@@ -63,9 +66,9 @@ export const cvData: CVData = {
       startDate: "April 2018",
       endDate: "November 2019",
       company: "Thales",
-      location: "Älvsjö",
+      location: "Stockholm",
       description:
-        "Review and packaging, ship ID documents, secure handling of personal documents, machine handling",
+        "Packaged and shipped secure ID documents with high accuracy. Gained independence, reliability, and attention to detail.",
       experienceGained: ["Responsibility", "Independency"],
     },
   ],

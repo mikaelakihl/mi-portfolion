@@ -315,9 +315,11 @@ const MainCV = () => {
           {cvData.education.map((educationEntry) => (
             <li key={educationEntry.id}>
               <h3 className="font-bold">
-                {educationEntry.startDate} - {educationEntry.endDate}:{" "}
                 {educationEntry.organization}, {educationEntry.location}
               </h3>
+              <p className="text-sm text-gray-500 mb-1">
+                {educationEntry.startDate} - {educationEntry.endDate}:{" "}
+              </p>
               <p>{educationEntry.description}</p>
             </li>
           ))}
@@ -329,17 +331,12 @@ const MainCV = () => {
           {cvData.workExperience.map((workEntry) => (
             <li key={workEntry.id}>
               <h3 className="font-bold">
-                {workEntry.startDate} - {workEntry.endDate}: {workEntry.company}
-                , {workEntry.location}
+                {workEntry.company}, {workEntry.location}
               </h3>
+              <p className="text-sm text-gray-500 mb-1">
+                {workEntry.startDate} - {workEntry.endDate}
+              </p>
               <p>{workEntry.description}</p>
-              {workEntry.experienceGained &&
-                workEntry.experienceGained.length > 0 && (
-                  <p>
-                    <strong>Experience gained:</strong>{" "}
-                    {workEntry.experienceGained.join(", ")}
-                  </p>
-                )}
             </li>
           ))}
         </ul>
