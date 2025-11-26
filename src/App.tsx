@@ -771,12 +771,12 @@ const Art = () => {
                 <div className="flex flex-col gap-2">
                   <NavLink
                     to={`/art/${art.id}`}
-                    className="block aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity"
+                    className="block aspect-square overflow-hidden rounded-lg group"
                   >
                     <img
                       src={art.img?.url}
                       alt={art.img?.alt}
-                      className="w-full h-full object-cover border border-2 border-white/20 rounded-xl"
+                      className="w-full h-full object-cover border border-2 border-white/20 rounded-xl transition-transform duration-500 group-hover:scale-110 ease-in-out"
                     />
                   </NavLink>
                   <h3 className="text-white text-center ">{art.name}</h3>
