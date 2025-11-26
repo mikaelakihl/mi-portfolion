@@ -616,7 +616,7 @@ const Projects = () => {
             {/* Filter Button */}
             <button
               onClick={() => setIsFilterOpen(!isFilterOpen)}
-              className={`flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg hover:bg-white/20 transition-all ${isFilterOpen ? "bg-white/20 ring-2 ring-white/50" : ""}`}
+              className={`flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1 ${isFilterOpen ? "bg-white/20 ring-2 ring-white/50" : ""}`}
             >
               <span className="text-sm uppercase tracking-wider font-medium">
                 Filter
@@ -632,7 +632,7 @@ const Projects = () => {
             {/* Sort Button */}
             <button
               onClick={() => setIsDescending(!isDescending)}
-              className="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg hover:bg-white/20 transition-all"
+              className="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
             >
               <span className="text-sm uppercase tracking-wider font-medium">
                 {isDescending ? "Newest" : "Oldest"}
@@ -651,7 +651,7 @@ const Projects = () => {
                 {selectedTechs.length > 0 && (
                   <button
                     onClick={() => setSelectedTechs([])}
-                    className="text-xs text-white/70 hover:text-white underline"
+                    className="text-xs text-white/70 hover:text-white underline hover:text-orange-400 transition-colors"
                   >
                     Clear all
                   </button>
@@ -667,7 +667,7 @@ const Projects = () => {
                       className={`flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all text-sm ${
                         isSelected
                           ? "bg-white text-brand-900 font-medium shadow-md scale-105"
-                          : "bg-white/10 text-white hover:bg-white/20"
+                          : "bg-white/10 text-white hover:bg-white/20 hover:text-orange-400"
                       }`}
                     >
                       <Icon icon={tech.icon} />
@@ -725,7 +725,7 @@ const Projects = () => {
                 <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
                 <div className="flex items-center w-full gap-2">
                   <a
-                    className=" bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white"
+                    className=" bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
                     target="_blank"
                     rel="noopener noreferrer"
                     href={project.demo}
@@ -733,7 +733,7 @@ const Projects = () => {
                     View Demo
                   </a>
                   <a
-                    className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white"
+                    className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
                     target="_blank"
                     rel="noopener noreferrer"
                     href={project.github}
