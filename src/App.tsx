@@ -692,6 +692,9 @@ const ArtDetail = () => {
   const navigate = useNavigate();
   const currentId = Number(id);
 
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
   const art = artData.find((item) => item.id === currentId);
 
   if (!art) return <div>No art found</div>;
@@ -708,18 +711,48 @@ const ArtDetail = () => {
     if (nextArt) navigate(`/art/${nextArt.id}`);
   };
 
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe && nextArt) {
+      handleNext();
+    }
+    if (isRightSwipe && prevArt) {
+      handlePrev();
+    }
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] p-4 relative ">
+    <div
+      className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] p-4 relative"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <h2 className="font-normal text-center my-8 text-white uppercase tracking-wider">
         {art.name}
       </h2>
 
-      <div className="flex items-center justify-center w-full gap-4">
+      <div className="flex items-center justify-center w-full gap-4 relative">
         {/* Previous Button */}
         <button
           onClick={handlePrev}
           disabled={!prevArt}
-          className={`p-2 rounded-full bg-white/10 backdrop-blur-md text-white transition-opacity ${!prevArt ? "opacity-30 cursor-not-allowed" : "hover:bg-white/20"}`}
+          className={`absolute left-0 md:static z-10 p-2 rounded-full bg-white/10 backdrop-blur-md text-white transition-opacity ${!prevArt ? "opacity-30 cursor-not-allowed hidden md:block" : "hover:bg-white/20"}`}
         >
           <FaChevronLeft size={30} />
         </button>
@@ -727,14 +760,14 @@ const ArtDetail = () => {
         <img
           src={"/" + art.img?.url}
           alt={art.img?.alt}
-          className="max-w-[80vw] max-h-[80vh] object-contain rounded-lg shadow-xl border border-2 border-white/20 rounded-xl"
+          className="max-w-full md:max-w-[80vw] max-h-[70vh] md:max-h-[80vh] object-contain rounded-lg shadow-xl border border-2 border-white/20"
         />
 
         {/* Next Button */}
         <button
           onClick={handleNext}
           disabled={!nextArt}
-          className={`p-2 rounded-full bg-white/10 backdrop-blur-md text-white transition-opacity ${!nextArt ? "opacity-30 cursor-not-allowed" : "hover:bg-white/20"}`}
+          className={`absolute right-0 md:static z-10 p-2 rounded-full bg-white/10 backdrop-blur-md text-white transition-opacity ${!nextArt ? "opacity-30 cursor-not-allowed hidden md:block" : "hover:bg-white/20"}`}
         >
           <FaChevronRight size={30} />
         </button>
