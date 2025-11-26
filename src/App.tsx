@@ -709,7 +709,7 @@ const ArtDetail = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 relative ">
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] p-4 relative ">
       <h2 className="font-normal text-center my-8 text-white uppercase tracking-wider">
         {art.name}
       </h2>
