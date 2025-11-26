@@ -8,6 +8,7 @@ import {
   useParams,
   useNavigate,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 import { cvData } from "./data/cvData";
 import { projectData } from "./data/projectData";
@@ -748,6 +749,7 @@ const App = () => {
           <Route path="projects" element={<Projects />} />
           <Route path="art" element={<Art />} />
           <Route path="art/:id" element={<ArtDetail />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </>
