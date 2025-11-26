@@ -623,7 +623,7 @@ const Projects = () => {
               </span>
               <FaFilter />
               {selectedTechs.length > 0 && (
-                <span className="bg-brand-400 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="bg-orange-400 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {selectedTechs.length}
                 </span>
               )}

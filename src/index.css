@@ -11,10 +11,10 @@
   font-family: "Poppins", sans-serif;
 }
 
-.sidebar-cv h1, .sidebar-cv h2 {
+.sidebar-cv h1,
+.sidebar-cv h2 {
   font-weight: 400;
 }
-
 
 * {
   box-sizing: border-box;
@@ -27,7 +27,12 @@ body {
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: "Poppins", sans-serif;
   }
 
@@ -35,31 +40,25 @@ body {
     @apply text-xl md:text-2xl lg:text-3xl font-bold;
   }
 
-
-
-
   h1 {
     @apply text-xl md:text-2xl lg:text-3xl font-bold;
   }
-  
+
   p {
     @apply text-base;
   }
 }
 
 @theme {
- 
   /* Or define a full color palette with shades */
   --font-script: "Caveat", cursive;
   --font-poppins: "Poppins", sans-serif;
 
-  --color-brand-50: #96A294;
-  --color-brand-100: #7D8C81;
-  --color-brand-200: #5E6961;
-  
-  --color-brand-300: #C6CDC5;
-  --color-brand-400: #38bdf8;
+  --color-brand-50: #96a294;
+  --color-brand-100: #7d8c81;
+  --color-brand-200: #5e6961;
+
+  --color-brand-300: #c6cdc5;
+  --color-brand-400: #;
   --color-brand-500: #060606;
-  
 }
-  
