@@ -35,6 +35,7 @@ import {
   FaChevronRight,
   FaSortAmountDown,
   FaSortAmountUp,
+  FaFilter,
 } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import {
@@ -355,9 +356,28 @@ const Projects = () => {
 
   // Add state for sort order, default true for "Newest" (Descending Dates)
   const [isDescending, setIsDescending] = useState(true);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
+
+  const toggleTech = (techName: string) => {
+    setSelectedTechs((prev) =>
+      prev.includes(techName)
+        ? prev.filter((t) => t !== techName)
+        : [...prev, techName]
+    );
+  };
+
+  // Filter projects based on selected techs
+  const filteredProjects = projectData.filter((project) => {
+    if (selectedTechs.length === 0) return true;
+    // Check if project includes ALL selected techs (AND logic)
+    return selectedTechs.every((tech) =>
+      project.tech.some((t) => t.toLowerCase() === tech.toLowerCase())
+    );
+  });
 
   // Sort the projects based on created_at
-  const sortedProjects = [...projectData].sort((a, b) => {
+  const sortedProjects = [...filteredProjects].sort((a, b) => {
     const dateA = new Date(a.created_at || 0).getTime(); // Fallback to 0 if empty
     const dateB = new Date(b.created_at || 0).getTime();
     return isDescending ? dateB - dateA : dateA - dateB;
@@ -591,17 +611,73 @@ const Projects = () => {
         My projects
       </h2>
       <section className="max-w-7xl mx-auto p-4">
-        {/* Add Sort Button */}
-        <div className="flex justify-end mb-6">
-          <button
-            onClick={() => setIsDescending(!isDescending)}
-            className="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg hover:bg-white/20 transition-all"
-          >
-            <span className="text-sm uppercase tracking-wider font-medium">
-              {isDescending ? "Newest" : "Oldest"}
-            </span>
-            {isDescending ? <FaSortAmountDown /> : <FaSortAmountUp />}
-          </button>
+        <div className="flex flex-col mb-6">
+          <div className="flex justify-end gap-4 mb-4">
+            {/* Filter Button */}
+            <button
+              onClick={() => setIsFilterOpen(!isFilterOpen)}
+              className={`flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg hover:bg-white/20 transition-all ${isFilterOpen ? "bg-white/20 ring-2 ring-white/50" : ""}`}
+            >
+              <span className="text-sm uppercase tracking-wider font-medium">
+                Filter
+              </span>
+              <FaFilter />
+              {selectedTechs.length > 0 && (
+                <span className="bg-brand-400 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {selectedTechs.length}
+                </span>
+              )}
+            </button>
+
+            {/* Sort Button */}
+            <button
+              onClick={() => setIsDescending(!isDescending)}
+              className="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg hover:bg-white/20 transition-all"
+            >
+              <span className="text-sm uppercase tracking-wider font-medium">
+                {isDescending ? "Newest" : "Oldest"}
+              </span>
+              {isDescending ? <FaSortAmountDown /> : <FaSortAmountUp />}
+            </button>
+          </div>
+
+          {/* Filter Panel */}
+          {isFilterOpen && (
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-xl mb-4 animate-in fade-in slide-in-from-top-2">
+              <div className="flex justify-between items-center mb-3">
+                <h3 className="text-white text-sm uppercase tracking-wider">
+                  Filter by Tech
+                </h3>
+                {selectedTechs.length > 0 && (
+                  <button
+                    onClick={() => setSelectedTechs([])}
+                    className="text-xs text-white/70 hover:text-white underline"
+                  >
+                    Clear all
+                  </button>
+                )}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {techStackList.map((tech) => {
+                  const isSelected = selectedTechs.includes(tech.name);
+                  return (
+                    <button
+                      key={tech.id}
+                      onClick={() => toggleTech(tech.name)}
+                      className={`flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all text-sm ${
+                        isSelected
+                          ? "bg-white text-brand-900 font-medium shadow-md scale-105"
+                          : "bg-white/10 text-white hover:bg-white/20"
+                      }`}
+                    >
+                      <Icon icon={tech.icon} />
+                      <span>{tech.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
 
         <ul className="grid md:grid-cols-2 gap-8">
