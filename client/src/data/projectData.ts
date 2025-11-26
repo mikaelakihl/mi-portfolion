@@ -1,4 +1,4 @@
-import { IProject } from '../types/project.js';
+import type { IProject } from '../types/project';
 
 export const projectData: IProject[] = [
   {
@@ -115,3 +115,4 @@ export const projectData: IProject[] = [
     created_at: ''
   }
 ];
+

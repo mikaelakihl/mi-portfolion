@@ -1,4 +1,4 @@
-import { CVData } from '../types/cv.js';
+import type { CVData } from '../types/cv';
 
 export const cvData: CVData = {
   education: [

@@ -1,4 +1,4 @@
-import { IArt } from '../types/art.js';
+import type { IArt } from '../types/art';
 
 export const artData: IArt[] = [
   {
