@@ -192,7 +192,7 @@ const Cloud = () => {
 
 const SideBarCV = () => {
   return (
-    <section className="sidebar-cv  flex flex-col items-center justify-center w-full md:w-1/3 text-white gap-8 md:mx-5">
+    <section className="sidebar-cv  flex flex-col items-center justify-center md:justify-start md:pt-20 w-full md:w-1/3 text-white gap-8 md:mx-5">
       <div className="rounded-full w-48 h-48 overflow-hidden border-4 border-brand-200">
         <img
           src="/assets/mikaelakihl-cv.png"
@@ -305,7 +305,7 @@ const MainCV = () => {
           me next.
         </p>
       </div>
-      <div className="bg-gradient-to-r from-transparent via-black to-transparent h-[1px] my-6 "></div>
+      <div className="bg-gradient-to-r from-transparent via-black to-transparent h-[2px] my-6 "></div>
       <div className="flex flex-col gap-4">
         <h2 className="text-left">Education & Internship</h2>
         <ul className="flex flex-col gap-4">
@@ -320,7 +320,7 @@ const MainCV = () => {
           ))}
         </ul>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 md:mt-4">
         <h2 className="text-left">Work Experience</h2>
         <ul className="flex flex-col gap-4">
           {cvData.workExperience.map((workEntry) => (
