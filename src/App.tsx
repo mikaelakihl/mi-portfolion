@@ -276,21 +276,33 @@ const MainCV = () => {
     <section className="flex flex-col bg-white gap-4 w-full px-4 pb-10 pt-10 text-left md:p-20 relative z-30 -mt-2 md:-mt-5">
       <div className="flex flex-col gap-4 w-full mt-4">
         <p>
-          My career started when I was 16, but my interest in design and
-          development began much earlier. As a teenager, I spent countless hours
-          customizing blogs and experimenting with HTML, CSS, and Photoshop — a
-          curiosity that never really left.
+          I’m Mikaela, a front-end development student with a background in
+          customer support and a long-time love for creating anything I could
+          shape, design, or bring to life digitally.
+        </p>
+        <p>
+          My love for design started early — long before I knew what “front-end”
+          even meant. As a teenager, I spent hours customizing blogs, playing
+          with HTML, CSS, and Photoshop — it was curiosity at its purest.
+        </p>
+
+        <p>
+          I started working at 16, mostly in customer-focused roles, which
+          taught me how to communicate, solve problems, and understand people.
+          After five years in customer support, I decided to follow what had
+          been calling me all along.{" "}
+        </p>
+        <p>
+          {" "}
+          Now I’m studying Front End Development, building projects, learning
+          new tools, and improving a little every day.
         </p>
         <p>
           Five words to describe me:{" "}
-          <strong>open, loyal, responsible, inventive & adaptable.</strong> I
-          enjoy the energy of teamwork but work just as well on my own.
-        </p>
-        <p>
-          After five years in customer support, I returned to what inspires me
-          most — so now I’m studying Front End Development, building projects,
-          learning new tools, and growing a little every day as I work toward
-          creating simple, thoughtful user experiences.
+          <strong>open, loyal, responsible, inventive & adaptable.</strong>
+          <br />I love the energy of collaboration, but I’m just as comfortable
+          working independently — and I’m excited to see where this path takes
+          me next.
         </p>
       </div>
       <div className="bg-gradient-to-r from-transparent via-black to-transparent h-[1px] my-6 "></div>
@@ -613,12 +625,16 @@ const Projects = () => {
                 <div className="flex items-center w-full gap-2">
                   <a
                     className=" bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={project.demo}
                   >
                     View Demo
                   </a>
                   <a
                     className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={project.github}
                   >
                     View on GitHub
