@@ -594,16 +594,43 @@ const Projects = () => {
         <h2 className="text-center font-normal text-white uppercase tracking-wider">
           Tech Stack
         </h2>
+        {isFilterOpen && (
+          <p className="text-center text-orange-400 text-sm mt-2 animate-pulse">
+            Select tech to filter projects
+          </p>
+        )}
         <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6 "></div>
+        {/* Updated Tech Stack List with Filter Interaction */}
         <ul className="flex flex-wrap gap-4 justify-center">
-          {techStackList.map((tech) => (
-            <li key={tech.id}>
-              <div className={tech.bgColor + " flex items-center gap-2"}>
-                <Icon icon={tech.icon} />
-                <p>{tech.name}</p>
-              </div>
-            </li>
-          ))}
+          {techStackList.map((tech) => {
+            const isSelected = selectedTechs.includes(tech.name);
+            const isDimmed = selectedTechs.length > 0 && !isSelected;
+
+            return (
+              <li key={tech.id}>
+                <button
+                  onClick={() => isFilterOpen && toggleTech(tech.name)}
+                  disabled={!isFilterOpen}
+                  className={`${tech.bgColor} flex items-center gap-2 transition-all duration-300 border border-white/20
+                    ${
+                      isFilterOpen
+                        ? "cursor-pointer hover:scale-110 hover:border-white/50"
+                        : "cursor-default"
+                    }
+                    ${
+                      isSelected
+                        ? "ring-2 ring-white scale-110 shadow-[0_0_15px_rgba(255,255,255,0.3)] !opacity-100"
+                        : ""
+                    }
+                    ${isDimmed ? "opacity-30 grayscale blur-[0.5px]" : ""}
+                  `}
+                >
+                  <Icon icon={tech.icon} />
+                  <p>{tech.name}</p>
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
@@ -612,22 +639,35 @@ const Projects = () => {
       </h2>
       <section className="max-w-7xl mx-auto p-4">
         <div className="flex flex-col mb-6">
-          <div className="flex justify-end gap-4 mb-4">
+          <div className="flex justify-end gap-4 mb-4 flex-wrap">
             {/* Filter Button */}
             <button
               onClick={() => setIsFilterOpen(!isFilterOpen)}
-              className={`flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1 ${isFilterOpen ? "bg-white/20 ring-2 ring-white/50" : ""}`}
+              className={`flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1 ${isFilterOpen ? "bg-orange-400 border-orange-400 ring-2 ring-white/50" : ""}`}
             >
               <span className="text-sm uppercase tracking-wider font-medium">
-                Filter
+                {isFilterOpen ? "Done Filtering" : "Filter"}
               </span>
               <FaFilter />
               {selectedTechs.length > 0 && (
-                <span className="bg-orange-400 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="bg-white text-orange-400 text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
                   {selectedTechs.length}
                 </span>
               )}
             </button>
+
+            {/* Clear Button (visible only when filters are active) */}
+            {selectedTechs.length > 0 && (
+              <button
+                onClick={() => setSelectedTechs([])}
+                className="flex items-center gap-2 text-white/70 bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl shadow-lg transition-all duration-300 hover:bg-red-500/20 hover:text-white hover:border-red-500/50 hover:-translate-y-1"
+              >
+                <span className="text-sm uppercase tracking-wider font-medium">
+                  Clear
+                </span>
+                <FaTimes />
+              </button>
+            )}
 
             {/* Sort Button */}
             <button
@@ -640,44 +680,6 @@ const Projects = () => {
               {isDescending ? <FaSortAmountDown /> : <FaSortAmountUp />}
             </button>
           </div>
-
-          {/* Filter Panel */}
-          {isFilterOpen && (
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-xl mb-4 animate-in fade-in slide-in-from-top-2">
-              <div className="flex justify-between items-center mb-3">
-                <h3 className="text-white text-sm uppercase tracking-wider">
-                  Filter by Tech
-                </h3>
-                {selectedTechs.length > 0 && (
-                  <button
-                    onClick={() => setSelectedTechs([])}
-                    className="text-xs text-white/70 hover:text-white underline hover:text-orange-400 transition-colors"
-                  >
-                    Clear all
-                  </button>
-                )}
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {techStackList.map((tech) => {
-                  const isSelected = selectedTechs.includes(tech.name);
-                  return (
-                    <button
-                      key={tech.id}
-                      onClick={() => toggleTech(tech.name)}
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all text-sm ${
-                        isSelected
-                          ? "bg-white text-brand-900 font-medium shadow-md scale-105"
-                          : "bg-white/10 text-white hover:bg-white/20 hover:text-orange-400"
-                      }`}
-                    >
-                      <Icon icon={tech.icon} />
-                      <span>{tech.name}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
         </div>
 
         <ul className="grid md:grid-cols-2 gap-8">
