@@ -140,7 +140,7 @@ const CV = () => {
   return (
     <div className="flex md:flex-row flex-col">
       <SideBarCV />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col flex-1">
         <div className="flex-1 md:mt-20 mt-20">
           <Cloud />
         </div>
@@ -273,7 +273,7 @@ const MainCV = () => {
   if (!cvData) return <div>No data available</div>;
 
   return (
-    <section className="flex flex-col bg-white gap-4 w-full px-4 pb-10 pt-10 text-left md:p-20 relative z-30 -mt-2 md:-mt-5">
+    <section className="flex flex-col bg-white gap-4 w-full px-4 pb-10 pt-10 text-left md:p-10 relative z-30 -mt-2 md:-mt-5">
       <div className="flex flex-col gap-4 w-full mt-4">
         <p>
           I’m Mikaela, a front-end development student with a background in
