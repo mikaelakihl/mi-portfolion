@@ -160,7 +160,7 @@ const Cloud = () => {
     <>
       <NavLink to="/art">
         <div className=" relative h-full">
-          <div className="absolute inset-3 flex items-center gap-2 -translate-y-[10%]">
+          <div className="absolute inset-3 flex items-center gap-2 -translate-y-[10%] transition-transform duration-500 hover:scale-110 ease-in-out">
             <img
               src="/assets/art/flysland.png"
               alt="floating island"

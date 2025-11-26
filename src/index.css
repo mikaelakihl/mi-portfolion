@@ -51,7 +51,7 @@ body {
   a {
     @apply transition-colors duration-300 hover:text-orange-400;
   }
-
+}
 
 @theme {
   /* Or define a full color palette with shades */
