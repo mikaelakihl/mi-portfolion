@@ -164,4 +164,28 @@ export const projectData: IProject[] = [
       "https://github.com/mikaelakihl/mi-api-development-assignment2-the-lumos-library",
     created_at: "2025-02-01",
   },
+  {
+    id: 7,
+    title: "Todo App",
+    img: {
+      src: "/assets/projects/todoapp.png",
+      alt: "Todo app",
+      width: 1670,
+      height: 1053,
+    },
+    description: [`Todo app`],
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind",
+      "Vite",
+      "React",
+      "Npm",
+    ],
+    demo: "https://mi-js-frameworks-assignment1-todos.vercel.app/",
+    github: "https://github.com/mikaelakihl/mi-js-frameworks-assignment1-todos",
+    created_at: "2025-06-03",
+  },
 ];
