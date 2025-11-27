@@ -198,7 +198,7 @@ export const projectData: IProject[] = [
       width: 1670,
       height: 1053,
     },
-    description: [`Todo app`],
+    description: [`The Zoo`],
     tech: [
       "HTML",
       "CSS",
@@ -215,5 +215,32 @@ export const projectData: IProject[] = [
     github:
       "https://github.com/mikaelakihl/mi-js-frameworks-assignment2-the-zoo",
     created_at: "2025-08-25",
+  },
+  {
+    id: 9,
+    title: "Case AF Jobtech",
+    img: {
+      src: "/assets/projects/platsbanken.png",
+      alt: "Platsbanken",
+      width: 1670,
+      height: 1053,
+    },
+    description: [`Platsbanken`],
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind",
+      "Vite",
+      "React",
+      "Npm",
+      "Eslint",
+      "Prettier",
+    ],
+    demo: "https://mi-js-frameworks-assignment3-case-a.vercel.app/",
+    github:
+      "https://github.com/mikaelakihl/mi-js-frameworks-assignment3-case-af-jobtech",
+    created_at: "2025-09-17",
   },
 ];
