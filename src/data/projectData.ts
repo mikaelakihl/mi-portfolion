@@ -173,7 +173,11 @@ export const projectData: IProject[] = [
       width: 1670,
       height: 1053,
     },
-    description: [`Todo app`],
+    description: [
+      `In this project, I built a client-side Todo Application using React and TypeScript, utilizing TailwindCSS to create a responsive and user-friendly interface.`,
+      `It allows users to organize their daily tasks, categorize them by emotion, filter active and completed items, and manage their workflow with ease.`,
+      `The application also includes state management for tracking task status and sorting preferences, using localStorage for persistence to ensure the user's list remains consistent across page reloads.`,
+    ],
     tech: [
       "HTML",
       "CSS",
@@ -198,7 +202,11 @@ export const projectData: IProject[] = [
       width: 1670,
       height: 1053,
     },
-    description: [`The Zoo`],
+    description: [
+      `In this project, I built a client-side Zoo Application using React and TypeScript. `,
+      `It allows users to browse a collection of animals, view detailed information, and manage their feeding schedules.`,
+      `The application also includes time-based state logic for tracking hunger levels and uses localStorage for persistence, ensuring that feeding status remains consistent across page reloads.`,
+    ],
     tech: [
       "HTML",
       "CSS",
@@ -225,7 +233,11 @@ export const projectData: IProject[] = [
       width: 1670,
       height: 1053,
     },
-    description: [`Platsbanken`],
+    description: [
+      `In this project, I built a client-side Job Search Application using React and TypeScript, integrating Arbetsförmedlingen's official design system to create an improved user experience.`,
+      ` It allows users to search for job advertisements, filter results by location and occupation, view detailed job descriptions, and save interesting positions for later.`,
+      `The application also includes state management for tracking search history and saved jobs, using localStorage for persistence to ensure user preferences remain consistent across page reloads.`,
+    ],
     tech: [
       "HTML",
       "CSS",
