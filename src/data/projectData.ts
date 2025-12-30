@@ -255,4 +255,38 @@ export const projectData: IProject[] = [
       "https://github.com/mikaelakihl/mi-js-frameworks-assignment3-case-af-jobtech",
     created_at: "2025-09-17",
   },
+  {
+    id: 10,
+    title: "Privacy Dashboard",
+    img: {
+      src: "/assets/projects/privacy-dashboard-portfolio.png",
+      alt: "Platsbanken",
+      width: 1670,
+      height: 1053,
+    },
+    description: [
+      `In this project, developed during my internship, I built a Privacy Dashboard Application using React and TypeScript to visualize customer health and product usage for the company's Privacy product.`,
+      ` It provides a robust interface for administrators to view and analyze aggregated statistics, manage customer and user profiles, and track engagement through a custom-built scoring system.`,
+      `The application features secure authentication (Clerk), internationalization (i18n), and efficient state management with TanStack Query, initially prototyped with MSW before integrating with a real backend.`,
+    ],
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind",
+      "Vite",
+      "React",
+      "Npm",
+      "Eslint",
+      "Prettier",
+      "Clerk",
+      "i18n",
+      "MSW",
+    ],
+    demo: "https://privacy-dashboard-xi.vercel.app/",
+    github:
+      "https://github.com/mikaelakihl/privacy-dashboard",
+    created_at: "2025-10-17",
+  },
 ];
