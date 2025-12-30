@@ -36,6 +36,7 @@ import {
   FaSortAmountDown,
   FaSortAmountUp,
   FaFilter,
+  FaCode,
 } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import {
@@ -50,6 +51,8 @@ import {
   SiAdobephotoshop,
   SiVitest,
   SiCypress,
+  SiClerk,
+  SiMockserviceworker,
 } from "react-icons/si";
 import { BsCursorFill } from "react-icons/bs";
 
@@ -414,6 +417,9 @@ const Projects = () => {
     SiEslint,
     SiCypress,
     SiPnpm,
+    SiClerk,
+    SiMockserviceworker,
+    FaCode,
   };
 
   const Icon = ({ icon }: { icon: string }) => {
@@ -582,6 +588,27 @@ const Projects = () => {
       icon: "SiPnpm",
       bgColor:
         "bg-stone-700/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
+    },
+    {
+      id: 24,
+      name: "Clerk",
+      icon: "SiClerk",
+      bgColor:
+        "bg-purple-600/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
+    },
+    {
+      id: 25,
+      name: "i18n",
+      icon: "FaCode",
+      bgColor:
+        "bg-teal-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
+    },
+    {
+      id: 26,
+      name: "MSW",
+      icon: "FaCode",
+      bgColor:
+        "bg-orange-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
     },
   ];
 
