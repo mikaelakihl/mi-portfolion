@@ -237,7 +237,7 @@ const SideBarCV = () => {
             </div>
             <div className="flex items-center gap-3 hover:text-brand-300 transition-colors">
               <FaLinkedin className="text-lg shrink-0" />
-              <a href="https://www.linkedin.com/in/mikaela-kihl-4b1751200/">
+              <a href="https://www.linkedin.com/in/mikaelakihl/">
                 LinkedIn
               </a>
             </div>
