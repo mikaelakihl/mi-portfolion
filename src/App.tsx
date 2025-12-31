@@ -56,6 +56,7 @@ import {
 } from "react-icons/si";
 import { BsCursorFill } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -93,12 +94,17 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Hamburger Icon */}
-        <div
-          className="md:hidden text-white cursor-pointer"
-          onClick={toggleMenu}
-        >
-          {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
+        {/* Right Side Container */}
+        <div className="flex items-center gap-4 md:absolute md:right-8">
+          <LanguageSwitcher />
+
+          {/* Hamburger Icon */}
+          <div
+            className="md:hidden text-white cursor-pointer"
+            onClick={toggleMenu}
+          >
+            {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
+          </div>
         </div>
       </nav>
 
