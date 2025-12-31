@@ -1,0 +1,90 @@
+{
+  "translation": {
+    "sidebarCV": {
+      "contact": "Contact",
+      "languages": "Languages",
+      "swedish": "Swedish",
+      "english": "English",
+      "tech": "Tech",
+      "view_here": "View here",
+      "Strengths": "Strengths",
+      "Creative": "Creative",
+      "Adaptable": "Adaptable",
+      "Easygoing": "Easygoing",
+      "Supportive": "Supportive",
+      "Growth areas": "Growth areas",
+      "Reading_lengthy_texts": "Reading lengthy texts",
+      "Presentation_skills": "Presentation skills"
+    },
+    "Cv": {
+      "text_about_me": {
+        "1": "I’m Mikaela, a front-end development student with a background in customer support and a long-time love for creating anything I could shape, design, or bring to life digitally.",
+        "2": "My love for design started early — long before I knew what “front-end” even meant. As a teenager, I spent hours customizing blogs, playing with HTML, CSS, and Photoshop — it was curiosity at its purest.",
+        "3": "I started working at 16, mostly in customer-focused roles, which taught me how to communicate, solve problems, and understand people. After five years in customer support, I decided to follow what had been calling me all along.",
+        "4": "Now I’m studying Front End Development, building projects, learning new tools, and improving a little every day.",
+        "5": "Five words to describe me: open, loyal, responsible, inventive & adaptable.",
+        "6": "I love the energy of collaboration, but I’m just as comfortable working independently — and I’m excited to see where this path takes me next."
+      }
+    },
+    "experiences": {
+      "education_internship": "Education & Internship",
+      "work_experience": "Work Experience",
+      "visma_draftit_internship": {
+      "oktober_2025": "October 2025",
+      "december_2025": "December 2025",
+      "description": {
+        "1": "Developing an interactive data visualization dashboard using React and TypeScript. Responsible for component structure, state management, and UI design, working independently while collaborating with the team to ensure quality in a production environment."
+      }
+      },
+      "mediainstitutet": {
+        "oktober_2024": "October 2024",
+        "may_2026": "May 2026 (expected)",
+        "description": {
+          "1": "Studying Front End Development, HTML, CSS, JavaScript, Frameworks, Graphic tools, UX, API development"
+        }
+      },
+      "visma_draftit": {
+        "march_2022": "March 2022",
+        "present": "present",
+        "description": {
+          "1": "Handling incoming calls and emails, helping customers with issues, and completing varied administrative tasks. Developed strong communication, problem-solving, and customer-focused service skills."
+        }
+      },
+
+      "betssongroup": {
+        "march_2021": "March 2021",
+        "february_2022": "February 2022",
+        "description": {
+          "1": "Assisted customers through email and chat in a fast-paced iGaming environment. Improved written communication, efficiency, and gained insight into the iGaming industry."
+        }
+      },
+      
+      "assistans_i_balans": {
+        "november_2020": "November 2020",
+        "march_2021": "March 2021",
+        "description": {
+          "1": "Provided daily support to an 11-year-old girl with a disability. Built skills in non-verbal communication, patience, and creative problem-solving."
+        }
+      },
+      
+      "mr_green_william_hill": {
+        "february_2020": "February 2020",
+        "august_2020": "August 2020",
+        "description": {
+          "1": "Handled customer inquiries across multiple channels. Strengthened multitasking abilities, language skills, and service handling under pressure."
+        }
+      },
+      "thales": {
+        "april_2018": "April 2018",
+        "november_2019": "November 2019",
+        "description": {
+          "1": "Packaged and shipped secure ID documents with high accuracy. Gained independence, reliability, and attention to detail."
+        }
+      },
+      "references_available_upon_request": "References available upon request"
+      
+    }
+    
+  }
+}
+

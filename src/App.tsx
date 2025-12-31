@@ -55,6 +55,7 @@ import {
   SiMockserviceworker,
 } from "react-icons/si";
 import { BsCursorFill } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -197,6 +198,7 @@ const Cloud = () => {
 };
 
 const SideBarCV = () => {
+  const { t } = useTranslation();
   return (
     <section className="sidebar-cv  flex flex-col items-center justify-center md:justify-start md:pt-20 w-full md:w-1/3 text-white gap-8 md:mx-5">
       <div className="rounded-full w-48 h-48 overflow-hidden border-4 border-brand-200">
@@ -213,7 +215,7 @@ const SideBarCV = () => {
       <div className="flex flex-col gap-4 w-full max-w-xs px-4">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white">
           <h2 className="uppercase text-white font-bold mb-4 tracking-wider text-center">
-            Contact
+            {t('contact')}
           </h2>
           <div className="flex flex-col gap-3 text-sm">
             <div className="flex items-center gap-3 hover:text-brand-300 transition-colors">
