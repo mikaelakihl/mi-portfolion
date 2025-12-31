@@ -101,5 +101,16 @@ export const artData: IArt[] = [
       alt: 'Porträtt av en Nallebjörn som sitter på en sten efter att han har hittat magiska svampar i skogen.',
     },
   },
+  {
+    id: 11,
+    name: 'Fearing apart',
+    img: {
+      url: 'assets/art/fearing-apart.png',
+      width: 800,
+      height: 1000,
+      alt: 'Porträtt av en Nallebjörn som sitter på en sten efter att han har hittat magiska svampar i skogen.',
+    },
+  },
+
 ];
 
