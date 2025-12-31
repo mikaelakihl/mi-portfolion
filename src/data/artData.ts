@@ -106,9 +106,80 @@ export const artData: IArt[] = [
     name: 'Fearing apart',
     img: {
       url: 'assets/art/fearing-apart.png',
+      width: 900,
+      height: 717,
+      alt: 'Landskapsbild av en man inzoomad på hans ansikte, med en tår i ögat med coronamask över munnen.',
+    },
+  },
+  {
+    id: 12,
+    name: 'Freedom',
+    img: {
+      url: 'assets/art/freedom.png',
+      width: 1500,
+      height: 1200,
+      alt: 'Landskapsbild av en skål i havet med en liten delfin som blir till en stor delfin när den hoppar ut ur skålen in i havet.',
+    },
+  },
+  {
+    id: 13,
+    name: 'Golden impressions',
+    img: {
+      url: 'assets/art/golden-impressions.png',
+      width: 900,
+      height: 1075,
+      alt: 'Porträtt av ett gammalt skåp som är fullt av teckningar i starka färger. Ovan finns en tavla på en strand.',
+    },
+  },
+  {
+    id: 14,
+    name: 'Våra vackra dar',
+    img: {
+      url: 'assets/art/vara-vackra-dar.png',
       width: 800,
-      height: 1000,
-      alt: 'Porträtt av en Nallebjörn som sitter på en sten efter att han har hittat magiska svampar i skogen.',
+      height: 1067,
+      alt: 'Porträtt av en uppförsbacke, träd och himmel. Utspritt finns olika tecknade figurer och i högra under hörnet står ett lamm med gul tröja och röker.',
+    },
+  },
+  {
+    id: 15,
+    name: 'No motivation inspiration',
+    img: {
+      url: 'assets/art/nomotivation-inspiration.png',
+      width: 900,
+      height: 1080,
+      alt: 'Flygfoto av en säng som står på ett trägolv, i sängen finns ett hål där en flicka sitter ihopkrupen med ett ljus.',
+    },
+  },
+  {
+    id: 16,
+    name: 'Carolina Kihl',
+    img: {
+      url: 'assets/art/carolina-kihl.png',
+      width: 1000,
+      height: 867,
+      alt: 'Landskapsbild av en kvinna som håller ett glas vin i färgglada rökeffekter mot en vit bakgrund.',
+    },
+  },
+  {
+    id: 17,
+    name: 'Spacebound',
+    img: {
+      url: 'assets/art/spacebound.png',
+      width: 1500,
+      height: 1034,
+      alt: 'Landskapsbild av en man med ett "avskuret" ansikte och utifrån kommer månen och planeter, resterande av ansiktet kommer i slutet. ',
+    },
+  },
+  
+  {
+    id: 18,
+    name: 'Moonswing',
+    img: {
+      url: 'assets/art/moonswing.png',
+      width: 1100,
+      height: 1556,
+      alt: 'Porträtt av ett par som sitter på en bänk som hänger i luften från en halvmåne som bildar en stad.',
     },
   },
 
