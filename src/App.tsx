@@ -221,7 +221,7 @@ const SideBarCV = () => {
       <div className="flex flex-col gap-4 w-full max-w-xs px-4">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white">
           <h2 className="uppercase text-white font-bold mb-4 tracking-wider text-center">
-            {t('contact')}
+            {t('sidebarCV.contact')}
           </h2>
           <div className="flex flex-col gap-3 text-sm">
             <div className="flex items-center gap-3 hover:text-brand-300 transition-colors">
