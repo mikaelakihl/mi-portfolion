@@ -12,7 +12,7 @@
       "Adaptable": "Anpassningsbar",
       "Easygoing": "Enkel",
       "Supportive": "Stöttande",
-      "Growth areas": "Utvecklingsområden",
+      "Growth areas": "Utmaningar",
       "Reading_lengthy_texts": "Läsa långa texter",
       "Presentation_skills": "Presentera"
     },
@@ -83,7 +83,95 @@
       },
       "references_available_upon_request": "Referenser tillgängliga vid begäran"
       
-    }
+    },
+    "projects": {
+      "my_projects": "Mina projekt",
+      "newest": "Nyaste",
+      "oldest": "Äldsta",
+      "filter": "Filter", 
+      "done_filtering": "Klart",
+      "view_demo": "Visa demo",
+      "view_on_github": "Visa på Github",
+      "select_tech_to_filter_projects": "Välj tech för att filtrera projekt",
+      "tough_cookies": {
+        "description": {
+          "1": "Detta projekt utvecklades som ett skolprojekt på Medieinstitutet.",
+          "2": "Vi fick en färdig design att återskapa med HTML och CSS för första gången."
+        }
+      },
+      "gottfrids_canvas_shop": {
+        "description": {
+          "1": "Detta projekt utvecklades som ett skolprojekt på Medieinstitutet.",
+          "2": "Målet var att skapa en webshop för donuts eller ett annat produktval. Jag valde att skapa en webshop för Canvases jag har skapat i photoshop för ett par år sedan för att göra det lite mer personligt.",
+          "3": "Under detta projekt fokuserade jag på att förstå grunderna i Java Script och jag är exalterad för att återskapa detta projekt igen om ett par år. Detta är mitt första projekt så jag anser det vara ett av de viktigaste."
+        }
+      },
+      "cartoon_quiz": {
+        "description": {
+          "1": "Detta projekt utvecklades som ett skolgrupprojekt på Medieinstitutet.",
+          "2": "Målet var att skapa ett quiz i valfritt tema. Vi valde att skapa ett quiz om cartoons eftersom vi ville leka med glada färger.",
+          "3": "Under detta projekt fokuserade vi på att lära oss hur man arbetar som grupp, både individuellt och parvis."
+        }
+      },
+      "jurassic_world": {
+        "description": {
+          "1": "Välkommen till en Design-Swap, en uppgift vi gjorde medan vi studerade Front End Developer programmet på Mediainstitutet.",
+          "2": "I detta projekt fick vi en design från en annan grupp och kodade webbplatsen enligt deras vision."
+        }
+      },
+      "reptilicious": {
+        "description": {
+          "1": "Välkommen till det andra projektet i Design-Swap, en uppgift vi gjorde medan vi studerade Front End Developer programmet på Mediainstitutet.",
+          "2": "I detta projekt gav vi över denna design och en annan grupp kodade webbplatsen enligt vår vision."
+        }
+      },
+       
+      "the_lumos_library": {
+        "description": {
+          "1": "I detta projekt byggde vi ett bok-api med MongoDB som backend och ett frontend-gränssnitt med Vue. Det gör att vi kan bläddra, granska och hantera en samling böcker.",
+          "2": "Applikationen inkluderar också användarautentisering, admin-åtkomst för att hantera innehåll, och offentlig åtkomst för att visa böcker och skicka recensioner.",
+          "3": "Logga in som admin, använd",
+          "4": "användarnamn: admin",
+          "5": "lösenord: admin123"
+        }
+      },
+      "todo_app": {
+        "description": {
+          "1": "I detta projekt byggde jag en Todo-app med React och TypeScript, använde TailwindCSS för att skapa ett responsivt och användarvänligt gränssnitt.",
+          "2": "Appen gör att användare kan organisera sina dagliga uppgifter, kategorisera dem efter sin känsla, filtrera aktiva och slutförda objekt, och hantera sitt arbetsflöde enkelt.",
+          "3": "Applikationen inkluderar också state-hantering för att spåra uppgiftsstatus och sorteringsinställningar, användning av localStorage för att säkerställa att användarens lista blir konsekvent mellan sidomladdningar."
+        }
+      },
+      "the_zoo": {
+        "description": {
+          "1": "I detta projekt byggde jag en Zoo-app med React och TypeScript.",
+          "2": "Användarna kan bläddra bland en samling djur, se detaljerad information, och hantera deras matscheman.",
+          "3": "Applikationen inkluderar också tidbaserad state-logik för att spåra hungersnivåer och använder localStorage för att säkerställa att matstatusen blir konsekvent mellan sidomladdningar."
+        }
+      },
+      "case_af_jobtech": {
+        "description": {
+          "1": "I detta projekt byggde vi en Job Search-app med React och TypeScript, integrerade Arbetsförmedlingens officiella designsystem för att skapa en förbättrad användarupplevelse.",
+          "2": "Användarna kan söka efter jobbannonser, filtrera resultat efter plats och yrke, se detaljerad jobbbeskrivning, och spara intressanta positioner för ett senare tillfälle.",
+          "3": "Applikationen inkluderar också state-hantering för att spåra sökhistorik och sparade jobb, användning av localStorage för att säkerställa att användarens inställningar blir konsekventa mellan sidomladdningar."
+        }
+      },
+      "privacy_dashboard": {
+        "description": {
+          "1": "Detta projekt utvecklades under min första LIA period, jag byggde en Privacy Dashboard-app med React och TypeScript för att visualisera kundhälsa och produktanvändning för företagets Privacy-produkt.",
+          "2": "Det ger en robust gränssnitt för administratörer att visa och analysera aggregerade statistik, se kund- och användarprofiler, och spåra engagemang genom ett självbyggt poängsystem.",
+          "3": "Applikationen har säker autentisering (Clerk), internationalisering (i18n), och effektiv state-hantering med TanStack Query, initialt prototypad med MSW innan den integrerades med en riktig backend."
+        }
+      }
+     
+    
+     
+      
+     
+     
+    
+    
+  }
     
   }
 }

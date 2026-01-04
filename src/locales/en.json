@@ -83,8 +83,95 @@
       },
       "references_available_upon_request": "References available upon request"
       
-    }
+    },
+    "projects": {
+      "my_projects": "My projects",
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "filter": "Filter", 
+      "done_filtering": "Done filtering",
+      "view_demo": "View demo",
+      "view_on_github": "View on Github",
+      "select_tech_to_filter_projects": "Select tech to filter projects",
+      "tough_cookies": {
+        "description": {
+          "1": "This project was developed as a school project at Medieinstitutet.",
+          "2": "We were given a pre-made design to replicate using HTML and CSS for the first time."
+        }
+      },
+      "gottfrids_canvas_shop": {
+        "description": {
+          "1": "This project was developed as a school project at Medieinstitutet.",
+          "2": "The aim was to create a webshop for donuts or another product of choice. I chose to create a webshop for Canvases I've created in photoshop a few years ago to make it a little bit more personal.",
+          "3": "Troughtout this project I focused on understanding the basics of Java Script and I'm excited to redo this projects in a few years. This is my first project so I consider it to be the most important one. I hope you enjoy."
+        }
+      },
+      "cartoon_quiz": {
+        "description": {
+          "1": "This project was developed as a school group-project at Medieinstitutet.",
+          "2": "The aim was to create a quiz in theme of choice. We chose to create a quiz about cartoons because it felt fun to play with happy colors.",
+          "3": "Troughout this project we focused on learning how to work as a group, both individually and pair coding. I hope you enjoy."
+        }
+      },
+      "jurassic_world": {
+        "description": {
+          "1": "Welcome to a Design-Swap, an assignment we did while studying the Front End Developer Program at Mediainstitutet.",
+          "2": "In this project we got handed a desing from another group and coded the website acording to their vision."
+        }
+      },
+      "reptilicious": {
+        "description": {
+          "1": "Welcome to the other project of the Design-Swap, an assignment we did while studying the Front End Developer Program at Mediainstitutet.",
+          "2": "In this project we handed over this design and another group code the website according to our vision."
+        }
+      },
+       
+      "the_lumos_library": {
+        "description": {
+          "1": "In this project we built a Book-api with MongoDB as backend and a Frontend interface with Vue. It allows us to browse, review and manage a collection of books.",
+          "2": "The application also includes user authentication, admin-only access for managing content, and public access for viewing books submitting reviews.",
+          "3": "Log in as admin, use",
+          "4": "username: admin",
+          "5": "password: admin123"
+        }
+      },
+      "todo_app": {
+        "description": {
+          "1": "In this project, I built a client-side Todo Application using React and TypeScript, utilizing TailwindCSS to create a responsive and user-friendly interface.",
+          "2": "It allows users to organize their daily tasks, categorize them by emotion, filter active and completed items, and manage their workflow with ease.",
+          "3": "The application also includes state management for tracking task status and sorting preferences, using localStorage for persistence to ensure the user's list remains consistent across page reloads."
+        }
+      },
+      "the_zoo": {
+        "description": {
+          "1": "In this project, I built a client-side Zoo Application using React and TypeScript.",
+          "2": "It allows users to browse a collection of animals, view detailed information, and manage their feeding schedules.",
+          "3": "The application also includes time-based state logic for tracking hunger levels and uses localStorage for persistence, ensuring that feeding status remains consistent across page reloads."
+        }
+      },
+      "case_af_jobtech": {
+        "description": {
+          "1": "In this project, I built a client-side Job Search Application using React and TypeScript, integrating Arbetsförmedlingen's official design system to create an improved user experience.",
+          "2": "It allows users to search for job advertisements, filter results by location and occupation, view detailed job descriptions, and save interesting positions for later.",
+          "3": "The application also includes state management for tracking search history and saved jobs, using localStorage for persistence to ensure user preferences remain consistent across page reloads."
+        }
+      },
+      "privacy_dashboard": {
+        "description": {
+          "1": "In this project, developed during my internship, I built a Privacy Dashboard Application using React and TypeScript to visualize customer health and product usage for the company's Privacy product.",
+          "2": "It provides a robust interface for administrators to view and analyze aggregated statistics, manage customer and user profiles, and track engagement through a custom-built scoring system.",
+          "3": "The application features secure authentication (Clerk), internationalization (i18n), and efficient state management with TanStack Query, initially prototyped with MSW before integrating with a real backend."
+        }
+      }
+     
+    
+     
+      
+     
+     
+    
     
   }
+}
 }
 

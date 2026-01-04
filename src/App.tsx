@@ -221,7 +221,7 @@ const SideBarCV = () => {
       <div className="flex flex-col gap-4 w-full max-w-xs px-4">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white">
           <h2 className="uppercase text-white font-bold mb-4 tracking-wider text-center">
-            {t('sidebarCV.contact')}
+            {t("sidebarCV.contact")}
           </h2>
           <div className="flex flex-col gap-3 text-sm">
             <div className="flex items-center gap-3 hover:text-brand-300 transition-colors">
@@ -256,27 +256,35 @@ const SideBarCV = () => {
           </div>
         </div>
         <div className="flex flex-col items-center gap-2 ">
-          <h2 className="uppercase tracking-wider mb-2">Languages</h2>
+          <h2 className="uppercase tracking-wider mb-2">
+            {t("sidebarCV.languages")}
+          </h2>
           <div className="flex items-center gap-2">
-            <p>swedish</p>
-            <p>english</p>
+            <p>{t("sidebarCV.swedish")}</p>
+            <p>{t("sidebarCV.english")}</p>
           </div>
         </div>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white">
-          <h2 className="uppercase mb-4 tracking-wider">Tech</h2>
-          <NavLink to="/projects">View here</NavLink>
+          <h2 className="uppercase mb-4 tracking-wider">
+            {t("sidebarCV.tech")}
+          </h2>
+          <NavLink to="/projects">{t("sidebarCV.view_here")}</NavLink>
         </div>
         <div>
-          <h2 className="uppercase tracking-wider mb-2">Strengths</h2>
-          <p>Creative</p>
-          <p>Adaptable</p>
-          <p>Easygoing</p>
-          <p>Supportive</p>
+          <h2 className="uppercase tracking-wider mb-2">
+            {t("sidebarCV.Strengths")}
+          </h2>
+          <p>{t("sidebarCV.Creative")}</p>
+          <p>{t("sidebarCV.Adaptable")}</p>
+          <p>{t("sidebarCV.Easygoing")}</p>
+          <p>{t("sidebarCV.Supportive")}</p>
         </div>
         <div>
-          <h2 className="uppercase tracking-wider mb-2">Growth areas</h2>
-          <p>Reading lengthy texts</p>
-          <p>Presentation skills</p>
+          <h2 className="uppercase tracking-wider mb-2">
+            {t("sidebarCV.Growth areas")}
+          </h2>
+          <p>{t("sidebarCV.Reading_lengthy_texts")}</p>
+          <p>{t("sidebarCV.Presentation_skills")}</p>
         </div>
       </div>
     </section>
@@ -284,44 +292,26 @@ const SideBarCV = () => {
 };
 
 const MainCV = () => {
+  const { t } = useTranslation();
   if (!cvData) return <div>No data available</div>;
 
   return (
     <section className="flex flex-col bg-white gap-4 w-full px-4 pb-10 pt-10 text-left md:p-10 relative z-30 -mt-2 md:-mt-5">
       <div className="flex flex-col gap-4 w-full mt-4">
-        <p>
-          I’m Mikaela, a front-end development student with a background in
-          customer support and a long-time love for creating anything I could
-          shape, design, or bring to life digitally.
-        </p>
-        <p>
-          My love for design started early — long before I knew what “front-end”
-          even meant. As a teenager, I spent hours customizing blogs, playing
-          with HTML, CSS, and Photoshop — it was curiosity at its purest.
-        </p>
+        <p>{t("Cv.text_about_me.1")}</p>
+        <p>{t("Cv.text_about_me.2")}</p>
 
+        <p>{t("Cv.text_about_me.3")}</p>
+        <p>{t("Cv.text_about_me.4")}</p>
         <p>
-          I started working at 16, mostly in customer-focused roles, which
-          taught me how to communicate, solve problems, and understand people.
-          After five years in customer support, I decided to follow what had
-          been calling me all along.{" "}
-        </p>
-        <p>
-          {" "}
-          Now I’m studying Front End Development, building projects, learning
-          new tools, and improving a little every day.
-        </p>
-        <p>
-          Five words to describe me:{" "}
-          <strong>open, loyal, responsible, inventive & adaptable.</strong>
-          <br />I love the energy of collaboration, but I’m just as comfortable
-          working independently — and I’m excited to see where this path takes
-          me next.
+          {t("Cv.text_about_me.5")}
+          <br />
+          {t("Cv.text_about_me.6")}
         </p>
       </div>
       <div className="bg-gradient-to-r from-transparent via-black to-transparent h-[2px] my-6 "></div>
       <div className="flex flex-col gap-4">
-        <h2 className="text-left">Education & Internship</h2>
+        <h2 className="text-left">{t("experiences.education_internship")}</h2>
         <ul className="flex flex-col gap-4">
           {cvData.education.map((educationEntry) => (
             <li key={educationEntry.id}>
@@ -329,15 +319,15 @@ const MainCV = () => {
                 {educationEntry.organization}, {educationEntry.location}
               </h3>
               <p className="text-sm text-gray-500 mb-1">
-                {educationEntry.startDate} - {educationEntry.endDate}:{" "}
+                {t(educationEntry.startDate)} - {t(educationEntry.endDate)}:{" "}
               </p>
-              <p>{educationEntry.description}</p>
+              <p>{t(educationEntry.description)}</p>
             </li>
           ))}
         </ul>
       </div>
       <div className="flex flex-col gap-4 md:mt-4">
-        <h2 className="text-left">Work Experience</h2>
+        <h2 className="text-left">{t("experiences.work_experience")}</h2>
         <ul className="flex flex-col gap-4">
           {cvData.workExperience.map((workEntry) => (
             <li key={workEntry.id}>
@@ -345,14 +335,14 @@ const MainCV = () => {
                 {workEntry.company}, {workEntry.location}
               </h3>
               <p className="text-sm text-gray-500 mb-1">
-                {workEntry.startDate} - {workEntry.endDate}
+                {t(workEntry.startDate)} - {t(workEntry.endDate)}
               </p>
-              <p>{workEntry.description}</p>
+              <p>{t(workEntry.description)}</p>
             </li>
           ))}
         </ul>
         <p className="text-black font-script text-2xl mt-4">
-          References available upon request
+          {t("experiences.references_available_upon_request")}
         </p>
       </div>
     </section>
@@ -360,12 +350,13 @@ const MainCV = () => {
 };
 
 const Projects = () => {
-  if (!projectData) return <div>No data available</div>;
-
+  const { t } = useTranslation();
   // Add state for sort order, default true for "Newest" (Descending Dates)
   const [isDescending, setIsDescending] = useState(true);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
+
+  if (!projectData) return <div>No data available</div>;
 
   const toggleTech = (techName: string) => {
     setSelectedTechs((prev) =>
@@ -624,11 +615,11 @@ const Projects = () => {
     <>
       <div className="max-w-7xl mx-auto p-4">
         <h2 className="text-center font-normal text-white uppercase tracking-wider">
-          Tech Stack
+          {t("sidebarCV.tech")}
         </h2>
         {isFilterOpen && (
           <p className="text-center text-orange-400 text-sm mt-2 animate-pulse">
-            Select tech to filter projects
+            {t("projects.select_tech_to_filter_projects")}
           </p>
         )}
         <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6 "></div>
@@ -667,7 +658,7 @@ const Projects = () => {
       </div>
       <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
       <h2 className="text-center font-normal mb-8 text-white uppercase tracking-wider">
-        My projects
+        {t("projects.my_projects")}
       </h2>
       <section className="max-w-7xl mx-auto p-4">
         <div className="flex flex-col mb-6">
@@ -678,7 +669,7 @@ const Projects = () => {
               className={`flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1 ${isFilterOpen ? "bg-orange-400 border-orange-400 ring-2 ring-white/50" : ""}`}
             >
               <span className="text-sm uppercase tracking-wider font-medium">
-                {isFilterOpen ? "Done Filtering" : "Filter"}
+                {isFilterOpen ? t("projects.done_filtering") : t("projects.filter")}
               </span>
               <FaFilter />
               {selectedTechs.length > 0 && (
@@ -707,7 +698,7 @@ const Projects = () => {
               className="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl shadow-lg transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
             >
               <span className="text-sm uppercase tracking-wider font-medium">
-                {isDescending ? "Newest" : "Oldest"}
+                {isDescending ? t("projects.newest") : t("projects.oldest")}
               </span>
               {isDescending ? <FaSortAmountDown /> : <FaSortAmountUp />}
             </button>
@@ -731,7 +722,7 @@ const Projects = () => {
 
                 <div className="flex flex-col gap-2 text-left">
                   {project.description.map((desc, index) => (
-                    <p key={index}>{desc}</p>
+                    <p key={index}>{t(desc)}</p>
                   ))}
                 </div>
                 <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
@@ -764,7 +755,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     href={project.demo}
                   >
-                    View Demo
+                    {t("projects.view_demo")}
                   </a>
                   <a
                     className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
@@ -772,7 +763,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     href={project.github}
                   >
-                    View on GitHub
+                    {t("projects.view_on_github")}
                   </a>
                 </div>
               </div>

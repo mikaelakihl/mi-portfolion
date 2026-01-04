@@ -11,9 +11,9 @@ export const projectData: IProject[] = [
       height: 817,
     },
     description: [
-      `This project was developed as a school project at Medieinstitutet.`,
-      `The aim was to create a webshop for donuts or another product of choice. I chose to create a webshop for Canvases I've created in photoshop a few years ago to make it a little bit more personal.`,
-      `Troughtout this project I focused on understanding the basics of Java Script and I'm excited to redo this projects in a few years. This is my first project so I consider it to be the most important one. I hope you enjoy.`,
+      "projects.gottfrids_canvas_shop.description.1",
+      "projects.gottfrids_canvas_shop.description.2",
+      "projects.gottfrids_canvas_shop.description.3",
     ],
     tech: ["HTML", "CSS", "JavaScript", "Sass", "Prettier"],
     demo: "https://mikaelakihl.github.io/mi-js-intro-assignment1-webshop/",
@@ -30,9 +30,9 @@ export const projectData: IProject[] = [
       height: 1000,
     },
     description: [
-      `This project was developed as a school group-project at Medieinstitutet.`,
-      `The aim was to create a quiz in theme of choice. We chose to create a quiz about cartoons because it felt fun to play with happy colors.`,
-      `Troughout this project we focused on learning how to work as a group, both individually and pair coding. I hope you enjoy.`,
+      "projects.cartoon_quiz.description.1",
+      "projects.cartoon_quiz.description.2",
+      "projects.cartoon_quiz.description.3",
     ],
     tech: [
       "HTML",
@@ -59,8 +59,8 @@ export const projectData: IProject[] = [
       height: 1113,
     },
     description: [
-      `This project was developed as a school project at Medieinstitutet.`,
-      `We were given a pre-made design to replicate using HTML and CSS for the first time.`,
+      "projects.tough_cookies.description.1",
+      "projects.tough_cookies.description.2",
     ],
     tech: ["HTML", "CSS", "Sass"],
     demo: "https://mikaelakihl.github.io/mi-html-css-assignment2-toughcookie/",
@@ -78,8 +78,8 @@ export const projectData: IProject[] = [
       height: 1000,
     },
     description: [
-      `Welcome to a "Design-Swap", an assignment we did while studying the Front End Developer Program at Mediainstitutet.`,
-      `In this project we got handed a desing from another group and coded the website acording to their vision.`,
+      "projects.jurassic_world.description.1",
+      "projects.jurassic_world.description.2",
     ],
     tech: [
       "HTML",
@@ -109,8 +109,8 @@ export const projectData: IProject[] = [
       height: 1003,
     },
     description: [
-      `Welcome to the other project of the "Design-Swap", an assignment we did while studying the Front End Developer Program at Mediainstitutet.`,
-      `In this project we handed over this design and another group code the website acording to our vision.`,
+      "projects.reptilicious.description.1",
+      "projects.reptilicious.description.2",
     ],
     tech: [
       "HTML",
@@ -140,11 +140,11 @@ export const projectData: IProject[] = [
       height: 1053,
     },
     description: [
-      `In this project we built a Book-api with MongoDB as backend and a Frontend interface with Vue. It allows us to browse, review and manage a collection of books.`,
-      `The application also includes user authentication, admin-only access for managing content, and public access for viewing books submitting reviews.`,
-      `Log in as admin, use`,
-      `username: admin`,
-      `password: admin123`,
+      "projects.the_lumos_library.description.1",
+      "projects.the_lumos_library.description.2",
+      "projects.the_lumos_library.description.3",
+      "projects.the_lumos_library.description.4",
+      "projects.the_lumos_library.description.5",
     ],
     tech: [
       "HTML",
@@ -174,9 +174,9 @@ export const projectData: IProject[] = [
       height: 1053,
     },
     description: [
-      `In this project, I built a client-side Todo Application using React and TypeScript, utilizing TailwindCSS to create a responsive and user-friendly interface.`,
-      `It allows users to organize their daily tasks, categorize them by emotion, filter active and completed items, and manage their workflow with ease.`,
-      `The application also includes state management for tracking task status and sorting preferences, using localStorage for persistence to ensure the user's list remains consistent across page reloads.`,
+      "projects.todo_app.description.1",
+      "projects.todo_app.description.2",
+      "projects.todo_app.description.3",
     ],
     tech: [
       "HTML",
@@ -203,9 +203,9 @@ export const projectData: IProject[] = [
       height: 1053,
     },
     description: [
-      `In this project, I built a client-side Zoo Application using React and TypeScript. `,
-      `It allows users to browse a collection of animals, view detailed information, and manage their feeding schedules.`,
-      `The application also includes time-based state logic for tracking hunger levels and uses localStorage for persistence, ensuring that feeding status remains consistent across page reloads.`,
+      "projects.the_zoo.description.1",
+      "projects.the_zoo.description.2",
+      "projects.the_zoo.description.3",
     ],
     tech: [
       "HTML",
@@ -234,9 +234,9 @@ export const projectData: IProject[] = [
       height: 1053,
     },
     description: [
-      `In this project, I built a client-side Job Search Application using React and TypeScript, integrating Arbetsförmedlingen's official design system to create an improved user experience.`,
-      ` It allows users to search for job advertisements, filter results by location and occupation, view detailed job descriptions, and save interesting positions for later.`,
-      `The application also includes state management for tracking search history and saved jobs, using localStorage for persistence to ensure user preferences remain consistent across page reloads.`,
+      "projects.case_af_jobtech.description.1",
+      "projects.case_af_jobtech.description.2",
+      "projects.case_af_jobtech.description.3",
     ],
     tech: [
       "HTML",
@@ -265,9 +265,9 @@ export const projectData: IProject[] = [
       height: 1053,
     },
     description: [
-      `In this project, developed during my internship, I built a Privacy Dashboard Application using React and TypeScript to visualize customer health and product usage for the company's Privacy product.`,
-      ` It provides a robust interface for administrators to view and analyze aggregated statistics, manage customer and user profiles, and track engagement through a custom-built scoring system.`,
-      `The application features secure authentication (Clerk), internationalization (i18n), and efficient state management with TanStack Query, initially prototyped with MSW before integrating with a real backend.`,
+      "projects.privacy_dashboard.description.1",
+      "projects.privacy_dashboard.description.2",
+      "projects.privacy_dashboard.description.3",
     ],
     tech: [
       "HTML",
