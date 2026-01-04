@@ -18,7 +18,7 @@ export const projectData: IProject[] = [
     tech: ["HTML", "CSS", "JavaScript", "Sass", "Prettier"],
     demo: "https://mikaelakihl.github.io/mi-js-intro-assignment1-webshop/",
     github: "https://github.com/mikaelakihl/mi-js-intro-assignment1-webshop",
-    created_at: "2024-09-01",
+    created_at: "2024-12-06",
   },
   {
     id: 1,
@@ -47,7 +47,7 @@ export const projectData: IProject[] = [
     demo: "https://mikaelakihl.github.io/mi-js-intro-assignment2-cartoonquiz/",
     github:
       "https://github.com/mikaelakihl/mi-js-intro-assignment2-cartoonquiz",
-    created_at: "2024-10-01",
+    created_at: "2025-01-07",
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ export const projectData: IProject[] = [
     demo: "https://mikaelakihl.github.io/mi-html-css-assignment2-toughcookie/",
     github:
       "https://github.com/mikaelakihl/mi-html-css-assignment2-toughcookie",
-    created_at: "2024-11-01",
+    created_at: "2024-10-30",
   },
   {
     id: 4,
@@ -97,7 +97,7 @@ export const projectData: IProject[] = [
     demo: "https://mikaelakihl.github.io/mi-graphic-tools-assignment2-jurassic-world/",
     github:
       "https://github.com/mikaelakihl/mi-graphic-tools-assignment2-jurassic-world",
-    created_at: "2024-12-01",
+    created_at: "2025-03-11",
   },
   {
     id: 5,
@@ -128,7 +128,7 @@ export const projectData: IProject[] = [
     demo: "https://mikaelakihl.github.io/mi-graphic-tools-assignment1-reptilicious/",
     github:
       "https://github.com/mikaelakihl/mi-graphic-tools-assignment1-reptilicious",
-    created_at: "2025-01-01",
+    created_at: "2025-03-12",
   },
   {
     id: 6,
@@ -162,7 +162,7 @@ export const projectData: IProject[] = [
     demo: "https://mi-api-development-assignment2-the-lumos-library-client.vercel.app/",
     github:
       "https://github.com/mikaelakihl/mi-api-development-assignment2-the-lumos-library",
-    created_at: "2025-02-01",
+    created_at: "2025-05-16",
   },
   {
     id: 7,
