@@ -1,4 +1,6 @@
-import { Cloud, MainCV, SideBarCV } from "../App";
+import { Cloud } from "../components/Cloud";
+import { MainCV } from "../components/MainCv";
+import { SideBarCV } from "../components/SidebarCv";
 
 export const CV = () => {
     return (
