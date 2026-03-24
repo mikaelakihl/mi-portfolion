@@ -30,6 +30,7 @@ import { CiMail } from "react-icons/ci";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import { Projects } from "./pages/Projects";
+import { CV } from "./pages/CV";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -122,23 +123,23 @@ const Layout = () => {
   );
 };
 
-const CV = () => {
-  return (
-    <div className="flex md:flex-row flex-col">
-      <SideBarCV />
-      <div className="flex flex-col flex-1">
-        <div className="flex-1 md:mt-20 mt-20">
-          <Cloud />
-        </div>
-        <div className="flex-1">
-          <MainCV />
-        </div>
-      </div>
-    </div>
-  );
-};
+// const CV = () => {
+//   return (
+//     <div className="flex md:flex-row flex-col">
+//       <SideBarCV />
+//       <div className="flex flex-col flex-1">
+//         <div className="flex-1 md:mt-20 mt-20">
+//           <Cloud />
+//         </div>
+//         <div className="flex-1">
+//           <MainCV />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
-const Cloud = () => {
+export const Cloud = () => {
   return (
     <>
       <NavLink to="/art">
@@ -176,7 +177,7 @@ const Cloud = () => {
   );
 };
 
-const SideBarCV = () => {
+export const SideBarCV = () => {
   const { t } = useTranslation();
   return (
     <section className="sidebar-cv  flex flex-col items-center justify-center md:justify-start md:pt-20 w-full md:w-1/3 text-white gap-8 md:mx-5">
@@ -264,7 +265,7 @@ const SideBarCV = () => {
   );
 };
 
-const MainCV = () => {
+export const MainCV = () => {
   const { t } = useTranslation();
   if (!cvData) return <div>No data available</div>;
 
