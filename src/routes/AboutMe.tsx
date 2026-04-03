@@ -3,18 +3,26 @@ import { useTranslation } from "react-i18next";
 const AboutMe = () => {
     const { t } = useTranslation();
     return (
-        <div>
-            <h1>About Me</h1>
-            <div className="flex flex-col gap-4 w-full mt-4">
+        <div className="max-w-7xl mx-auto p-4">
+            <h2 className="text-center font-normal text-white uppercase tracking-wider">
+                    About me
+                </h2>
+                <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
+                <div className="flex flex-col gap-4 w-full mt-4 text-brand-600">
+                <h3 className="uppercase tracking-wider">Who I am</h3>
                 <p>{t("Cv.text_about_me.1")}</p>
+                <h3 className="uppercase tracking-wider">Where it started</h3>
                 <p>{t("Cv.text_about_me.2")}</p>
-
+        <h3 className="uppercase tracking-wider">My bakground</h3>
                 <p>{t("Cv.text_about_me.3")}</p>
+                <h3 className="uppercase tracking-wider">Where I am now</h3>
                 <p>{t("Cv.text_about_me.4")}</p>
+                <p>{t("Cv.text_about_me.6")}</p>
+                <h3 className="uppercase tracking-wider">Five words to describe me:</h3>
                 <p>
                     {t("Cv.text_about_me.5")}
-                    <br />
-                    {t("Cv.text_about_me.6")}
+                   
+                   
                 </p>
             </div>
         </div>
