@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { cvData } from "../data/cvData";
 import { NavLink } from "react-router-dom";
-import { FaArrowRight, FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 export const MainCV = () => {
     const { t } = useTranslation();
