@@ -32,11 +32,11 @@
       "education_internship": "Utbildning & Praktik",
       "work_experience": "Arbetserfarenhet",
       "visma_draftit_internship": {
-      "oktober_2025": "Oktober 2025",
-      "december_2025": "December 2025",
-      "description": {
-        "1": "Utvecklade en interaktiv datavisualiseringsinstrumentpanel med React och TypeScript. Ansvarig för komponentstruktur, state-hantering, och UI-design, arbetade självständigt medan samarbetet med teamet gällde mestadels att säkerställa kvalitet i en produktionsmiljö."
-      }
+        "oktober_2025": "Oktober 2025",
+        "december_2025": "December 2025",
+        "description": {
+          "1": "Utvecklade en interaktiv datavisualiseringsinstrumentpanel med React och TypeScript. Ansvarig för komponentstruktur, state-hantering, och UI-design, arbetade självständigt medan samarbetet med teamet gällde mestadels att säkerställa kvalitet i en produktionsmiljö."
+        }
       },
       "mediainstitutet": {
         "oktober_2024": "Oktober 2024",
@@ -60,7 +60,7 @@
           "1": "Hjälpte kunder genom e-post och chat i ett snabbt tempo i Gaming-miljö. Förbättrade skriftlig kommunikation, effektivitet, och fick insikt i iGaming-branschen."
         }
       },
-      
+
       "assistans_i_balans": {
         "november_2020": "November 2020",
         "march_2021": "Mars 2021",
@@ -68,7 +68,7 @@
           "1": "Förde dagligt stöd till en 11-årig tjej med funktionsnedsättning. Utvecklade förmågor i icke-verbal kommunikation, tålamod, och kreativ problem-lösning."
         }
       },
-      
+
       "mr_green_william_hill": {
         "february_2020": "Februari 2020",
         "august_2020": "Augusti 2020",
@@ -84,13 +84,12 @@
         }
       },
       "references_available_upon_request": "Referenser tillgängliga vid begäran"
-      
     },
     "projects": {
       "my_projects": "Mina projekt",
       "newest": "Nyaste",
       "oldest": "Äldsta",
-      "filter": "Filter", 
+      "filter": "Filter",
       "done_filtering": "Klart",
       "view_demo": "Visa demo",
       "view_on_github": "Visa på Github",
@@ -127,7 +126,7 @@
           "2": "I detta projekt gav vi över denna design och en annan grupp kodade webbplatsen enligt vår vision."
         }
       },
-       
+
       "the_lumos_library": {
         "description": {
           "1": "I detta projekt byggde vi ett bok-api med MongoDB som backend och ett frontend-gränssnitt med Vue. Det gör att vi kan bläddra, granska och hantera en samling böcker.",
@@ -165,17 +164,6 @@
           "3": "Applikationen har säker autentisering (Clerk), internationalisering (i18n), och effektiv state-hantering med TanStack Query, initialt prototypad med MSW innan den integrerades med en riktig backend."
         }
       }
-     
-    
-     
-      
-     
-     
-    
-    
-  }
-    
+    }
   }
 }
-
-

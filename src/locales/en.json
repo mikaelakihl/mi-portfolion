@@ -32,11 +32,11 @@
       "education_internship": "Education & Internship",
       "work_experience": "Work Experience",
       "visma_draftit_internship": {
-      "oktober_2025": "October 2025",
-      "december_2025": "December 2025",
-      "description": {
-        "1": "Developing an interactive data visualization dashboard using React and TypeScript. Responsible for component structure, state management, and UI design, working independently while collaborating with the team to ensure quality in a production environment."
-      }
+        "oktober_2025": "October 2025",
+        "december_2025": "December 2025",
+        "description": {
+          "1": "Developing an interactive data visualization dashboard using React and TypeScript. Responsible for component structure, state management, and UI design, working independently while collaborating with the team to ensure quality in a production environment."
+        }
       },
       "mediainstitutet": {
         "oktober_2024": "October 2024",
@@ -60,7 +60,7 @@
           "1": "Assisted customers through email and chat in a fast-paced iGaming environment. Improved written communication, efficiency, and gained insight into the iGaming industry."
         }
       },
-      
+
       "assistans_i_balans": {
         "november_2020": "November 2020",
         "march_2021": "March 2021",
@@ -68,7 +68,7 @@
           "1": "Provided daily support to an 11-year-old girl with a disability. Built skills in non-verbal communication, patience, and creative problem-solving."
         }
       },
-      
+
       "mr_green_william_hill": {
         "february_2020": "February 2020",
         "august_2020": "August 2020",
@@ -84,13 +84,12 @@
         }
       },
       "references_available_upon_request": "References available upon request"
-      
     },
     "projects": {
       "my_projects": "My projects",
       "newest": "Newest",
       "oldest": "Oldest",
-      "filter": "Filter", 
+      "filter": "Filter",
       "done_filtering": "Done filtering",
       "view_demo": "View demo",
       "view_on_github": "View on Github",
@@ -127,7 +126,7 @@
           "2": "In this project we handed over this design and another group code the website according to our vision."
         }
       },
-       
+
       "the_lumos_library": {
         "description": {
           "1": "In this project we built a Book-api with MongoDB as backend and a Frontend interface with Vue. It allows us to browse, review and manage a collection of books.",
@@ -165,15 +164,6 @@
           "3": "The application features secure authentication (Clerk), internationalization (i18n), and efficient state management with TanStack Query, initially prototyped with MSW before integrating with a real backend."
         }
       }
-     
-    
-     
-      
-     
-     
-    
-    
+    }
   }
 }
-}
-

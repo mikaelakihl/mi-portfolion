@@ -8,19 +8,19 @@ const AboutMe = () => {
         About me
       </h2>
       <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
-        <div className="flex flex-col gap-4 w-full mt-4 text-brand-600 text-white">
-          <h3 className="uppercase tracking-wider">Who I am</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white">
+        <div className="flex flex-col gap-4 w-full mt-4 text-brand-600 text-white   ">
+          <h3 className="uppercase tracking-wider text-brand-600 font-bold">Who I am</h3>
           <p>{t("Cv.text_about_me.1")}</p>
-          <h3 className="uppercase tracking-wider">Where it started</h3>
+          <h3 className="uppercase tracking-wider text-brand-600 font-bold">Where it started</h3>
           <p>{t("Cv.text_about_me.2")}</p>
-          <h3 className="uppercase tracking-wider">My bakground</h3>
+          <h3 className="uppercase tracking-wider text-brand-600 font-bold">My bakground</h3>
           <p>{t("Cv.text_about_me.3")}</p>
-          <h3 className="uppercase tracking-wider">Where I am now</h3>
+          <h3 className="uppercase tracking-wider text-brand-600 font-bold">Where I am now</h3>
           <p>{t("Cv.text_about_me.4")}</p>
           <p>{t("Cv.text_about_me.6")}</p>
 
-          <p>{t("Cv.text_about_me.5")}</p>
+          
         </div>
         <div className="flex justify-center md:justify-end w-full mt-4 md:mt-0 md:sticky md:top-8 self-start">
           <div className="w-full max-w-md aspect-[3/4] overflow-hidden rounded-2xl border-4 border-brand-200 shadow-lg">
@@ -29,7 +29,11 @@ const AboutMe = () => {
               alt="Mikaela Kihl"
               className="w-full h-full object-cover"
             />
+             <div>
+            <p>{t("Cv.text_about_me.5")}</p>
           </div>
+          </div>
+         
         </div>
       </div>
     </div>
