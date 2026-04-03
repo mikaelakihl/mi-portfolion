@@ -17,6 +17,8 @@
       "Presentation_skills": "Presentation skills"
     },
     "Cv": {
+      "short_about_me": "I’m Mikaela, a front-end developer with a background in customer support and a long-time love for creating anything I could shape, design, or bring to life digitally.",
+      "story": "Read my full story",
       "text_about_me": {
         "1": "I’m Mikaela, a front-end development student with a background in customer support and a long-time love for creating anything I could shape, design, or bring to life digitally.",
         "2": "My love for design started early — long before I knew what “front-end” even meant. As a teenager, I spent hours customizing blogs, playing with HTML, CSS, and Photoshop — it was curiosity at its purest.",

@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { cvData } from "../data/cvData";
+import { NavLink } from "react-router-dom";
+import { FaArrowRight, FaLongArrowAltRight } from "react-icons/fa";
 
 export const MainCV = () => {
     const { t } = useTranslation();
@@ -8,16 +10,8 @@ export const MainCV = () => {
     return (
         <section className="flex flex-col bg-white gap-4 w-full px-4 pb-10 pt-10 text-left md:p-10 relative z-30 -mt-2 md:-mt-5">
             <div className="flex flex-col gap-4 w-full mt-4">
-                <p>{t("Cv.text_about_me.1")}</p>
-                <p>{t("Cv.text_about_me.2")}</p>
-
-                <p>{t("Cv.text_about_me.3")}</p>
-                <p>{t("Cv.text_about_me.4")}</p>
-                <p>
-                    {t("Cv.text_about_me.5")}
-                    <br />
-                    {t("Cv.text_about_me.6")}
-                </p>
+                <p>{t("Cv.short_about_me")}</p>
+                <NavLink to="/about-me" className='flex items-center gap-2 italic'><span>{t("Cv.story")}</span><span><FaLongArrowAltRight /></span></NavLink>
             </div>
             <div className="bg-gradient-to-r from-transparent via-black to-transparent h-[2px] my-6 "></div>
             <div className="flex flex-col gap-4">

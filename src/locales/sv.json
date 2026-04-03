@@ -17,8 +17,10 @@
       "Presentation_skills": "Presentera"
     },
     "Cv": {
+      "short_about_me": "Jag är Mikaela, en frontendutvecklare med en bakgrund inom kundsupport och en långvarig passion för att skapa, designa och bygga digitala upplevelser.",
+      "story": "Läs mer historia",
       "text_about_me": {
-        "1": "Jag är Mikaela, en front-endutvecklare med en bakgrund inom kundsupport och en långvarig kärlek till att skapa något jag kunde forma, designa, eller föra till liv digitalt.",
+        "1": "Jag är Mikaela, en frontendutvecklare med en bakgrund inom kundsupport och en långvarig kärlek till att skapa något jag kunde forma, designa, eller föra till liv digitalt.",
         "2": "Min kärlek till design startade tidigt — långt före jag visste vad “front-end” ens betydde. Som tonåring spenderade jag timmar med att designa bloggar, leka med HTML, CSS, och Photoshop — det var nyfikenhetens renaste form.",
         "3": "Jag började arbeta vid 16 års ålder, mest i kundfokuserade roller, vilket lärde mig hur man kommunicerar, löser problem, och förstår människor. Efter fem år i kundsupport, beslutade jag att följa det som jag en gång älskade.",
         "4": "Nu studerar jag Front End Development, bygger projekt, lär mig nya verktyg, och utvecklas lite mer för varje dag.",

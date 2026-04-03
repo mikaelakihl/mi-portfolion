@@ -1,4 +1,3 @@
-
 import {
   Routes,
   Route,
@@ -14,8 +13,7 @@ import { Art } from "./routes/Art";
 import { ArtDetail } from "./routes/ArtDetail";
 import { Header } from "./components/Header";
 import { ScrollToTop } from "./components/ScrollToTop";
-
-
+import AboutMe from "./routes/AboutMe";
 
 const Layout = () => {
   return (
@@ -28,8 +26,6 @@ const Layout = () => {
   );
 };
 
-
-
 const App = () => {
   return (
     <>
@@ -41,6 +37,7 @@ const App = () => {
           <Route path="art" element={<Art />} />
           <Route path="art/:id" element={<ArtDetail />} />
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="about-me" element={<AboutMe />} />
         </Route>
       </Routes>
     </>
