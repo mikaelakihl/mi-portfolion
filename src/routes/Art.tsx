@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { artData } from "../data/artData";
+import { TbBrandAdobePhotoshop, TbBrush } from "react-icons/tb";
 
 export const Art = () => {
     if (!artData) return <div>No data available</div>;
@@ -18,15 +19,23 @@ export const Art = () => {
                         {artData.map((art) => (
                             <li key={art.id}>
                                 <div className="flex flex-col gap-2">
+                                    
                                     <NavLink
                                         to={`/art/${art.id}`}
-                                        className="block aspect-square overflow-hidden rounded-lg group"
+                                        className="block aspect-square overflow-hidden rounded-lg group relative"
                                     >
                                         <img
                                             src={art.img?.url}
                                             alt={art.img?.alt}
                                             className="w-full h-full object-cover border border-2 border-white/20 rounded-xl transition-transform duration-500 group-hover:scale-110 ease-in-out"
                                         />
+                                        <div>
+                                        <div className="absolute top-2 right-2 bg-white/10 backdrop-blur-md rounded-full p-2">
+                {art.art === 'photoshop' && <TbBrandAdobePhotoshop size={20} />
+                }
+                {art.art === 'procreate' && <TbBrush size={30} />}
+            </div>
+                                        </div>
                                     </NavLink>
                                     <h3 className="text-white text-center ">{art.name}</h3>
                                 </div>

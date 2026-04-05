@@ -10,6 +10,7 @@ export const artData: IArt[] = [
       height: 918,
       alt: 'Porträtt av en delfin i solnedgången som drar en van under vattnet vars tak består av en mini ö.',
     },
+    art: 'photoshop',
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const artData: IArt[] = [
       height: 707,
       alt: 'Landskapsbild av två sträckgubbar vars huvud består av ett hjärta och en hjärna. De vandrar på en väg hand i hand som sedan går skilda riktningar. ',
     },
+    art: 'photoshop',
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const artData: IArt[] = [
       height: 707,
       alt: 'Landskapsbild av olika djungeldjur i en djungel',
     },
+    art: 'photoshop',
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ export const artData: IArt[] = [
       height: 1284,
       alt: 'Porträtt av en svävande ö med en blå molnig himmel. På ön finns ett träd, en parkbänk och ett vattenfall',
     },
+    art: 'photoshop',
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ export const artData: IArt[] = [
       height: 1260,
       alt: 'Porträtt av en staty i form av en ung kvinnas kropp. Från halsen växer det ut 5 olika slags blommor.',
     },
+    art: 'photoshop',
   },
   {
     id: 6,
@@ -60,6 +65,7 @@ export const artData: IArt[] = [
       height: 707,
       alt: 'Landskapsbild av Nalle Puh och hans vänner på ett rave i Sjumilaskogen. ',
     },
+    art: 'photoshop',
   },
   {
     id: 7,
@@ -70,6 +76,7 @@ export const artData: IArt[] = [
       height: 1500,
       alt: 'Porträtt av en halvkroppskvinna med rosa t-shirt vars huvud är ersatt med en stor glödlampa. Inuti glödlampan finns en färgexplosion i form av en hjärna',
     },
+    art: 'photoshop',
   },
   {
     id: 8,
@@ -80,6 +87,7 @@ export const artData: IArt[] = [
       height: 707,
       alt: 'Landskapsbild av ett badrum vars utsikt från fönstrerna är under vattenytan och på botten finns lilla sjöjunfrun. ',
     },
+    art: 'photoshop',
   },
   {
     id: 9,
@@ -90,6 +98,7 @@ export const artData: IArt[] = [
       height: 707,
       alt: 'Landskapsbild av Lilo och Stitch som firar Stich födelsedag på semester med deras van vid havet',
     },
+    art: 'photoshop',
   },
   {
     id: 10,
@@ -100,6 +109,7 @@ export const artData: IArt[] = [
       height: 1000,
       alt: 'Porträtt av en Nallebjörn som sitter på en sten efter att han har hittat magiska svampar i skogen.',
     },
+    art: 'photoshop',
   },
   {
     id: 11,
@@ -110,6 +120,7 @@ export const artData: IArt[] = [
       height: 717,
       alt: 'Landskapsbild av en man inzoomad på hans ansikte, med en tår i ögat med coronamask över munnen.',
     },
+    art: 'photoshop',
   },
   {
     id: 12,
@@ -120,6 +131,7 @@ export const artData: IArt[] = [
       height: 1200,
       alt: 'Landskapsbild av en skål i havet med en liten delfin som blir till en stor delfin när den hoppar ut ur skålen in i havet.',
     },
+    art: 'photoshop',
   },
   {
     id: 13,
@@ -130,6 +142,7 @@ export const artData: IArt[] = [
       height: 1075,
       alt: 'Porträtt av ett gammalt skåp som är fullt av teckningar i starka färger. Ovan finns en tavla på en strand.',
     },
+    art: 'photoshop',
   },
   {
     id: 14,
@@ -140,6 +153,7 @@ export const artData: IArt[] = [
       height: 1067,
       alt: 'Porträtt av en uppförsbacke, träd och himmel. Utspritt finns olika tecknade figurer och i högra under hörnet står ett lamm med gul tröja och röker.',
     },
+    art: 'photoshop',
   },
   {
     id: 15,
@@ -150,6 +164,7 @@ export const artData: IArt[] = [
       height: 1080,
       alt: 'Flygfoto av en säng som står på ett trägolv, i sängen finns ett hål där en flicka sitter ihopkrupen med ett ljus.',
     },
+    art: 'photoshop',
   },
   {
     id: 16,
@@ -160,17 +175,9 @@ export const artData: IArt[] = [
       height: 867,
       alt: 'Landskapsbild av en kvinna som håller ett glas vin i färgglada rökeffekter mot en vit bakgrund.',
     },
+    art: 'photoshop',
   },
-  {
-    id: 17,
-    name: 'Spacebound',
-    img: {
-      url: 'assets/art/spacebound.png',
-      width: 1500,
-      height: 1034,
-      alt: 'Landskapsbild av en man med ett "avskuret" ansikte och utifrån kommer månen och planeter, resterande av ansiktet kommer i slutet. ',
-    },
-  },
+ 
   
   {
     id: 18,
@@ -181,6 +188,7 @@ export const artData: IArt[] = [
       height: 1556,
       alt: 'Porträtt av ett par som sitter på en bänk som hänger i luften från en halvmåne som bildar en stad.',
     },
+    art: 'photoshop',
   },
 
 ];
