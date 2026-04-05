@@ -218,6 +218,18 @@ export const artData: IArt[] = [
     art: 'photoshop',
     created_at: '2021-03-02',
   },
+  {
+    id: 19,
+    name: 'Path to dusk',
+    img: {
+      url: 'assets/art/path-to-dusk.jpg',
+      width: 2200,
+      height: 3112,
+      alt: 'Porträtt av en väg vid en sjö under skymning.',
+    },
+    art: 'procreate',
+    created_at: '2025-06-19',
+  }
 
 ];
 
