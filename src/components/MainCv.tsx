@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { cvData } from "../data/cvData";
 import { NavLink } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
 
 export const MainCV = () => {
     const { t } = useTranslation();
@@ -15,7 +16,19 @@ export const MainCV = () => {
             </div>
             <div className="bg-gradient-to-r from-transparent via-black to-transparent h-[2px] my-6 "></div>
             <div className="flex flex-col gap-4">
-                <h2 className="text-left">{t("experiences.education_internship")}</h2>
+                <div className="flex items-center justify-between">
+                   <h2 className="text-left">{t("experiences.education_internship")}</h2> 
+                   <a
+                        href="/assets/mikaela-kihl-cv.pdf"
+                        download="mikaela-kihl-cv.pdf"
+                        className="flex items-center gap-2 text-inherit hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 rounded-sm"
+                        aria-label={t("Cv.download_cv")}
+                    >
+                        <span className="text-sm">CV</span>
+                        <FiDownload aria-hidden />
+                    </a>
+                </div>
+                
                 <ul className="flex flex-col gap-4">
                     {cvData.education.map((educationEntry) => (
                         <li key={educationEntry.id}>
