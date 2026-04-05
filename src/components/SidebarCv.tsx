@@ -9,7 +9,7 @@ export const SideBarCV = () => {
     const { t } = useTranslation();
     return (
         <section className="sidebar-cv  flex flex-col items-center justify-center md:justify-start md:pt-20 w-full md:w-1/3 text-white gap-8 md:mx-5">
-            <div className="rounded-full w-48 h-48 overflow-hidden border-4 border-brand-200">
+            <div className="rounded-full w-48 h-48 overflow-hidden border-4 border-brand-700">
                 <img
                     src="/assets/mikaelakihl-cv.png"
                     alt="CV"

@@ -59,11 +59,15 @@ body {
   --font-poppins: "Poppins", sans-serif;
 
   --color-brand-50: #96a294;
-  --color-brand-100: #7d8c81;
-  --color-brand-200: #5e6961;
+  --color-brand-100: #57635a; /* BG color */
+  --color-brand-200: #47524a; /* Top border color */
 
   --color-brand-300: #c6cdc5;
   --color-brand-400: #;
   --color-brand-500: #060606;
   --color-brand-600: #242e23;
+  --color-brand-700: #353d37;
+
+  /* --color-brand-100: #57635a; 
+  --color-brand-200: #47524a;  */
 }
