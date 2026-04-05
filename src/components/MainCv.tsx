@@ -21,7 +21,7 @@ export const MainCV = () => {
                    <a
                         href="/assets/mikaela-kihl-cv.pdf"
                         download="mikaela-kihl-cv.pdf"
-                        className="flex items-center gap-2 text-inherit hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 rounded-sm"
+                        className="flex items-center gap-2 text-black transition-colors duration-300 hover:text-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 rounded-sm"
                         aria-label={t("Cv.download_cv")}
                     >
                         <span className="text-sm">CV</span>
