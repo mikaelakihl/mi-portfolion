@@ -5,18 +5,18 @@ const AboutMe = () => {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <h2 className="text-center font-normal text-white uppercase tracking-wider">
-        About me
+        {t("Cv.about_me_title.1")}
       </h2>
       <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white">
         <div className="flex flex-col gap-4 w-full mt-4 text-brand-600 text-white   ">
-          <h3 className="uppercase tracking-wider text-brand-600 font-bold">Who I am</h3>
+          <h3 className="uppercase tracking-wider text-brand-600 font-bold">{t("Cv.about_me_title.2")}</h3>
           <p>{t("Cv.text_about_me.1")}</p>
-          <h3 className="uppercase tracking-wider text-brand-600 font-bold">Where it started</h3>
+          <h3 className="uppercase tracking-wider text-brand-600 font-bold">{t("Cv.about_me_title.3")}</h3>
           <p>{t("Cv.text_about_me.2")}</p>
-          <h3 className="uppercase tracking-wider text-brand-600 font-bold">My bakground</h3>
+          <h3 className="uppercase tracking-wider text-brand-600 font-bold">{t("Cv.about_me_title.4")}</h3>
           <p>{t("Cv.text_about_me.3")}</p>
-          <h3 className="uppercase tracking-wider text-brand-600 font-bold">Where I am now</h3>
+          <h3 className="uppercase tracking-wider text-brand-600 font-bold">{t("Cv.about_me_title.5")}</h3>
           <p>{t("Cv.text_about_me.4")}</p>
           <p>{t("Cv.text_about_me.6")}</p>
 

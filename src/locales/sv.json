@@ -18,6 +18,13 @@
     },
     "Cv": {
       "short_about_me": "Jag är Mikaela, en frontendutvecklare med en bakgrund inom kundsupport och en långvarig passion för att skapa, designa och bygga digitala upplevelser.",
+      "about_me_title": {
+        "1": "Om mig",
+        "2": "Vem är jag",
+        "3": "Var det började",
+        "4": "Min bakgrund",
+        "5": "Var jag är nu"
+      },
       "story": "Läs mer historia",
       "text_about_me": {
         "1": "Jag är Mikaela, en frontendutvecklare med en bakgrund inom kundsupport och en långvarig kärlek till att skapa något jag kunde forma, designa, eller föra till liv digitalt.",

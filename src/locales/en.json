@@ -18,6 +18,13 @@
     },
     "Cv": {
       "short_about_me": "I’m Mikaela, a front-end developer with a background in customer support and a long-time love for creating anything I could shape, design, or bring to life digitally.",
+      "about_me_title": {
+        "1": "About me",
+        "2": "Who I am",
+        "3": "Where it started",
+        "4": "My background",
+        "5": "Where I am now"
+      },
       "story": "Read my full story",
       "text_about_me": {
         "1": "I’m Mikaela, a front-end development student with a background in customer support and a long-time love for creating anything I could shape, design, or bring to life digitally.",
