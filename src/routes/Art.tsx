@@ -23,6 +23,9 @@ export const Art = () => {
     "rounded-full px-2 py-2 border border-white/20 bg-white/10 backdrop-blur-md text-white/80 transition-colors hover:bg-white/20 hover:text-white";
   const filterBtnActive = "ring-2 ring-white/50 bg-white/20 text-white";
 
+  const filterTooltip =
+    "pointer-events-none absolute top-full left-1/2 z-20 mt-1.5 -translate-x-1/2 whitespace-nowrap rounded-md border border-white/20 bg-white/10 px-2.5 py-1 text-xs font-medium uppercase tracking-wide text-white shadow-lg backdrop-blur-md opacity-0 transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100";
+
   return (
     <>
       {" "}
@@ -33,24 +36,34 @@ export const Art = () => {
 
         <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
         <div className="flex justify-end gap-2 mb-4 px-4">
-          <button
-            type="button"
-            aria-label="Show only Photoshop pieces"
-            aria-pressed={toolFilter === "photoshop"}
-            onClick={() => toggleTool("photoshop")}
-            className={`${filterBtn} ${toolFilter === "photoshop" ? filterBtnActive : ""}`}
-          >
-            <TbBrandAdobePhotoshop size={20} />
-          </button>
-          <button
-            type="button"
-            aria-label="Show only Procreate pieces"
-            aria-pressed={toolFilter === "procreate"}
-            onClick={() => toggleTool("procreate")}
-            className={`${filterBtn} ${toolFilter === "procreate" ? filterBtnActive : ""}`}
-          >
-            <TbBrush size={20} />
-          </button>
+          <div className="relative group">
+            <button
+              type="button"
+              aria-label="Show only Photoshop pieces"
+              aria-pressed={toolFilter === "photoshop"}
+              onClick={() => toggleTool("photoshop")}
+              className={`${filterBtn} ${toolFilter === "photoshop" ? filterBtnActive : ""}`}
+            >
+              <TbBrandAdobePhotoshop size={20} />
+            </button>
+            <span className={filterTooltip} role="tooltip">
+              Photoshop
+            </span>
+          </div>
+          <div className="relative group">
+            <button
+              type="button"
+              aria-label="Show only Procreate pieces"
+              aria-pressed={toolFilter === "procreate"}
+              onClick={() => toggleTool("procreate")}
+              className={`${filterBtn} ${toolFilter === "procreate" ? filterBtnActive : ""}`}
+            >
+              <TbBrush size={20} />
+            </button>
+            <span className={filterTooltip} role="tooltip">
+              Procreate
+            </span>
+          </div>
         </div>
         <section className="max-w-7xl mx-auto p-4">
           {filteredArt.length === 0 ? (

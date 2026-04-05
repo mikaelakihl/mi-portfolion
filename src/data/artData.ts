@@ -229,7 +229,54 @@ export const artData: IArt[] = [
     },
     art: 'procreate',
     created_at: '2025-06-19',
+  },
+  {
+    id: 20,
+    name: 'Quiet luxury',
+    img: {
+      url: 'assets/art/quiet-luxury.jpg',
+      width: 2480,
+      height: 3508,
+      alt: 'Porträtt av en dalmatin med gul sjal och solbrillor.',
+    },
+    art: 'procreate',
+    created_at: '2025-12-21',
+  }, 
+  {
+    id: 21,
+    name: 'Kihlen',
+    img: {
+      url: 'assets/art/kihlen.jpg',
+      width: 3000,
+      height: 3000,
+      alt: 'Coverbild på en man som har hatt och fiskar upp sin tatuering, Kihlen.',
+    },
+    art: 'procreate',
+    created_at: '2026-01-02',
+  },
+  {
+    id: 22,
+    name: 'Twins in leo',
+    img: {
+      url: 'assets/art/leotwins.jpg',
+      width: 3106,
+      height: 2174,
+      alt: 'Landskapsbild av två små lejon som leker vid vattned, där man ser deras spegelbilder som vuxna lejon.',
+    },
+    art: 'procreate',
+    created_at: '2025-08-22',
+  },
+  {
+    id: 23,
+    name: 'Rebel muse',
+    img: {
+      url: 'assets/art/rebel-muse.jpg',
+      width: 1780,
+      height: 2518,
+      alt: 'Porträtt av en färgstark kvinna som röker en cigarett och utstrålar en självsäker och rebellisk attityd.',
+    },
+    art: 'procreate',
+    created_at: '2025-06-01',
   }
-
 ];
 
