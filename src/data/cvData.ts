@@ -7,7 +7,7 @@ export const cvData: CVData = {
       startDate: "experiences.visma_acubiz_internship.february_2026",
       endDate: "experiences.visma_acubiz_internship.present",
       organization: "Visma Acubiz",
-      location: "Malmö",
+      location: "Köpenhamn",
       description: "experiences.visma_acubiz_internship.description.1",
     },
     {
