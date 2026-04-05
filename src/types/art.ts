@@ -8,9 +8,6 @@ export interface IArt {
     alt: string;
   };
   art: "photoshop" | "procreate";
-  /** Optional display year */
-  year?: number;
-  /** Optional short caption (separate from image alt text) */
-  description?: string;
+  created_at: string;
 }
 

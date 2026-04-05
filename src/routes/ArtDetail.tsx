@@ -72,19 +72,12 @@ export const ArtDetail = () => {
               className="absolute top-[calc(100%+6px)] right-0 w-[min(20rem,calc(100vw-2rem))] rounded-xl border border-white/20 bg-white/10 backdrop-blur-md p-4 shadow-xl text-white opacity-0 invisible -translate-y-1 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:pointer-events-auto before:absolute before:left-0 before:right-0 before:bottom-full before:h-3 before:content-['']"
             >
               <dl className="flex flex-col gap-3 text-center">
-                {art.year != null && (
-                  <div>
-                    <dt className="text-xs uppercase tracking-wider text-white/50 mb-0.5">
-                      Year
-                    </dt>
-                    <dd className="text-sm">{art.year}</dd>
-                  </div>
-                )}
+                
                 <div>
                   <dt className="text-xs uppercase tracking-wider text-white/50 mb-0.5">
                     Made with
                   </dt>
-                  <dd className="flex flex-row items-center justify-center gap-2 text-sm">
+                  <dd className="flex flex-row items-center justify-center gap-1 text-sm">
                     <span>{toolLabel[art.art]}</span>
                     {art.art === "photoshop" && (
                       <TbBrandAdobePhotoshop
@@ -105,12 +98,21 @@ export const ArtDetail = () => {
                     {art.img.width} × {art.img.height} px
                   </dd>
                 </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-wider text-white/50 mb-0.5">
+                    Created at
+                  </dt>
+                  <dd className="text-sm tabular-nums">
+                    {art.created_at}
+                  </dd>
+                </div>
               </dl>
-              {art.description ? (
+              
+              {/* {art.description ? (
                 <p className="mt-3 pt-3 border-t border-white/10 text-sm text-white/80 leading-relaxed text-center">
                   {art.description}
                 </p>
-              ) : null}
+              ) : null} */}
             </div>
           </div>
         </div>

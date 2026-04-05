@@ -30,7 +30,7 @@ export const Art = () => {
                                             className="w-full h-full object-cover border border-2 border-white/20 rounded-xl transition-transform duration-500 group-hover:scale-110 ease-in-out"
                                         />
                                         <div>
-                                        <div className="absolute top-2 right-2 bg-white/10 backdrop-blur-md rounded-full p-2">
+                                        <div className="absolute top-2 right-2 bg-white/10 backdrop-blur-md rounded-full p-2 text-white/70">
                 {art.art === 'photoshop' && <TbBrandAdobePhotoshop size={20} />
                 }
                 {art.art === 'procreate' && <TbBrush size={30} />}
