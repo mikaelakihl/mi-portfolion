@@ -38,11 +38,18 @@
     "experiences": {
       "education_internship": "Education & Internship",
       "work_experience": "Work Experience",
+      "visma_acubiz_internship": {
+        "february_2026": "February 2026",
+        "present": "present",
+        "description": {
+          "1": "Develop reusable UI components for an expenses management application. Implement features and improvements based on Jira tickets. Contribute to UI and UX improvements to enhance the overall user experience."
+        }
+      },
       "visma_draftit_internship": {
         "oktober_2025": "October 2025",
         "december_2025": "December 2025",
         "description": {
-          "1": "Developing an interactive data visualization dashboard using React and TypeScript. Responsible for component structure, state management, and UI design, working independently while collaborating with the team to ensure quality in a production environment."
+          "1": "Developed an interactive data visualization dashboard using React and TypeScript. Responsible for component structure, state management, and UI design, working independently while collaborating with the team to ensure quality in a production environment."
         }
       },
       "mediainstitutet": {

@@ -4,6 +4,14 @@ export const cvData: CVData = {
   education: [
     {
       id: "0",
+      startDate: "experiences.visma_acubiz_internship.february_2026",
+      endDate: "experiences.visma_acubiz_internship.present",
+      organization: "Visma Acubiz",
+      location: "Malmö",
+      description: "experiences.visma_acubiz_internship.description.1",
+    },
+    {
+      id: "1",
       startDate: "experiences.visma_draftit_internship.oktober_2025",
       endDate: "experiences.visma_draftit_internship.december_2025",
       organization: "Visma Draftit",
@@ -11,7 +19,7 @@ export const cvData: CVData = {
       description: "experiences.visma_draftit_internship.description.1",
     },
     {
-      id: "1",
+      id: "2",
       startDate: "experiences.mediainstitutet.oktober_2024",
       endDate: "experiences.mediainstitutet.may_2026",
       organization: "Mediainstitutet",

@@ -38,6 +38,13 @@
     "experiences": {
       "education_internship": "Utbildning & Praktik",
       "work_experience": "Arbetserfarenhet",
+      "visma_acubiz_internship": {
+        "february_2026": "Februari 2026",
+        "present": "nuvarande",
+        "description": {
+          "1": "Utvecklar återanvändbara UI-komponenter för ett utläggshanteringsprogram. Implementerar funktioner och förbättringar baserat på Jira-tickets. Bidrar till förbättringar av användargränssnittet och användarupplevelsen."
+        }
+      },
       "visma_draftit_internship": {
         "oktober_2025": "Oktober 2025",
         "december_2025": "December 2025",
