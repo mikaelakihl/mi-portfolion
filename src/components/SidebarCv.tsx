@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { CiMail } from "react-icons/ci";
-import { FaGithub } from "react-icons/fa";
+import { FaChevronDown, FaGithub, FaLongArrowAltRight } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
@@ -76,18 +76,28 @@ export const SideBarCV = () => {
                     <h2 className="uppercase tracking-wider mb-2">
                         {t("sidebarCV.Strengths")}
                     </h2>
-                    <p>{t("sidebarCV.Creative")}</p>
-                    <p>{t("sidebarCV.Adaptable")}</p>
-                    <p>{t("sidebarCV.Easygoing")}</p>
-                    <p>{t("sidebarCV.Supportive")}</p>
+                    <ul className="flex flex-col gap-2">
+                    <li>{t("sidebarCV.Attention_to_detail")}</li>
+                    <li>{t("sidebarCV.Responsive_accessible_design")}</li>
+                    <li>{t("sidebarCV.Curious_motivated_to_grow")}</li>
+                    <li>{t("sidebarCV.Collaborative_team_player")}</li>
+
+                    </ul>
+                    <NavLink to="/about-me" className='flex items-center justify-center gap-2 italic text-center mt-4 text-brand-600 hover:text-orange-400'><span>{t('sidebarCV.Read_more')}</span><span><FaLongArrowAltRight /></span></NavLink>
                 </div>
-                <div>
-                    <h2 className="uppercase tracking-wider mb-2">
+                <details>
+                    <summary className="uppercase tracking-wider mb-2 list-none [&::-webkit-details-marker]:hidden cursor-pointer flex items-center gap-2 justify-center">
                         {t("sidebarCV.Growth areas")}
-                    </h2>
-                    <p>{t("sidebarCV.Reading_lengthy_texts")}</p>
-                    <p>{t("sidebarCV.Presentation_skills")}</p>
-                </div>
+                        <span>
+                            <FaChevronDown size={16} />
+                        </span>
+                    </summary>
+                    <ul className="flex flex-col gap-2">
+                    <li>{t("sidebarCV.Web_performance_optimization")}</li>
+                    <li>{t("sidebarCV.Technical_presentations")}</li>  
+                    </ul>
+                    
+                </details>
             </div>
         </section>
     );
