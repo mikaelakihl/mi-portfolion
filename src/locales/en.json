@@ -29,10 +29,14 @@
       "story": "Read my full story",
       "download_cv": "Download CV (PDF)",
       "text_about_me": {
-        "1": "I’m Mikaela, a front-end development student with a background in customer support and a long-time love for creating things I can shape, design, and bring to life digitally. I enjoy translating ideas into clean, thoughtful interfaces and paying attention to the small details that make a user experience feel intuitive.",
-        "2": "My love for design started early — long before I knew what “front-end” even meant. As a teenager, I spent hours customizing blogs, experimenting with HTML, CSS, and Photoshop. It was curiosity at its purest, and the feeling of seeing something I built come to life on screen never really left.",
-        "3": "I started working at 16, mostly in customer-focused roles, which taught me how to communicate, solve problems, and understand people. That experience shaped how I approach development today — thinking not only about how something works, but how it feels to use.",
-        "4": "Now I’m studying Front End Development, building projects, learning new tools, and improving a little every day. I know there’s still a lot for me to learn, and that’s part of what excites me most about this field.",
+        "1": "I’m Mikaela, a front-end development student with a background in customer support and a long-time love for creating things I can shape, design, and bring to life digitally.", 
+        "1.1": "I enjoy translating ideas into clean, thoughtful interfaces and paying attention to the small details that make a user experience feel intuitive.",
+        "2": "My love for design started early — long before I knew what “front-end” even meant. As a teenager, I spent hours customizing blogs, experimenting with HTML, CSS, and Photoshop.", 
+        "2.1": "It was curiosity at its purest, and the feeling of seeing something I built come to life on screen never really left.",
+        "3": "I started working at 16, mostly in customer-focused roles, which taught me how to communicate, solve problems, and understand people.",
+        "3.1": "That experience shaped how I approach development today — thinking not only about how something works, but how it feels to use.",
+        "4": "Now I’m studying Front End Development, building projects, learning new tools, and improving a little every day.",
+        "4.1": "I know there’s still a lot for me to learn, and that’s part of what excites me most about this field.",
         "5": "Five words to describe me: open, loyal, responsible, inventive & adaptable.",
         "6": "I love the energy of collaboration, but I’m just as comfortable working independently — and I’m excited to see where this path takes me next."
       }

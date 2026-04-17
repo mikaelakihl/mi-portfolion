@@ -29,10 +29,15 @@
       "story": "Läs mer historia",
       "download_cv": "Ladda ner CV (PDF)",
       "text_about_me": {
-        "1": "Jag är Mikaela, en frontend-student med en bakgrund inom kundsupport och en långvarig passion för att skapa saker jag kan forma, designa och ge liv digitalt. Jag tycker om att omvandla idéer till genomtänkta gränssnitt och att lägga märke till de små detaljerna som gör att en användarupplevelse känns intuitiv.",
-        "2": "Min kärlek till design började tidigt — långt innan jag visste vad “front-end” ens betydde. Som tonåring spenderade jag timmar med att anpassa bloggar och experimentera med HTML, CSS och Photoshop. Det var nyfikenhet i sin renaste form, och känslan av att se något jag byggt komma till liv på skärmen har aldrig riktigt lämnat mig.",
-        "3": "Jag började arbeta vid 16 års ålder, främst i kundfokuserade roller, vilket lärde mig hur man kommunicerar, löser problem och förstår människor. Den erfarenheten har format hur jag utvecklar idag — jag tänker inte bara på hur något fungerar, utan också på hur det känns att använda.",
-        "4": "Nu studerar jag Front End Development, bygger projekt, lär mig nya verktyg och utvecklas lite mer för varje dag. Jag vet att det fortfarande finns mycket för mig att lära, och det är också en stor del av det gör det här yrket så spännande!",
+        "1": "Jag är Mikaela, en frontend-student med en bakgrund inom kundsupport och en långvarig passion för att skapa saker jag kan forma, designa och ge liv digitalt. ",
+        "1.1": "Jag tycker om att omvandla idéer till genomtänkta gränssnitt och att lägga märke till de små detaljerna som gör att en användarupplevelse känns intuitiv.",
+        "2": "Min kärlek till design började tidigt — långt innan jag visste vad “front-end” ens betydde. Som tonåring spenderade jag timmar med att anpassa bloggar och experimentera med HTML, CSS och Photoshop.",
+        "2.1": "Det var nyfikenhet i sin renaste form, och känslan av att se något jag byggt komma till liv på skärmen har aldrig riktigt lämnat mig.",
+        "3": "Jag började arbeta vid 16 års ålder, främst i kundfokuserade roller, vilket lärde mig hur man kommunicerar, löser problem och förstår människor." ,
+        "3.1": "Den erfarenheten har format hur jag utvecklar idag — jag tänker inte bara på hur något fungerar, utan också på hur det känns att använda.",
+
+        "4": "Nu studerar jag Front End Development, bygger projekt, lär mig nya verktyg och utvecklas lite mer för varje dag.",
+        "4.1": "Jag vet att det fortfarande finns mycket för mig att lära, och det är också en stor del av varför det här yrket är så spännande!",
         "5": "Fem ord för att beskriva mig: öppen, lojal, ansvarig, kreativ & anpassningsbar.",
         "6": "Jag älskar energin i att samarbeta med andra, men jag är lika bekväm med att arbeta självständigt — och jag ser fram emot att se vart den här vägen leder mig."
       }
