@@ -4,7 +4,6 @@ import { FaChevronDown, FaGithub, FaLongArrowAltRight } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import { Modal } from "./Modal";
 
 export const SideBarCV = () => {
     const { t } = useTranslation();
@@ -100,7 +99,7 @@ export const SideBarCV = () => {
                     
                 </details>
             </div>
-            {/* <Modal /> */}
+           
         </section>
     );
 };
