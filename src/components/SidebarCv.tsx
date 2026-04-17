@@ -4,6 +4,7 @@ import { FaChevronDown, FaGithub, FaLongArrowAltRight } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { Modal } from "./Modal";
 
 export const SideBarCV = () => {
     const { t } = useTranslation();
@@ -87,7 +88,7 @@ export const SideBarCV = () => {
                 </div>
                 <details>
                     <summary className="uppercase tracking-wider mb-2 list-none [&::-webkit-details-marker]:hidden cursor-pointer flex items-center gap-2 justify-center">
-                        {t("sidebarCV.Growth areas")}
+                        {t("sidebarCV.Growth_areas")}
                         <span>
                             <FaChevronDown size={16} />
                         </span>
@@ -99,6 +100,7 @@ export const SideBarCV = () => {
                     
                 </details>
             </div>
+            {/* <Modal /> */}
         </section>
     );
 };
