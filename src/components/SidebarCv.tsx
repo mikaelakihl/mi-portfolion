@@ -26,15 +26,7 @@ export const SideBarCV = () => {
                         {t("sidebarCV.contact")}
                     </h2>
                     <div className="flex flex-col gap-3 text-sm">
-                        <div className="flex items-center gap-3 hover:text-brand-300 transition-colors">
-                            <CiMail className="text-lg shrink-0" />
-                            <a
-                                href="mailto:mikaela.kihl@medieinstitutet.se"
-                                className="truncate"
-                            >
-                                mikaela.kihl@medieinstitutet.se
-                            </a>
-                        </div>
+                
                         <div className="flex items-center gap-3 hover:text-brand-300 transition-colors">
                             <CiMail className="text-lg shrink-0" />
                             <a href="mailto:mikaela.kihl@outlook.com" className="truncate">
@@ -53,7 +45,7 @@ export const SideBarCV = () => {
                         </div>
                         <div className="flex items-center gap-3 hover:text-brand-300 transition-colors">
                             <FaPhoneAlt className="text-sm shrink-0" />
-                            <a href="tel:070-857-0746">070-857-0746</a>
+                            <a href="tel:070-857-0746">+46 708 570 746</a>
                         </div>
                     </div>
                 </div>
