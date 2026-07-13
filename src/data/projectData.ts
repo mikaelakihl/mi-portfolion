@@ -267,7 +267,7 @@ export const projectData: IProject[] = [
   {
     id: 10,
     slug: "privacy-dashboard",
-    featured: true,
+    featured: false,
     title: "Privacy Dashboard",
     img: {
       src: "/assets/projects/privacy-dashboard-portfolio.png",
