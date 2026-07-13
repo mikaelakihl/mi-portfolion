@@ -115,6 +115,9 @@
       "view_demo": "Visa demo",
       "view_on_github": "Visa på Github",
       "select_tech_to_filter_projects": "Välj tech för att filtrera projekt",
+      "early_projects_heading": "Tidiga projekt",
+      "read_more": "Läs mer",
+      "back_to_projects": "Tillbaka till projekt",
       "tough_cookies": {
         "description": {
           "1": "Detta projekt utvecklades som ett skolprojekt på Medieinstitutet.",
@@ -190,6 +193,12 @@
           "1": "I detta projekt, utvecklat som mitt examensarbete på Medieinstitutet, byggde jag Kronspar spar-app med React och TypeScript som hjälper studenter att lägga undan pengar över tid till studentmössan utan stress i sista minuten.",
           "2": "Appen fungerar som en personlig ekonomi-instrumentpanel: användare ser aktuellt sparande, tid kvar och framsteg mot målet; ställer in sparplan och betalningsmetoder; följer statistik över tid; jämför leverantörer av studentmössor; och kan se projicerat saldo utifrån månadsinsättningen.",
           "3": "Applikationen har säker autentisering med Clerk, TanStack Query för datahämtning och React Router för navigering. MSW användes under utveckling för att simulera backend-anrop innan framtida API-integration. En demonstrationsfunktion, Time Travel, dold i headern, hoppar mellan milstolpar som köpdag för mössan och studentdagen för att validera sparprojektionen."
+        }
+      },
+      "amperium": {
+        "description": {
+          "1": "Amperium är ett nytt projekt som ännu inte är påbörjat — den här sidan är en platshållare.",
+          "2": "Mer information, bilder, tech stack och länkar läggs till här när projektet kommer igång."
         }
       }
     }

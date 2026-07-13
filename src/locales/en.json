@@ -114,6 +114,9 @@
       "view_demo": "View demo",
       "view_on_github": "View on Github",
       "select_tech_to_filter_projects": "Select tech to filter projects",
+      "early_projects_heading": "Early projects",
+      "read_more": "Read more",
+      "back_to_projects": "Back to projects",
       "tough_cookies": {
         "description": {
           "1": "This project was developed as a school project at Medieinstitutet.",
@@ -189,6 +192,12 @@
           "1": "In this project, developed as my final-year examination work at Medieinstitutet, I built Kronspar—a savings web application using React and TypeScript that helps students set aside money over time for their graduation hat without last-minute financial stress.",
           "2": "It works as a personal finance dashboard: users see current savings, time remaining, and progress toward the goal; configure a saving plan and payment methods; explore statistics over time; compare graduation hat suppliers; and review projected balances based on their monthly contribution.",
           "3": "The application features secure authentication with Clerk, TanStack Query for data fetching, and React Router for navigation. MSW was used during development to simulate backend interactions ahead of future API integration. A demonstration-only Time Travel control, hidden in the header, jumps between milestones such as hat purchase day and graduation to validate savings projection logic."
+        }
+      },
+      "amperium": {
+        "description": {
+          "1": "Amperium is a new project that hasn't been built yet — this page is a placeholder.",
+          "2": "More details, images, tech stack and links will be added here once the project is underway."
         }
       }
     }

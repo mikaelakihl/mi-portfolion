@@ -3,6 +3,7 @@ import type { IProject } from "../types/project";
 export const projectData: IProject[] = [
   {
     id: 0,
+    slug: "gottfrids-canvas-shop",
     title: "Gottfrids canvas shop",
     img: {
       src: "/assets/projects/gottfrids-canvas-shop-portfolio.png",
@@ -22,6 +23,7 @@ export const projectData: IProject[] = [
   },
   {
     id: 1,
+    slug: "cartoon-quiz",
     title: "Cartoon quiz",
     img: {
       src: "/assets/projects/cartoon-quiz-portfolio.png",
@@ -51,6 +53,7 @@ export const projectData: IProject[] = [
   },
   {
     id: 3,
+    slug: "tough-cookies",
     title: "Tough Cookies",
     img: {
       src: "/assets/projects/tough-cookies-portfolio.png",
@@ -70,6 +73,7 @@ export const projectData: IProject[] = [
   },
   {
     id: 4,
+    slug: "jurassic-world-rebirth",
     title: "Jurassic World - Rebirth",
     img: {
       src: "/assets/projects/jurassic-world-portfolio.png",
@@ -101,6 +105,7 @@ export const projectData: IProject[] = [
   },
   {
     id: 5,
+    slug: "reptilicious",
     title: "Reptilicious",
     img: {
       src: "/assets/projects/reptilicous-portfolio.png",
@@ -132,6 +137,7 @@ export const projectData: IProject[] = [
   },
   {
     id: 6,
+    slug: "the-lumos-library",
     title: "The Lumos Library",
     img: {
       src: "/assets/projects/the-lumos-library-portfolio.png",
@@ -166,6 +172,7 @@ export const projectData: IProject[] = [
   },
   {
     id: 7,
+    slug: "todo-app",
     title: "Todo App",
     img: {
       src: "/assets/projects/todoapp.png",
@@ -195,6 +202,7 @@ export const projectData: IProject[] = [
   },
   {
     id: 8,
+    slug: "the-zoo",
     title: "The Zoo",
     img: {
       src: "/assets/projects/thezoo.png",
@@ -226,6 +234,7 @@ export const projectData: IProject[] = [
   },
   {
     id: 9,
+    slug: "case-af-jobtech",
     title: "Case AF Jobtech",
     img: {
       src: "/assets/projects/platsbanken.png",
@@ -257,6 +266,8 @@ export const projectData: IProject[] = [
   },
   {
     id: 10,
+    slug: "privacy-dashboard",
+    featured: true,
     title: "Privacy Dashboard",
     img: {
       src: "/assets/projects/privacy-dashboard-portfolio.png",
@@ -264,7 +275,8 @@ export const projectData: IProject[] = [
       width: 1670,
       height: 1053,
     },
-    description: [
+    description: ["projects.privacy_dashboard.description.1"],
+    longDescription: [
       "projects.privacy_dashboard.description.1",
       "projects.privacy_dashboard.description.2",
       "projects.privacy_dashboard.description.3",
@@ -291,6 +303,8 @@ export const projectData: IProject[] = [
   },
   {
   id: 11,
+  slug: "kronspar",
+  featured: true,
   title: "Kronspar",
   img: {
     src: "/assets/projects/kronspar.png",
@@ -298,7 +312,8 @@ export const projectData: IProject[] = [
     width: 3000,
     height: 1053,
   },
-  description: [
+  description: ["projects.kronspar.description.1"],
+  longDescription: [
     "projects.kronspar.description.1",
     "projects.kronspar.description.2",
     "projects.kronspar.description.3",
@@ -324,4 +339,17 @@ export const projectData: IProject[] = [
   github: "https://github.com/mikaelakihl/mi-exam-kronspar",
   created_at: "2025-12-28",
 },
+  {
+    id: 12,
+    slug: "amperium",
+    featured: true,
+    title: "Amperium",
+    description: ["projects.amperium.description.1"],
+    longDescription: [
+      "projects.amperium.description.1",
+      "projects.amperium.description.2",
+    ],
+    tech: [],
+    created_at: "2026-07-13",
+  },
 ];

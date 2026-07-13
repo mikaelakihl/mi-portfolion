@@ -8,6 +8,7 @@ import {
 import "./App.css";
 
 import { Projects } from "./routes/Projects";
+import { ProjectDetail } from "./routes/ProjectDetail";
 import { CV } from "./routes/CV";
 import { Art } from "./routes/Art";
 import { ArtDetail } from "./routes/ArtDetail";
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<CV />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="projects/:slug" element={<ProjectDetail />} />
           <Route path="art" element={<Art />} />
           <Route path="art/:id" element={<ArtDetail />} />
           <Route path="*" element={<Navigate to="/" replace />} />
