@@ -54,18 +54,19 @@ export const Projects = () => {
 
     return (
         <>
-            <div className="max-w-7xl mx-auto p-4">
-                <h2 className="text-center font-normal text-white uppercase tracking-wider">
-                    {t("sidebarCV.tech")}
+            <section className="max-w-7xl mx-auto p-4">
+                <h2 className="text-center font-normal mb-8 text-white uppercase tracking-wider">
+                    {t("projects.my_projects")}
                 </h2>
+                <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
+
                 {isFilterOpen && (
-                    <p className="text-center text-orange-400 text-sm mt-2 animate-pulse">
+                    <p className="text-center text-orange-400 text-sm mb-4 animate-pulse">
                         {t("projects.select_tech_to_filter_projects")}
                     </p>
                 )}
-                <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6 "></div>
-                {/* Updated Tech Stack List with Filter Interaction */}
-                <ul className="flex flex-wrap gap-4 justify-center">
+                {/* Tech stack list, doubles as a filter for the projects below */}
+                <ul className="flex flex-wrap gap-4 justify-center mb-6">
                     {techStackList.map((tech) => {
                         const isSelected = selectedTechs.includes(tech.name);
                         const isDimmed = selectedTechs.length > 0 && !isSelected;
@@ -94,12 +95,7 @@ export const Projects = () => {
                         );
                     })}
                 </ul>
-            </div>
-            <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
-            <h2 className="text-center font-normal mb-8 text-white uppercase tracking-wider">
-                {t("projects.my_projects")}
-            </h2>
-            <section className="max-w-7xl mx-auto p-4">
+
                 <div className="flex flex-col mb-6">
                     <div className="flex justify-end gap-4 mb-4 flex-wrap">
                         {/* Filter Button */}
