@@ -2,7 +2,12 @@ import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { projectData } from "../data/projectData";
 import { TechBadge } from "../data/techStack";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaGithub,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 
 export const ProjectDetail = () => {
   const { slug } = useParams();
@@ -72,7 +77,7 @@ export const ProjectDetail = () => {
               alt={image.alt}
               width={image.width}
               height={image.height}
-              className="w-full border border-2 border-white/20 rounded-xl shadow-xl"
+              className="w-full border-2 border-white/20 rounded-xl shadow-xl"
             />
           ))}
         </div>
@@ -105,53 +110,47 @@ export const ProjectDetail = () => {
       )}
 
       {project.tech.length > 0 && (
-        <>
-          <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
-          <div className="flex flex-wrap gap-2 mb-8">
-            {project.tech.map((techName) => (
-              <TechBadge key={techName} name={techName} />
-            ))}
-          </div>
-        </>
+        <div className="flex flex-wrap gap-x-4 gap-y-2 mb-8">
+          {project.tech.map((techName) => (
+            <TechBadge key={techName} name={techName} />
+          ))}
+        </div>
       )}
 
       {(project.demo || project.github || (project.links && project.links.length > 0)) && (
-        <>
-          <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
-          <div className="flex items-center w-full gap-2 flex-wrap mb-12">
-            {project.demo && (
-              <a
-                className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={project.demo}
-              >
-                {t("projects.view_demo")}
-              </a>
-            )}
-            {project.github && (
-              <a
-                className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={project.github}
-              >
-                {t("projects.view_on_github")}
-              </a>
-            )}
-            {project.links?.map((link) => (
-              <a
-                key={link.url}
-                className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={link.url}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </>
+        <div className="flex items-center w-full gap-x-6 gap-y-2 flex-wrap text-sm mb-12">
+          {project.demo && (
+            <a
+              className="inline-flex items-center gap-1.5 text-white/80 hover:text-orange-400 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={project.demo}
+            >
+              {t("projects.view_demo")} <FaExternalLinkAlt size={12} />
+            </a>
+          )}
+          {project.github && (
+            <a
+              className="inline-flex items-center gap-1.5 text-white/80 hover:text-orange-400 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={project.github}
+            >
+              {t("projects.view_on_github")} <FaGithub size={14} />
+            </a>
+          )}
+          {project.links?.map((link) => (
+            <a
+              key={link.url}
+              className="inline-flex items-center gap-1.5 text-white/80 hover:text-orange-400 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={link.url}
+            >
+              {link.label} <FaExternalLinkAlt size={12} />
+            </a>
+          ))}
+        </div>
       )}
     </div>
   );

@@ -2,8 +2,16 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { projectData } from "../data/projectData";
-import { techStackList, Icon, TechBadge } from "../data/techStack";
-import { FaFilter, FaTimes, FaSortAmountDown, FaSortAmountUp } from "react-icons/fa";
+import { techStackList, filterChipBase, Icon, TechBadge } from "../data/techStack";
+import {
+    FaFilter,
+    FaTimes,
+    FaSortAmountDown,
+    FaSortAmountUp,
+    FaGithub,
+    FaExternalLinkAlt,
+    FaLongArrowAltRight,
+} from "react-icons/fa";
 import type { IProject } from "../types/project";
 
 export const Projects = () => {
@@ -67,19 +75,19 @@ export const Projects = () => {
                                 <button
                                     onClick={() => isFilterOpen && toggleTech(tech.name)}
                                     disabled={!isFilterOpen}
-                                    className={`${tech.bgColor} flex items-center gap-2 transition-all duration-300 border border-white/20
+                                    className={`${filterChipBase} ${tech.tint} transition-all duration-300
                       ${isFilterOpen
-                                            ? "cursor-pointer hover:scale-110 hover:border-white/50"
+                                            ? "cursor-pointer hover:border-white/40"
                                             : "cursor-default"
                                         }
                       ${isSelected
-                                            ? "ring-2 ring-white scale-110 shadow-[0_0_15px_rgba(255,255,255,0.3)] !opacity-100"
+                                            ? "ring-2 ring-white !opacity-100"
                                             : ""
                                         }
-                      ${isDimmed ? "opacity-30 grayscale blur-[0.5px]" : ""}
+                      ${isDimmed ? "opacity-30 grayscale" : ""}
                     `}
                                 >
-                                    <Icon icon={tech.icon} />
+                                    <Icon icon={tech.icon} size={18} />
                                     <p>{tech.name}</p>
                                 </button>
                             </li>
@@ -138,7 +146,6 @@ export const Projects = () => {
 
                 {newProjects.length > 0 && (
                     <div className="mb-12">
-                        
                         <ul className="grid md:grid-cols-2 gap-8">
                             {newProjects.map((project) => (
                                 <FeaturedProjectCard key={project.id} project={project} t={t} />
@@ -172,14 +179,14 @@ const FeaturedProjectCard = ({
     t: (key: string) => string;
 }) => (
     <li>
-        <div className="flex flex-col gap-4 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white h-full">
-            <Link to={`/projects/${project.slug}`} className="flex flex-col gap-4 group">
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-normal group-hover:text-orange-400 transition-colors">
+        <div className="flex flex-col gap-5 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white h-full">
+            <Link to={`/projects/${project.slug}`} className="flex flex-col gap-5 group">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold group-hover:text-orange-400 transition-colors">
                     {project.title}
                 </h3>
                 {project.img && (
                     <img
-                        className="border border-2 border-white/20 rounded-xl"
+                        className="border-2 border-white/20 rounded-xl"
                         src={project.img.src}
                         alt={project.img.alt}
                         width={project.img.width}
@@ -194,42 +201,38 @@ const FeaturedProjectCard = ({
                 ))}
             </div>
             {project.tech.length > 0 && (
-                <>
-                    <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
-                    <div className="flex flex-wrap gap-2">
-                        {project.tech.map((techName) => (
-                            <TechBadge key={techName} name={techName} />
-                        ))}
-                    </div>
-                </>
+                <div className="flex flex-wrap gap-x-4 gap-y-2">
+                    {project.tech.map((techName) => (
+                        <TechBadge key={techName} name={techName} />
+                    ))}
+                </div>
             )}
-            <div className="bg-gradient-to-r from-transparent via-white to-transparent h-[1px] my-6"></div>
-            <div className="flex items-center w-full gap-2 flex-wrap">
+            <div className="flex items-center w-full gap-x-6 gap-y-2 flex-wrap text-sm">
                 {project.demo && (
                     <a
-                        className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
+                        className="inline-flex items-center gap-1.5 text-white/80 hover:text-orange-400 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                         href={project.demo}
                     >
-                        {t("projects.view_demo")}
+                        {t("projects.view_demo")} <FaExternalLinkAlt size={12} />
                     </a>
                 )}
                 {project.github && (
                     <a
-                        className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
+                        className="inline-flex items-center gap-1.5 text-white/80 hover:text-orange-400 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                         href={project.github}
                     >
-                        {t("projects.view_on_github")}
+                        {t("projects.view_on_github")} <FaGithub size={14} />
                     </a>
                 )}
                 <Link
-                    className="bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white transition-all duration-300 hover:bg-orange-400 hover:border-orange-400 hover:-translate-y-1"
+                    className="inline-flex items-center gap-1.5 italic text-white/80 hover:text-orange-400 transition-colors"
                     to={`/projects/${project.slug}`}
                 >
-                    {t("projects.read_more")}
+                    {t("projects.read_more")} <FaLongArrowAltRight />
                 </Link>
             </div>
         </div>
@@ -244,10 +247,10 @@ const LegacyProjectCard = ({ project }: { project: IProject }) => (
                     <img
                         src={project.img.src}
                         alt={project.img.alt}
-                        className="w-full h-full object-cover border border-2 border-white/20 rounded-xl transition-transform duration-500 group-hover:scale-110 ease-in-out"
+                        className="w-full h-full object-cover border-2 border-white/20 rounded-xl transition-transform duration-500 group-hover:scale-110 ease-in-out"
                     />
                 ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-white/5 border border-2 border-white/20 rounded-xl text-white/50 text-sm">
+                    <div className="w-full h-full flex items-center justify-center bg-white/5 border-2 border-white/20 rounded-xl text-white/50 text-sm">
                         {project.title}
                     </div>
                 )}

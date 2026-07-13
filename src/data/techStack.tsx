@@ -34,7 +34,8 @@ export interface ITechStack {
   id: number;
   name: string;
   icon: string;
-  bgColor?: string;
+  /** Background tint only (e.g. "bg-orange-500/10") — combine with `filterChipBase` for the interactive filter chips. */
+  tint: string;
 }
 
 export const iconMap: {
@@ -69,207 +70,53 @@ export const iconMap: {
   FaCode,
 };
 
-export const Icon = ({ icon }: { icon: string }) => {
+export const Icon = ({ icon, size = 30 }: { icon: string; size?: number }) => {
   const IconComponent = iconMap[icon];
-  return IconComponent ? <IconComponent size={30} /> : null;
+  return IconComponent ? <IconComponent size={size} /> : null;
 };
 
 export const techStackList: ITechStack[] = [
-  {
-    id: 1,
-    name: "HTML",
-    icon: "FaHtml5",
-    bgColor:
-      "bg-orange-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 2,
-    name: "CSS",
-    icon: "FaCss3Alt",
-    bgColor:
-      "bg-indigo-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 3,
-    name: "JavaScript",
-    icon: "FaJs",
-    bgColor:
-      "bg-yellow-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 4,
-    name: "TypeScript",
-    icon: "SiTypescript",
-    bgColor:
-      "bg-indigo-600/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 5,
-    name: "React",
-    icon: "FaReact",
-    bgColor:
-      "bg-black/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 6,
-    name: "Vite",
-    icon: "SiVite",
-    bgColor:
-      "bg-purple-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 7,
-    name: "Tailwind",
-    icon: "SiTailwindcss",
-    bgColor:
-      "bg-cyan-400/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 8,
-    name: "Node.js",
-    icon: "FaNodeJs",
-    bgColor:
-      "bg-lime-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 9,
-    name: "Express",
-    icon: "SiExpress",
-    bgColor:
-      "bg-slate-700/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 10,
-    name: "Vitest",
-    icon: "SiVitest",
-    bgColor:
-      "bg-yellow-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 11,
-    name: "GitHub",
-    icon: "FaGithub",
-    bgColor:
-      "bg-black/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 12,
-    name: "NPM",
-    icon: "FaNpm",
-    bgColor:
-      "bg-red-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 13,
-    name: "Figma",
-    icon: "FaFigma",
-    bgColor:
-      "bg-orange-600/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 14,
-    name: "Sass",
-    icon: "FaSass",
-    bgColor:
-      "bg-pink-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 15,
-    name: "SQL",
-    icon: "FaDatabase",
-    bgColor:
-      "bg-sky-600/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 16,
-    name: "MongoDB",
-    icon: "SiMongodb",
-    bgColor:
-      "bg-emerald-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 17,
-    name: "Adobe Photoshop",
-    icon: "SiAdobephotoshop",
-    bgColor:
-      "bg-sky-400/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 18,
-    name: "Cursor",
-    icon: "BsCursorFill",
-    bgColor:
-      "bg-black/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 19,
-    name: "Cypress",
-    icon: "SiCypress",
-    bgColor:
-      "bg-gray-300/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 20,
-    name: "Vue",
-    icon: "FaVuejs",
-    bgColor:
-      "bg-cyan-900/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 21,
-    name: "Prettier",
-    icon: "SiPrettier",
-    bgColor:
-      "bg-black/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 22,
-    name: "EsLint",
-    icon: "SiEslint",
-    bgColor:
-      "bg-purple-950/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 23,
-    name: "Pnpm",
-    icon: "SiPnpm",
-    bgColor:
-      "bg-stone-700/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 24,
-    name: "Clerk",
-    icon: "SiClerk",
-    bgColor:
-      "bg-purple-600/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 25,
-    name: "i18n",
-    icon: "FaCode",
-    bgColor:
-      "bg-teal-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
-  {
-    id: 26,
-    name: "MSW",
-    icon: "FaCode",
-    bgColor:
-      "bg-orange-500/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white",
-  },
+  { id: 1, name: "HTML", icon: "FaHtml5", tint: "bg-orange-500/10" },
+  { id: 2, name: "CSS", icon: "FaCss3Alt", tint: "bg-indigo-500/10" },
+  { id: 3, name: "JavaScript", icon: "FaJs", tint: "bg-yellow-500/10" },
+  { id: 4, name: "TypeScript", icon: "SiTypescript", tint: "bg-indigo-600/10" },
+  { id: 5, name: "React", icon: "FaReact", tint: "bg-black/10" },
+  { id: 6, name: "Vite", icon: "SiVite", tint: "bg-purple-500/10" },
+  { id: 7, name: "Tailwind", icon: "SiTailwindcss", tint: "bg-cyan-400/10" },
+  { id: 8, name: "Node.js", icon: "FaNodeJs", tint: "bg-lime-500/10" },
+  { id: 9, name: "Express", icon: "SiExpress", tint: "bg-slate-700/10" },
+  { id: 10, name: "Vitest", icon: "SiVitest", tint: "bg-yellow-500/10" },
+  { id: 11, name: "GitHub", icon: "FaGithub", tint: "bg-black/10" },
+  { id: 12, name: "NPM", icon: "FaNpm", tint: "bg-red-500/10" },
+  { id: 13, name: "Figma", icon: "FaFigma", tint: "bg-orange-600/10" },
+  { id: 14, name: "Sass", icon: "FaSass", tint: "bg-pink-500/10" },
+  { id: 15, name: "SQL", icon: "FaDatabase", tint: "bg-sky-600/10" },
+  { id: 16, name: "MongoDB", icon: "SiMongodb", tint: "bg-emerald-500/10" },
+  { id: 17, name: "Adobe Photoshop", icon: "SiAdobephotoshop", tint: "bg-sky-400/10" },
+  { id: 18, name: "Cursor", icon: "BsCursorFill", tint: "bg-black/10" },
+  { id: 19, name: "Cypress", icon: "SiCypress", tint: "bg-gray-300/10" },
+  { id: 20, name: "Vue", icon: "FaVuejs", tint: "bg-cyan-900/10" },
+  { id: 21, name: "Prettier", icon: "SiPrettier", tint: "bg-black/10" },
+  { id: 22, name: "EsLint", icon: "SiEslint", tint: "bg-purple-950/10" },
+  { id: 23, name: "Pnpm", icon: "SiPnpm", tint: "bg-stone-700/10" },
+  { id: 24, name: "Clerk", icon: "SiClerk", tint: "bg-purple-600/10" },
+  { id: 25, name: "i18n", icon: "FaCode", tint: "bg-teal-500/10" },
+  { id: 26, name: "MSW", icon: "FaCode", tint: "bg-orange-500/10" },
 ];
 
-const defaultBadgeStyle =
-  "bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-xl shadow-lg text-white";
+/** Shared look for the interactive tech filter chips (Projects page). Combine with a tech's `tint`. */
+export const filterChipBase =
+  "inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/15 backdrop-blur-sm text-white text-sm";
 
+/** Flat, read-only tech tag — used to list a project's stack without the heavier "chip" treatment. */
 export const TechBadge = ({ name }: { name: string }) => {
   const tech = techStackList.find(
     (t) => t.name.toLowerCase() === name.toLowerCase(),
   );
   return (
-    <div className={(tech ? tech.bgColor : defaultBadgeStyle) + " flex items-center gap-2"}>
-      {tech && <Icon icon={tech.icon} />}
-      <p>{tech ? tech.name : name}</p>
-    </div>
+    <span className="inline-flex items-center gap-1.5 text-white/70 text-sm">
+      {tech && <Icon icon={tech.icon} size={16} />}
+      {tech ? tech.name : name}
+    </span>
   );
 };
