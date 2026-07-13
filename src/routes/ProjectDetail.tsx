@@ -78,11 +78,31 @@ export const ProjectDetail = () => {
         </div>
       )}
 
-      <div className="flex flex-col gap-4 text-white/90 mb-8">
-        {paragraphs.map((desc, index) => (
-          <p key={index}>{t(desc)}</p>
-        ))}
-      </div>
+      {project.sections ? (
+        <div className="flex flex-col gap-8 text-left text-white/90 mb-8">
+          {project.sections.map((section, index) => (
+            <div key={index}>
+              <h3 className="text-white font-semibold text-lg mb-2">
+                {t(section.heading)}
+              </h3>
+              {section.body && <p>{t(section.body)}</p>}
+              {section.items && (
+                <ul className="list-disc list-outside pl-5 flex flex-col gap-2 mt-2">
+                  {section.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>{t(item)}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="flex flex-col gap-4 text-white/90 mb-8">
+          {paragraphs.map((desc, index) => (
+            <p key={index}>{t(desc)}</p>
+          ))}
+        </div>
+      )}
 
       {project.tech.length > 0 && (
         <>

@@ -196,8 +196,58 @@
       },
       "amperium": {
         "description": {
-          "1": "Amperium is a new project that hasn't been built yet — this page is a placeholder.",
-          "2": "More details, images, tech stack and links will be added here once the project is underway."
+          "1": "A bilingual marketing site for Amperium Elektriska, an electrician company in Stockholm. I designed and built the site solo from scratch with React, TypeScript and Vite — with a focus on accessibility, i18n and SEO."
+        },
+        "sections": {
+          "what_it_is": {
+            "heading": "What it is",
+            "body": "A bilingual (Swedish/English) marketing site for Amperium Elektriska, an electrician company in Stockholm founded in 2023. The site presents the company's three services (service & emergency call-outs, electrical installation, project management), the team, and includes a quote request form for new customers. I designed and built the site from scratch, solo, with React, TypeScript and Vite."
+          },
+          "my_role": {
+            "heading": "My role",
+            "body": "I owned the whole project: structure, design implementation, accessibility, i18n, SEO and testing. I started from my own design system (tokens for color, spacing, typography) and adapted the values to the brand's identity."
+          },
+          "architecture": {
+            "heading": "Architecture and technical choices",
+            "items": {
+              "1": "Page structure: Four pages (Home, About, Services, Contact) via React Router, with a shared Layout component (header/nav/footer) as the app shell.",
+              "2": "Component organization: A clear rule for where components belong — page-specific components in pages/<Page>/components/, generic UI primitives in components/ui/ (Button, Input, Pill, etc.), and shared but non-generic components (e.g. ServiceCard) at the top level. That split made it easy to find the right place for new code without guessing.",
+              "3": "Styling: CSS Modules throughout, no CSS-in-JS. Design tokens as CSS variables in styles/tokens/, with a separate layer of semantic tokens (--color-action-primary instead of --color-orange-500) so components never point directly at primitives — making it possible to swap theme/brand color without touching component code.",
+              "4": "Responsiveness: Mobile-first with @custom-media breakpoints (@media (--md)) via PostCSS.",
+              "5": "Swedish routing: Slugs for the service pages are in Swedish (not English) — a deliberate SEO decision to match how Swedish customers actually search."
+            }
+          },
+          "i18n": {
+            "heading": "Internationalization (i18n)",
+            "body": "All text lives in two structurally identical JSON files (sv/en) via react-i18next, with nested keys per page/section. A language switcher sits in the navigation, with automatic browser-language detection and sync against <html lang>."
+          },
+          "accessibility": {
+            "heading": "Accessibility",
+            "items": {
+              "1": "Skip link to main content for keyboard and screen reader users.",
+              "2": "Contrast was actively adjusted during the project — e.g. swapping a white background for black/orange, and a darker gray for background-elevated, specifically to improve contrast (documented in my project journal as a deliberate a11y decision, not just aesthetics).",
+              "3": "Focus styles and tested keyboard navigation in the navigation component."
+            }
+          },
+          "seo": {
+            "heading": "SEO",
+            "items": {
+              "1": "Structured data (JSON-LD, schema.org/Electrician) with address, opening hours, phone number and service areas — so Google can show company info directly in search results.",
+              "2": "Open Graph metadata, descriptions, and a single source of truth for phone number/email (constants/contact.ts) reused in the footer, nav and contact page — with clear documentation (CONTENT_GUIDE.md) noting that opening hours and phone number exist in two places (code + JSON-LD) that must be kept in sync manually."
+            }
+          },
+          "testing": {
+            "heading": "Testing",
+            "body": "Vitest + Testing Library, with tests co-located next to every component that has logic or meaningful markup (navigation, footer, forms, hero, contact card, and more)."
+          },
+          "process": {
+            "heading": "Process",
+            "body": "I started the process by reviewing the company's existing site and analyzing what to keep stylistically and what needed an upgrade. Based on that analysis, I designed the new look in Figma and talked through a few design decisions together with Claude. I then set up the project structure with a dev branch and a main branch to keep a professional workflow, creating smaller feature branches off dev for each new feature. I built all the reusable components first — starting with navigation and routing, since they form the app's shell — before moving on to page-specific content. I also kept a day-by-day project journal through the whole build, covering everything from that initial setup to forms and SEO polish toward the end."
+          },
+          "maintainability": {
+            "heading": "Maintainability",
+            "body": "Wrote a separate CONTENT_GUIDE.md aimed at non-developers (e.g. the company owner) with exact steps for updating phone number, opening hours, contacts and text — without touching the code structure. That was a deliberate choice to make the site maintainable after delivery, without me needing to be involved in every small content change."
+          }
         }
       }
     }

@@ -344,12 +344,78 @@ export const projectData: IProject[] = [
     slug: "amperium",
     featured: true,
     title: "Amperium",
+    img: {
+    src: "/assets/projects/amperium-portfolio.png",
+    alt: "Kronspar",
+    width: 3000,
+    height: 1053,
+  },
     description: ["projects.amperium.description.1"],
-    longDescription: [
-      "projects.amperium.description.1",
-      "projects.amperium.description.2",
+    sections: [
+      {
+        heading: "projects.amperium.sections.what_it_is.heading",
+        body: "projects.amperium.sections.what_it_is.body",
+      },
+      {
+        heading: "projects.amperium.sections.my_role.heading",
+        body: "projects.amperium.sections.my_role.body",
+      },
+      {
+        heading: "projects.amperium.sections.architecture.heading",
+        items: [
+          "projects.amperium.sections.architecture.items.1",
+          "projects.amperium.sections.architecture.items.2",
+          "projects.amperium.sections.architecture.items.3",
+          "projects.amperium.sections.architecture.items.4",
+          "projects.amperium.sections.architecture.items.5",
+        ],
+      },
+      {
+        heading: "projects.amperium.sections.i18n.heading",
+        body: "projects.amperium.sections.i18n.body",
+      },
+      {
+        heading: "projects.amperium.sections.accessibility.heading",
+        items: [
+          "projects.amperium.sections.accessibility.items.1",
+          "projects.amperium.sections.accessibility.items.2",
+          "projects.amperium.sections.accessibility.items.3",
+        ],
+      },
+      {
+        heading: "projects.amperium.sections.seo.heading",
+        items: [
+          "projects.amperium.sections.seo.items.1",
+          "projects.amperium.sections.seo.items.2",
+        ],
+      },
+      {
+        heading: "projects.amperium.sections.testing.heading",
+        body: "projects.amperium.sections.testing.body",
+      },
+      {
+        heading: "projects.amperium.sections.process.heading",
+        body: "projects.amperium.sections.process.body",
+      },
+      {
+        heading: "projects.amperium.sections.maintainability.heading",
+        body: "projects.amperium.sections.maintainability.body",
+      },
     ],
-    tech: [],
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vite",
+      "React Router",
+      "i18n",
+      "Vitest",
+      "PostCSS",
+      "npm"
+    ],
     created_at: "2026-07-13",
+    github: "https://github.com/mikaelakihl/amperium",
   },
 ];

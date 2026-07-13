@@ -197,8 +197,58 @@
       },
       "amperium": {
         "description": {
-          "1": "Amperium är ett nytt projekt som ännu inte är påbörjat — den här sidan är en platshållare.",
-          "2": "Mer information, bilder, tech stack och länkar läggs till här när projektet kommer igång."
+          "1": "En tvåspråkig marknadsföringssajt för Amperium Elektriska, ett elektrikerföretag i Stockholm. Jag designade och byggde sajten solo från grunden med React, TypeScript och Vite — med fokus på tillgänglighet, i18n och SEO."
+        },
+        "sections": {
+          "what_it_is": {
+            "heading": "Vad det är",
+            "body": "En tvåspråkig (svenska/engelska) marknadsföringssajt för Amperium Elektriska, ett elektrikerföretag i Stockholm som grundades 2023. Sajten presenterar företagets tre tjänster (service & jour, elinstallation, projektledning), teamet och innehåller ett offertformulär för nya kunder. Jag designade och byggde sajten från grunden, solo, med React, TypeScript och Vite."
+          },
+          "my_role": {
+            "heading": "Min roll",
+            "body": "Jag ägde hela projektet: struktur, design-implementation, tillgänglighet, i18n, SEO och testning. Jag utgick från mitt eget designsystem (tokens för färg, spacing, typografi) och anpassade värdena till varumärkets identitet."
+          },
+          "architecture": {
+            "heading": "Arkitektur och tekniska val",
+            "items": {
+              "1": "Sidstruktur: Fyra sidor (Home, About, Services, Contact) via React Router, med en gemensam Layout-komponent (header/nav/footer) som app-skal.",
+              "2": "Komponentorganisation: Tydlig regel för var komponenter hör hemma — sidspecifika komponenter i pages/<Page>/components/, generiska UI-primitiver i components/ui/ (Button, Input, Pill osv.), och delade men icke-generiska komponenter (t.ex. ServiceCard) på toppnivå. Den uppdelningen gjorde det enkelt att hitta rätt plats för ny kod utan att gissa.",
+              "3": "Styling: CSS Modules genomgående, inget CSS-in-JS. Designtokens som CSS-variabler i styles/tokens/, med ett separat lager av semantiska tokens (--color-action-primary istället för --color-orange-500) så att komponenter aldrig pekar direkt på primitiver — gör det möjligt att byta tema/varumärkesfärg utan att röra komponentkod.",
+              "4": "Responsivitet: Mobile-first med @custom-media-breakpoints (@media (--md)) via PostCSS.",
+              "5": "Routing på svenska: Slugs för tjänstesidorna är på svenska (inte engelska) — ett medvetet SEO-beslut för att matcha hur svenska kunder faktiskt söker."
+            }
+          },
+          "i18n": {
+            "heading": "Internationalisering (i18n)",
+            "body": "All text ligger i två strukturellt identiska JSON-filer (sv/en) via react-i18next, med nästlade nycklar per sida/sektion. Språkväljare i navigationen, med automatisk detektering av webbläsarspråk och synk mot <html lang>."
+          },
+          "accessibility": {
+            "heading": "Tillgänglighet",
+            "items": {
+              "1": "Skip-link till huvudinnehåll för tangentbords- och skärmläsaranvändare.",
+              "2": "Kontrastjustering gjordes aktivt under projektet — bytte t.ex. en vit bakgrund mot svart/orange och mörkare grå för background-elevated specifikt för att förbättra kontrast (dokumenterat i min projektdagbok som ett medvetet a11y-beslut, inte bara estetik).",
+              "3": "Fokusstilar och testad tangentbordsnavigering i navigationskomponenten."
+            }
+          },
+          "seo": {
+            "heading": "SEO",
+            "items": {
+              "1": "Strukturerad data (JSON-LD, schema.org/Electrician) med adress, öppettider, telefon och områden som täcks — så att Google kan visa företagsinfo direkt i sökresultat.",
+              "2": "Open Graph-metadata, beskrivningar och en enda källa till sanning för telefonnummer/e-post (constants/contact.ts) som återanvänds i footer, nav och kontaktsida — med tydlig dokumentation (CONTENT_GUIDE.md) om att öppettider och telefonnummer finns på två ställen (kod + JSON-LD) som måste hållas i synk manuellt."
+            }
+          },
+          "testing": {
+            "heading": "Testning",
+            "body": "Vitest + Testing Library, med test co-located med varje komponent som har logik eller viktig markup (navigation, footer, formulär, hero, kontaktkort m.fl.)."
+          },
+          "process": {
+            "heading": "Process",
+            "body": "Jag inledde processen med att gå igenom företagets befintliga sajt och analysera vad som stilmässigt skulle behållas och vad som behövde uppgraderas. Utifrån den analysen tog jag fram ny design i Figma och stämde av ett par designbeslut tillsammans med Claude. Därefter satte jag upp projektstrukturen med en dev-branch och en main-branch för att hålla ett professionellt arbetsflöde, och skapade mindre feature-branches från dev för varje ny funktion. Jag byggde alla återanvändningsbara komponenter först — jag startade med navigering och routing, eftersom de utgör appens skal — innan jag gick vidare till sidspecifikt innehåll. Jag förde också en projektdagbok dag för dag genom hela bygget, som täcker allt från den initiala uppsättningen till formulär och SEO-finputs mot slutet."
+          },
+          "maintainability": {
+            "heading": "Underhållbarhet",
+            "body": "Skrev en separat CONTENT_GUIDE.md riktad till icke-utvecklare (t.ex. företagets ägare) med exakta steg för att uppdatera telefonnummer, öppettider, kontaktpersoner och text — utan att röra kodstrukturen. Det var ett medvetet val för att göra sajten möjlig att underhålla efter leverans, utan att jag behöver vara inblandad i varje litet innehållsbyte."
+          }
         }
       }
     }

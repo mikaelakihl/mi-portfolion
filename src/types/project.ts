@@ -10,6 +10,15 @@ export interface IProjectLink {
   url: string;
 }
 
+export interface IProjectSection {
+  /** Translation key for the section heading. */
+  heading: string;
+  /** Translation key for a paragraph body. */
+  body?: string;
+  /** Translation keys for a bullet list, rendered alongside or instead of `body`. */
+  items?: string[];
+}
+
 export interface IProject {
   id: number;
   /** Every project has a slug and its own /projects/:slug page. */
@@ -21,8 +30,10 @@ export interface IProject {
   /** Extra gallery images for the detail page. Falls back to `img` when omitted. */
   images?: IProjectImage[];
   description: string[];
-  /** Longer copy shown only on the detail page. Falls back to `description` when omitted. */
+  /** Longer copy shown only on the detail page. Falls back to `description` when omitted. Ignored when `sections` is set. */
   longDescription?: string[];
+  /** Structured detail-page content (heading + paragraph and/or bullet list per section). Takes priority over `longDescription`. */
+  sections?: IProjectSection[];
   tech: string[];
   demo?: string;
   github?: string;
