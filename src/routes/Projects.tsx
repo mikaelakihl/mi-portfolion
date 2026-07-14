@@ -224,6 +224,17 @@ const FeaturedProjectCard = ({
                         {t("projects.view_on_github")} <FaGithub size={14} />
                     </a>
                 )}
+                {project.links?.map((link) => (
+                    <a
+                        key={link.url}
+                        className="inline-flex items-center gap-1.5 text-white/80 hover:text-orange-400 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={link.url}
+                    >
+                        {t(link.label)} <FaExternalLinkAlt size={12} />
+                    </a>
+                ))}
                 <Link
                     className="inline-flex items-center gap-1.5 italic text-white/80 hover:text-orange-400 transition-colors"
                     to={`/projects/${project.slug}`}

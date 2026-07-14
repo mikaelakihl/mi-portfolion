@@ -2,6 +2,7 @@ import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { projectData } from "../data/projectData";
 import { TechBadge } from "../data/techStack";
+import { ImageCarousel } from "../components/ImageCarousel";
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -68,20 +69,7 @@ export const ProjectDetail = () => {
         </button>
       </div>
 
-      {images.length > 0 && (
-        <div className="flex flex-col gap-4 mb-8">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image.src}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
-              className="w-full border-2 border-white/20 rounded-xl shadow-xl"
-            />
-          ))}
-        </div>
-      )}
+      <ImageCarousel images={images} />
 
       {project.sections ? (
         <div className="flex flex-col gap-8 text-left text-white/90 mb-8">
@@ -147,7 +135,7 @@ export const ProjectDetail = () => {
               rel="noopener noreferrer"
               href={link.url}
             >
-              {link.label} <FaExternalLinkAlt size={12} />
+              {t(link.label)} <FaExternalLinkAlt size={12} />
             </a>
           ))}
         </div>

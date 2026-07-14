@@ -3,6 +3,8 @@ export interface IProjectImage {
   alt: string;
   width: number;
   height: number;
+  /** Optional label shown under the image in the detail-page carousel, e.g. "Before" / "After". */
+  caption?: string;
 }
 
 export interface IProjectLink {
