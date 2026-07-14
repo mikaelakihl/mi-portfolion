@@ -32,6 +32,7 @@ const AboutMe = () => {
           <div className="flex flex-col gap-2 group-open:mt-4">
           <p>{t("Cv.text_about_me.3")}</p>
           <p>{t("Cv.text_about_me.3.1")}</p>
+          <p>{t("Cv.text_about_me.3.2")}</p>
           </div>
           </details>
          <div>
