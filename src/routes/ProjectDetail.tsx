@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { projectData } from "../data/projectData";
 import { TechBadge } from "../data/techStack";
 import { ImageCarousel } from "../components/ImageCarousel";
+import { formatProjectDate } from "../utils/formatProjectDate";
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -12,7 +13,7 @@ import {
 
 export const ProjectDetail = () => {
   const { slug } = useParams();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
   // Prev/next steps through every project, newest first, regardless of category.
@@ -56,9 +57,14 @@ export const ProjectDetail = () => {
         >
           <FaChevronLeft size={24} />
         </button>
-        <h2 className="font-normal text-center text-white uppercase tracking-wider">
-          {project.title}
-        </h2>
+        <div>
+          <h2 className="font-normal text-center text-white uppercase tracking-wider">
+            {project.title}
+          </h2>
+          <p className="text-white/50 text-xs uppercase tracking-wide text-center mt-1">
+            {formatProjectDate(project.created_at, i18n.language)}
+          </p>
+        </div>
         <button
           type="button"
           onClick={handleNext}

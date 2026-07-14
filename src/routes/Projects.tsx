@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { projectData } from "../data/projectData";
 import { techStackList, filterChipBase, Icon, TechBadge } from "../data/techStack";
+import { formatProjectDate } from "../utils/formatProjectDate";
 import {
     FaFilter,
     FaTimes,
@@ -144,7 +145,7 @@ export const Projects = () => {
                     <div className="mb-12">
                         <ul className="grid md:grid-cols-2 gap-8">
                             {newProjects.map((project) => (
-                                <FeaturedProjectCard key={project.id} project={project} t={t} />
+                                <FeaturedProjectCard key={project.id} project={project} />
                             ))}
                         </ul>
                     </div>
@@ -167,19 +168,21 @@ export const Projects = () => {
     );
 };
 
-const FeaturedProjectCard = ({
-    project,
-    t,
-}: {
-    project: IProject;
-    t: (key: string) => string;
-}) => (
+const FeaturedProjectCard = ({ project }: { project: IProject }) => {
+    const { t, i18n } = useTranslation();
+
+    return (
     <li>
         <div className="flex flex-col gap-5 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg text-white h-full">
             <Link to={`/projects/${project.slug}`} className="flex flex-col gap-5 group">
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold group-hover:text-orange-400 transition-colors">
-                    {project.title}
-                </h3>
+                <div>
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold group-hover:text-orange-400 transition-colors">
+                        {project.title}
+                    </h3>
+                    <p className="text-white/50 text-xs uppercase tracking-wide mt-1">
+                        {formatProjectDate(project.created_at, i18n.language)}
+                    </p>
+                </div>
                 {project.img && (
                     <img
                         className="border-2 border-white/20 rounded-xl"
@@ -244,9 +247,13 @@ const FeaturedProjectCard = ({
             </div>
         </div>
     </li>
-);
+    );
+};
 
-const LegacyProjectCard = ({ project }: { project: IProject }) => (
+const LegacyProjectCard = ({ project }: { project: IProject }) => {
+    const { i18n } = useTranslation();
+
+    return (
     <li>
         <Link to={`/projects/${project.slug}`} className="flex flex-col gap-2 group">
             <div className="aspect-square overflow-hidden rounded-lg relative">
@@ -265,6 +272,10 @@ const LegacyProjectCard = ({ project }: { project: IProject }) => (
             <h4 className="text-white text-center text-sm group-hover:text-orange-400 transition-colors">
                 {project.title}
             </h4>
+            <p className="text-white/40 text-center text-xs uppercase tracking-wide">
+                {formatProjectDate(project.created_at, i18n.language)}
+            </p>
         </Link>
     </li>
-);
+    );
+};
