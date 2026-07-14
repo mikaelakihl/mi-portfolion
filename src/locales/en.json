@@ -117,6 +117,8 @@
       "early_projects_heading": "Early projects",
       "read_more": "Read more",
       "back_to_projects": "Back to projects",
+      "before": "Before",
+      "after": "After",
       "tough_cookies": {
         "description": {
           "1": "This project was developed as a school project at Medieinstitutet.",
@@ -198,6 +200,12 @@
         "description": {
           "1": "A bilingual marketing site for Amperium Elektriska, an electrician company in Stockholm. I designed and built the site solo from scratch with React, TypeScript and Vite — with a focus on accessibility, i18n and SEO."
         },
+        "captions": {
+          "home_before": "Home page — Before",
+          "home_after": "Home page — After",
+          "contact_before": "Contact page — Before"
+        },
+        "view_design_system": "View design",
         "sections": {
           "what_it_is": {
             "heading": "What it is",

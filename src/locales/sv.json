@@ -118,6 +118,8 @@
       "early_projects_heading": "Tidiga projekt",
       "read_more": "Läs mer",
       "back_to_projects": "Tillbaka till projekt",
+      "before": "Före",
+      "after": "Efter",
       "tough_cookies": {
         "description": {
           "1": "Detta projekt utvecklades som ett skolprojekt på Medieinstitutet.",
@@ -199,6 +201,12 @@
         "description": {
           "1": "En tvåspråkig marknadsföringssajt för Amperium Elektriska, ett elektrikerföretag i Stockholm. Jag designade och byggde sajten solo från grunden med React, TypeScript och Vite — med fokus på tillgänglighet, i18n och SEO."
         },
+        "captions": {
+          "home_before": "Startsidan — Före",
+          "home_after": "Startsidan — Efter",
+          "contact_before": "Kontaktsidan — Före"
+        },
+        "view_design_system": "Se design",
         "sections": {
           "what_it_is": {
             "heading": "Vad det är",

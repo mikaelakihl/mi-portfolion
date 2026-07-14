@@ -345,11 +345,34 @@ export const projectData: IProject[] = [
     featured: true,
     title: "Amperium",
     img: {
-    src: "/assets/projects/amperium-portfolio.png",
-    alt: "Kronspar",
-    width: 3000,
-    height: 1053,
-  },
+      src: "/assets/projects/amperium/amperium-home-after.png",
+      alt: "Amperium",
+      width: 2988,
+      height: 1650,
+    },
+    images: [
+      {
+        src: "/assets/projects/amperium/amperium-home-before.png",
+        alt: "Amperium — home page before redesign",
+        width: 1876,
+        height: 1134,
+        caption: "projects.amperium.captions.home_before",
+      },
+      {
+        src: "/assets/projects/amperium/amperium-home-after.png",
+        alt: "Amperium — home page after redesign",
+        width: 2988,
+        height: 1650,
+        caption: "projects.amperium.captions.home_after",
+      },
+      {
+        src: "/assets/projects/amperium/amperium-contact-before.png",
+        alt: "Amperium — contact page before redesign",
+        width: 2110,
+        height: 1118,
+        caption: "projects.amperium.captions.contact_before",
+      },
+    ],
     description: ["projects.amperium.description.1"],
     sections: [
       {
@@ -416,6 +439,13 @@ export const projectData: IProject[] = [
       "npm"
     ],
     created_at: "2026-07-13",
+    demo: "https://amperium.se/",
     github: "https://github.com/mikaelakihl/amperium",
+    links: [
+      {
+        label: "projects.amperium.view_design_system",
+        url: "https://drive.google.com/drive/folders/1v8TDNMs2MPtybNv05Vtww6GX7Af_p77U?usp=sharing",
+      },
+    ],
   },
 ];
