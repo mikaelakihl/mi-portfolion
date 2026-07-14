@@ -256,15 +256,15 @@ const LegacyProjectCard = ({ project }: { project: IProject }) => {
     return (
     <li>
         <Link to={`/projects/${project.slug}`} className="flex flex-col gap-2 group">
-            <div className="aspect-square overflow-hidden rounded-lg relative">
+            <div className="aspect-square overflow-hidden rounded-xl relative border-2 border-white/20">
                 {project.img ? (
                     <img
                         src={project.img.src}
                         alt={project.img.alt}
-                        className="w-full h-full object-cover border-2 border-white/20 rounded-xl transition-transform duration-500 group-hover:scale-110 ease-in-out"
+                        className="w-full h-full object-cover blur-[2px] transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:blur-none group-active:blur-none group-focus-visible:blur-none"
                     />
                 ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-white/5 border-2 border-white/20 rounded-xl text-white/50 text-sm">
+                    <div className="w-full h-full flex items-center justify-center bg-white/5 text-white/50 text-sm">
                         {project.title}
                     </div>
                 )}
